@@ -1,0 +1,302 @@
+[
+ {
+  "infinitive": "ser",
+  "meaning": "to be (permanent)",
+  "present": "sou / és / somos",
+  "preterite": "fui / foste / fomos"
+ },
+ {
+  "infinitive": "estar",
+  "meaning": "to be (temporary)",
+  "present": "estou / estás / estamos",
+  "preterite": "estive / estiveste / estivemos"
+ },
+ {
+  "infinitive": "ter",
+  "meaning": "to have",
+  "present": "tenho / tens / temos",
+  "preterite": "tive / tiveste / tivemos"
+ },
+ {
+  "infinitive": "fazer",
+  "meaning": "to do / make",
+  "present": "faço / fazes / fazemos",
+  "preterite": "fiz / fizeste / fizemos"
+ },
+ {
+  "infinitive": "ir",
+  "meaning": "to go",
+  "present": "vou / vais / vamos",
+  "preterite": "fui / foste / fomos"
+ },
+ {
+  "infinitive": "dizer",
+  "meaning": "to say",
+  "present": "digo / dizes / dizemos",
+  "preterite": "disse / disseste / dissemos"
+ },
+ {
+  "infinitive": "ver",
+  "meaning": "to see",
+  "present": "vejo / vês / vemos",
+  "preterite": "vi / viste / vimos"
+ },
+ {
+  "infinitive": "vir",
+  "meaning": "to come",
+  "present": "venho / vens / vimos",
+  "preterite": "vim / vieste / viemos"
+ },
+ {
+  "infinitive": "dar",
+  "meaning": "to give",
+  "present": "dou / dás / damos",
+  "preterite": "dei / deste / demos"
+ },
+ {
+  "infinitive": "saber",
+  "meaning": "to know (facts)",
+  "present": "sei / sabes / sabemos",
+  "preterite": "soube / soubeste / soubemos"
+ },
+ {
+  "infinitive": "querer",
+  "meaning": "to want",
+  "present": "quero / queres / queremos",
+  "preterite": "quis / quiseste / quisemos"
+ },
+ {
+  "infinitive": "poder",
+  "meaning": "can / to be able",
+  "present": "posso / podes / podemos",
+  "preterite": "pude / pudeste / pudemos"
+ },
+ {
+  "infinitive": "ficar",
+  "meaning": "to stay / become",
+  "present": "fico / ficas / ficamos",
+  "preterite": "fiquei / ficaste / ficámos"
+ },
+ {
+  "infinitive": "falar",
+  "meaning": "to speak",
+  "present": "falo / falas / falamos",
+  "preterite": "falei / falaste / falámos"
+ },
+ {
+  "infinitive": "comer",
+  "meaning": "to eat",
+  "present": "como / comes / comemos",
+  "preterite": "comi / comeste / comemos"
+ },
+ {
+  "infinitive": "beber",
+  "meaning": "to drink",
+  "present": "bebo / bebes / bebemos",
+  "preterite": "bebi / bebeste / bebemos"
+ },
+ {
+  "infinitive": "gostar",
+  "meaning": "to like (de)",
+  "present": "gosto / gostas / gostamos",
+  "preterite": "gostei / gostaste / gostámos"
+ },
+ {
+  "infinitive": "trabalhar",
+  "meaning": "to work",
+  "present": "trabalho / trabalhas / trabalhamos",
+  "preterite": "trabalhei / trabalhaste / trabalhámos"
+ },
+ {
+  "infinitive": "morar",
+  "meaning": "to live (reside)",
+  "present": "moro / moras / moramos",
+  "preterite": "morei / moraste / morámos"
+ },
+ {
+  "infinitive": "estudar",
+  "meaning": "to study",
+  "present": "estudo / estudas / estudamos",
+  "preterite": "estudei / estudaste / estudámos"
+ },
+ {
+  "infinitive": "comprar",
+  "meaning": "to buy",
+  "present": "compro / compras / compramos",
+  "preterite": "comprei / compraste / comprámos"
+ },
+ {
+  "infinitive": "pagar",
+  "meaning": "to pay",
+  "present": "pago / pagas / pagamos",
+  "preterite": "paguei / pagaste / pagámos"
+ },
+ {
+  "infinitive": "precisar",
+  "meaning": "to need (de)",
+  "present": "preciso / precisas / precisamos",
+  "preterite": "precisei / precisaste / precisámos"
+ },
+ {
+  "infinitive": "começar",
+  "meaning": "to start",
+  "present": "começo / começas / começamos",
+  "preterite": "comecei / começaste / começámos"
+ },
+ {
+  "infinitive": "terminar",
+  "meaning": "to finish",
+  "present": "termino / terminas / terminamos",
+  "preterite": "terminei / terminaste / terminámos"
+ },
+ {
+  "infinitive": "ajudar",
+  "meaning": "to help",
+  "present": "ajudo / ajudas / ajudamos",
+  "preterite": "ajudei / ajudaste / ajudámos"
+ },
+ {
+  "infinitive": "perguntar",
+  "meaning": "to ask",
+  "present": "pergunto / perguntas / perguntamos",
+  "preterite": "perguntei / perguntaste / perguntámos"
+ },
+ {
+  "infinitive": "responder",
+  "meaning": "to answer",
+  "present": "respondo / respondes / respondemos",
+  "preterite": "respondi / respondeste / respondemos"
+ },
+ {
+  "infinitive": "entender",
+  "meaning": "to understand",
+  "present": "entendo / entendes / entendemos",
+  "preterite": "entendi / entendeste / entendemos"
+ },
+ {
+  "infinitive": "ouvir",
+  "meaning": "to hear",
+  "present": "ouço / ouves / ouvimos",
+  "preterite": "ouvi / ouviste / ouvimos"
+ },
+ {
+  "infinitive": "escutar",
+  "meaning": "to listen",
+  "present": "escuto / escutas / escutamos",
+  "preterite": "escutei / escutaste / escutámos"
+ },
+ {
+  "infinitive": "olhar",
+  "meaning": "to look",
+  "present": "olho / olhas / olhamos",
+  "preterite": "olhei / olhaste / olhámos"
+ },
+ {
+  "infinitive": "assistir",
+  "meaning": "to watch",
+  "present": "assisto / assistes / assistimos",
+  "preterite": "assisti / assististe / assistimos"
+ },
+ {
+  "infinitive": "ler",
+  "meaning": "to read",
+  "present": "leio / lês / lemos",
+  "preterite": "li / leste / lemos"
+ },
+ {
+  "infinitive": "escrever",
+  "meaning": "to write",
+  "present": "escrevo / escreves / escrevemos",
+  "preterite": "escrevi / escreveste / escrevemos"
+ },
+ {
+  "infinitive": "aprender",
+  "meaning": "to learn",
+  "present": "aprendo / aprendes / aprendemos",
+  "preterite": "aprendi / aprendeste / aprendemos"
+ },
+ {
+  "infinitive": "ensinar",
+  "meaning": "to teach",
+  "present": "ensino / ensinas / ensinamos",
+  "preterite": "ensinei / ensinaste / ensinámos"
+ },
+ {
+  "infinitive": "jogar",
+  "meaning": "to play (game)",
+  "present": "jogo / jogas / jogamos",
+  "preterite": "joguei / jogaste / jogámos"
+ },
+ {
+  "infinitive": "correr",
+  "meaning": "to run",
+  "present": "corro / corres / corremos",
+  "preterite": "corri / correste / corremos"
+ },
+ {
+  "infinitive": "andar",
+  "meaning": "to walk",
+  "present": "ando / andas / andamos",
+  "preterite": "andei / andaste / andámos"
+ },
+ {
+  "infinitive": "conduzir",
+  "meaning": "to drive",
+  "present": "conduzo / conduzes / conduzimos",
+  "preterite": "conduzi / conduziste / conduzimos"
+ },
+ {
+  "infinitive": "viajar",
+  "meaning": "to travel",
+  "present": "viajo / viajas / viajamos",
+  "preterite": "viajei / viajaste / viajámos"
+ },
+ {
+  "infinitive": "dormir",
+  "meaning": "to sleep",
+  "present": "durmo / dormes / dormimos",
+  "preterite": "dormi / dormiste / dormimos"
+ },
+ {
+  "infinitive": "acordar",
+  "meaning": "to wake up",
+  "present": "acordo / acordas / acordamos",
+  "preterite": "acordei / acordaste / acordámos"
+ },
+ {
+  "infinitive": "levantar",
+  "meaning": "to get up",
+  "present": "levanto / levantas / levantamos",
+  "preterite": "levantei / levantaste / levantámos"
+ },
+ {
+  "infinitive": "esperar",
+  "meaning": "to wait / hope",
+  "present": "espero / esperas / esperamos",
+  "preterite": "esperei / esperaste / esperámos"
+ },
+ {
+  "infinitive": "encontrar",
+  "meaning": "to meet / find",
+  "present": "encontro / encontras / encontramos",
+  "preterite": "encontrei / encontraste / encontrámos"
+ },
+ {
+  "infinitive": "levar",
+  "meaning": "to take / carry",
+  "present": "levo / levas / levamos",
+  "preterite": "levei / levaste / levámos"
+ },
+ {
+  "infinitive": "trazer",
+  "meaning": "to bring",
+  "present": "trago / trazes / trazemos",
+  "preterite": "trouxe / trouxeste / trouxemos"
+ },
+ {
+  "infinitive": "conhecer",
+  "meaning": "to know (people/places)",
+  "present": "conheço / conheces / conhecemos",
+  "preterite": "conheci / conheceste / conhecêmos"
+ }
+]

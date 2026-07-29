@@ -1,0 +1,16 @@
+{
+  "name": "portuguese-tutor",
+  "local_port": 52242,
+  "entrypoint": "npm run dev -- --host 0.0.0.0 --port 52242",
+  "publish": {
+    "label": "portuguese-tutor",
+    "type": "http",
+    "public": true,
+    "entrypoint": "npm run prod",
+    "published_port": 52243,
+    "env": {
+      "NODE_ENV": "production",
+      "APP_ORIGIN": "https://portuguese-tutor-marlandoj.zocomputer.io"
+    }
+  }
+}

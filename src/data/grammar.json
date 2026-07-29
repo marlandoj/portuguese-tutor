@@ -1,0 +1,892 @@
+[
+ {
+  "id": "l1-g1",
+  "level": 1,
+  "title": "Ser vs Estar — the two 'to be's",
+  "pattern": "ser (permanent) / estar (temporary)",
+  "explanation": "Portuguese has two verbs for 'to be'. Use SER for identity, origin, profession, and permanent traits (Sou americano). Use ESTAR for temporary states, feelings, and location (Estou cansado, Estou no hotel).",
+  "examples": [
+   {
+    "jp": "Sou dos Estados Unidos.",
+    "romaji": "",
+    "en": "I am from the United States. (ser — origin)"
+   },
+   {
+    "jp": "Estou muito feliz aqui.",
+    "romaji": "",
+    "en": "I am very happy here. (estar — temporary state)"
+   },
+   {
+    "jp": "Ela é professora.",
+    "romaji": "",
+    "en": "She is a teacher. (ser — profession)"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g2",
+  "level": 1,
+  "title": "Present tense with tu",
+  "pattern": "falar: falo, falas, fala, falamos, falam",
+  "explanation": "In Portugal, informal speech uses TU: tu falas, tu comes, tu vais. Regular -ar verbs: -o (eu), -as (tu), -a (ele/ela), -amos (nós), -am (eles). Use 'o senhor / a senhora' + 3rd person for polite situations.",
+  "examples": [
+   {
+    "jp": "Tu falas português muito bem!",
+    "romaji": "",
+    "en": "You speak Portuguese very well! (informal)"
+   },
+   {
+    "jp": "Nós falamos inglês também.",
+    "romaji": "",
+    "en": "We speak English too."
+   },
+   {
+    "jp": "O senhor deseja mais alguma coisa?",
+    "romaji": "",
+    "en": "Would you like anything else? (polite)"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g3",
+  "level": 1,
+  "title": "Questions with 'o que é que'",
+  "pattern": "É que + statement / question word",
+  "explanation": "Yes/no questions use statement word order with rising intonation: 'Falas inglês?' For detail questions, Portugal loves inserting 'é que': 'O que é que queres?' (What do you want?), 'Onde é que fica?' (Where is it?). Question words: o que, onde, quanto, quando, quem, como, porquê.",
+  "examples": [
+   {
+    "jp": "Fala inglês?",
+    "romaji": "",
+    "en": "Do you speak English?"
+   },
+   {
+    "jp": "O que é que deseja?",
+    "romaji": "",
+    "en": "What would you like?"
+   },
+   {
+    "jp": "Onde é que fica a casa de banho?",
+    "romaji": "",
+    "en": "Where is the bathroom?"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g4",
+  "level": 1,
+  "title": "Polite requests: queria & pode",
+  "pattern": "Queria + noun / Pode + infinitive?",
+  "explanation": "'Queria um café' (I'd like a coffee — imperfect for politeness) is THE way to order in Portugal. 'Pode repetir?' = Can you repeat? 'Posso pagar com cartão?' = Can I pay by card?",
+  "examples": [
+   {
+    "jp": "Queria uma mesa para dois.",
+    "romaji": "",
+    "en": "I'd like a table for two."
+   },
+   {
+    "jp": "Pode repetir, se faz favor?",
+    "romaji": "",
+    "en": "Can you repeat, please?"
+   },
+   {
+    "jp": "Posso pagar com MB Way?",
+    "romaji": "",
+    "en": "Can I pay with MB Way?"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g5",
+  "level": 1,
+  "title": "Ter — to have (and hunger, age, hurry)",
+  "pattern": "eu tenho, tu tens, nós temos",
+  "explanation": "Ter is irregular and everywhere: 'Tenho uma reserva' (I have a reservation). Portugal uses ter where English uses 'to be': tenho fome (I'm hungry), tenho pressa (I'm in a hurry), tenho 40 anos (I'm 40 years old).",
+  "examples": [
+   {
+    "jp": "Tenho uma reserva.",
+    "romaji": "",
+    "en": "I have a reservation."
+   },
+   {
+    "jp": "Tenho fome e tenho pressa.",
+    "romaji": "",
+    "en": "I'm hungry and in a hurry."
+   },
+   {
+    "jp": "Tem Wi-Fi no quarto?",
+    "romaji": "",
+    "en": "Is there Wi-Fi in the room?"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g6",
+  "level": 1,
+  "title": "The future with ir + infinitive",
+  "pattern": "vou/vais + verb",
+  "explanation": "The everyday future: 'vou' + infinitive, like English 'going to': 'Vou visitar amanhã' (I'm going to visit tomorrow), 'Vais sair às oito?' (Are you going to leave at eight?).",
+  "examples": [
+   {
+    "jp": "Vou visitar a Torre de Belém.",
+    "romaji": "",
+    "en": "I'm going to visit the Belém Tower."
+   },
+   {
+    "jp": "Vamos sair às oito.",
+    "romaji": "",
+    "en": "We're going to leave at eight."
+   },
+   {
+    "jp": "O que é que vais fazer amanhã?",
+    "romaji": "",
+    "en": "What are you going to do tomorrow?"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g7",
+  "level": 1,
+  "title": "Contractions: do, da, no, na",
+  "pattern": "de+o=do, de+a=da, em+o=no, em+a=na",
+  "explanation": "Prepositions fuse with articles: de+o → do (of the), em+o → no (in the). You'll hear them constantly: 'Sou do Arizona', 'Estou no hotel', 'Vou para a praia'.",
+  "examples": [
+   {
+    "jp": "Sou de Mesa, no Arizona.",
+    "romaji": "",
+    "en": "I'm from Mesa, in Arizona."
+   },
+   {
+    "jp": "O hotel fica na praia.",
+    "romaji": "",
+    "en": "The hotel is on the beach."
+   },
+   {
+    "jp": "Estou no aeroporto.",
+    "romaji": "",
+    "en": "I'm at the airport."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g8",
+  "level": 1,
+  "title": "Muito — very / a lot",
+  "pattern": "muito (very) / muito+muita (a lot of)",
+  "explanation": "Muito does double duty: as an adverb it's 'very' and never changes (muito obrigado). As a quantity it agrees: muito tempo, muita gente. 'Muito prazer' = nice to meet you.",
+  "examples": [
+   {
+    "jp": "Muito obrigado!",
+    "romaji": "",
+    "en": "Thank you very much!"
+   },
+   {
+    "jp": "Havia muita gente na festa.",
+    "romaji": "",
+    "en": "There were a lot of people at the party."
+   },
+   {
+    "jp": "Tenho muita fome.",
+    "romaji": "",
+    "en": "I'm very hungry."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g9",
+  "level": 1,
+  "title": "Gostar de — liking things",
+  "pattern": "gostar de + noun/verb",
+  "explanation": "'To like' always takes 'de': 'Gosto de música' (I like music), 'Gostas de dançar?' (Do you like to dance?). Negative: 'Não gosto de acordar cedo'.",
+  "examples": [
+   {
+    "jp": "Gosto muito de pastel de nata.",
+    "romaji": "",
+    "en": "I really like pastel de nata."
+   },
+   {
+    "jp": "Gostas de música portuguesa?",
+    "romaji": "",
+    "en": "Do you like Portuguese music?"
+   },
+   {
+    "jp": "Não gosto de café com açúcar.",
+    "romaji": "",
+    "en": "I don't like coffee with sugar."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g10",
+  "level": 1,
+  "title": "Numbers & money",
+  "pattern": "um/uma, dois/duas, três... euros",
+  "explanation": "Um and dois change with gender: um café, uma água; dois cafés, duas águas. Prices in Portugal are in euros: 'cinco euros' (€5), 'dois euros e cinquenta' (€2.50).",
+  "examples": [
+   {
+    "jp": "Custa vinte euros.",
+    "romaji": "",
+    "en": "It costs twenty euros."
+   },
+   {
+    "jp": "Uma água e dois cafés, se faz favor.",
+    "romaji": "",
+    "en": "One water and two coffees, please."
+   },
+   {
+    "jp": "São quarenta e cinco euros.",
+    "romaji": "",
+    "en": "That's forty-five euros."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g11",
+  "level": 1,
+  "title": "Tudo bem — the universal greeting",
+  "pattern": "Tudo bem? Tudo!",
+  "explanation": "'Tudo bem?' is both 'how are you?' and its own answer ('Tudo!' = all good). Casual check-ins: 'Tudo fixe?' (all cool?), 'Tudo porreiro?' The standard reply is to repeat it, then 'e tu?'.",
+  "examples": [
+   {
+    "jp": "Tudo bem? — Tudo, e tu?",
+    "romaji": "",
+    "en": "How are you? — Good, and you?"
+   },
+   {
+    "jp": "Tudo fixe por aqui.",
+    "romaji": "",
+    "en": "All good here."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l1-g12",
+  "level": 1,
+  "title": "Se faz favor & the politeness toolkit",
+  "pattern": "se faz favor / com licença / desculpe",
+  "explanation": "In Portugal, 'se faz favor' (or the joined 'se faz favor'/'faz favor') is as common as 'por favor'. 'Com licença' = excuse me (to pass). 'Desculpe' = sorry. Men say 'obrigado', women say 'obrigada' — the ending matches the speaker.",
+  "examples": [
+   {
+    "jp": "Uma bica, se faz favor.",
+    "romaji": "",
+    "en": "An espresso, please."
+   },
+   {
+    "jp": "Com licença, onde fica o metro?",
+    "romaji": "",
+    "en": "Excuse me, where is the metro?"
+   },
+   {
+    "jp": "Desculpe, não percebi.",
+    "romaji": "",
+    "en": "Sorry, I didn't understand."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g1",
+  "level": 2,
+  "title": "Preterite — talking about the past",
+  "pattern": "-ei / -aste / -ou (regular -ar)",
+  "explanation": "Regular preterite: -ar verbs take -ei (eu), -aste (tu), -ou (ele), -ámos (nós): falei, falaste, falou, falámos. -er/-ir: comi/comeste/comeu, parti/partiste/partiu. Irregular stars: fui/foste (ir, ser), fiz/fizeste (fazer), tive/tiveste (ter), disse/disseste (dizer).",
+  "examples": [
+   {
+    "jp": "Ontem fui à praia.",
+    "romaji": "",
+    "en": "Yesterday I went to the beach."
+   },
+   {
+    "jp": "O que é que fizeste no fim de semana?",
+    "romaji": "",
+    "en": "What did you do on the weekend?"
+   },
+   {
+    "jp": "Comemos peixe grelhado à beira-mar.",
+    "romaji": "",
+    "en": "We ate grilled fish by the sea."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g2",
+  "level": 2,
+  "title": "Estar a + infinitive — happening now",
+  "pattern": "estou a + infinitive",
+  "explanation": "THE European Portuguese progressive: estar a + infinitive = 'am doing right now'. 'Estou a procurar apartamento' (I'm looking for an apartment), 'Está a chover' (it's raining). Brazil uses the gerund (-ndo); Portugal uses 'a + infinitive'.",
+  "examples": [
+   {
+    "jp": "Estou a adorar Portugal!",
+    "romaji": "",
+    "en": "I'm loving Portugal!"
+   },
+   {
+    "jp": "Estás a adaptar-te bem?",
+    "romaji": "",
+    "en": "Are you adapting well?"
+   },
+   {
+    "jp": "'Tou a comer, ligo-te depois.",
+    "romaji": "",
+    "en": "I'm eating, I'll call you later. (casual)"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g3",
+  "level": 2,
+  "title": "Ter que / Precisar de — obligations",
+  "pattern": "ter que + inf / precisar de + inf",
+  "explanation": "'Tenho que confirmar a consulta' = I have to confirm the appointment. 'Preciso de voltar?' = Do I need to come back? Note: precisar takes 'de' in Portugal.",
+  "examples": [
+   {
+    "jp": "Tenho que confirmar a consulta.",
+    "romaji": "",
+    "en": "I have to confirm the appointment."
+   },
+   {
+    "jp": "Precisa de receita médica?",
+    "romaji": "",
+    "en": "Does it need a prescription?"
+   },
+   {
+    "jp": "Preciso de um documento?",
+    "romaji": "",
+    "en": "Do I need a document?"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g4",
+  "level": 2,
+  "title": "Ficar — location, staying, becoming",
+  "pattern": "ficar (3 meanings)",
+  "explanation": "Ficar is a Swiss-army verb: location ('Onde fica o metro?' — where is the metro?), staying ('Vou ficar duas semanas'), and becoming ('Fiquei doente' — I got sick, 'Fico contente' — I'm glad).",
+  "examples": [
+   {
+    "jp": "Onde fica a estação?",
+    "romaji": "",
+    "en": "Where is the station (located)?"
+   },
+   {
+    "jp": "Vou ficar em casa hoje.",
+    "romaji": "",
+    "en": "I'm staying home today."
+   },
+   {
+    "jp": "Fiquei muito contente com a notícia.",
+    "romaji": "",
+    "en": "I was very happy with the news."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g5",
+  "level": 2,
+  "title": "Reflexive verbs — European placement",
+  "pattern": "verb + me (Exercito-me)",
+  "explanation": "In Portugal the little pronoun goes AFTER the verb in normal statements: 'Exercito-me três vezes por semana', 'Estou a habituar-me', 'Ela chama-se Juliana'. With estar a + infinitive, it hangs on the infinitive: 'Estou a adaptar-me'.",
+  "examples": [
+   {
+    "jp": "Exercito-me três vezes por semana.",
+    "romaji": "",
+    "en": "I exercise three times a week."
+   },
+   {
+    "jp": "Estou a adaptar-me ao fuso horário.",
+    "romaji": "",
+    "en": "I'm adapting to the time zone."
+   },
+   {
+    "jp": "Deito-me cedo durante a semana.",
+    "romaji": "",
+    "en": "I go to bed early during the week."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g6",
+  "level": 2,
+  "title": "Por vs Para",
+  "pattern": "por (through/by/for duration) / para (destination/goal)",
+  "explanation": "Rough guide: PARA points forward — destination, purpose, recipient (Vou para a praia, um presente para ti). POR looks at the path — through, by, duration, exchange (andei pelo parque, obrigado por tudo, paguei dez euros por isto).",
+  "examples": [
+   {
+    "jp": "Vou para o Porto na sexta-feira.",
+    "romaji": "",
+    "en": "I'm going to Porto on Friday."
+   },
+   {
+    "jp": "Andei pelo centro ontem.",
+    "romaji": "",
+    "en": "I walked through downtown yesterday."
+   },
+   {
+    "jp": "Obrigado por tudo!",
+    "romaji": "",
+    "en": "Thanks for everything!"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g7",
+  "level": 2,
+  "title": "Saber vs Conhecer — knowing",
+  "pattern": "saber (facts/how) / conhecer (people, places)",
+  "explanation": "SABER = know facts or how to do something ('Sei nadar' — I can swim). CONHECER = be familiar with people/places ('Conheço Lisboa' — I know Lisbon, 'Conheces a Ana?').",
+  "examples": [
+   {
+    "jp": "Sabes onde fica o banco?",
+    "romaji": "",
+    "en": "Do you know where the bank is?"
+   },
+   {
+    "jp": "Conheço um sítio perfeito!",
+    "romaji": "",
+    "en": "I know a perfect place!"
+   },
+   {
+    "jp": "Ainda não conheço este bairro.",
+    "romaji": "",
+    "en": "I don't know this neighborhood yet."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g8",
+  "level": 2,
+  "title": "Já — already, yet, right away",
+  "pattern": "já / ainda não",
+  "explanation": "Já is tiny but mighty: 'Já!' = yes, I have. 'Já experimentaste?' = have you tried yet? 'Já venho' = be right back. Negative: 'ainda não' (not yet).",
+  "examples": [
+   {
+    "jp": "Já experimentaste ginjinha? — Já!",
+    "romaji": "",
+    "en": "Have you tried ginjinha? — I have!"
+   },
+   {
+    "jp": "Ainda não fui a Belém.",
+    "romaji": "",
+    "en": "I haven't been to Belém yet."
+   },
+   {
+    "jp": "Já te envio a localização.",
+    "romaji": "",
+    "en": "I'll send you the location right away."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g9",
+  "level": 2,
+  "title": "Este, esse, aquele — this & that",
+  "pattern": "este (here) / esse (there) / aquele (over there)",
+  "explanation": "Three distances: ESTE = this (near me), ESSE = that (near you), AQUELE = that over there (far). Everyday neuter forms: isto, isso, aquilo: 'O que é isso?' (what is that?), 'Quanto é isto?' (how much is this?).",
+  "examples": [
+   {
+    "jp": "Quanto é isto?",
+    "romaji": "",
+    "en": "How much is this?"
+   },
+   {
+    "jp": "Esse restaurante é ótimo.",
+    "romaji": "",
+    "en": "That restaurant is great."
+   },
+   {
+    "jp": "Aquele prédio alto é o hotel.",
+    "romaji": "",
+    "en": "That tall building over there is the hotel."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g10",
+  "level": 2,
+  "title": "Queria & gostava — polite wishing",
+  "pattern": "queria/gostava de + noun/verb",
+  "explanation": "The imperfect softens requests beautifully: 'Queria marcar uma consulta' (I'd like to book an appointment — the phone-call essential), 'Gostava de jantar convosco' (I'd like to have dinner with you all).",
+  "examples": [
+   {
+    "jp": "Queria marcar uma consulta.",
+    "romaji": "",
+    "en": "I'd like to book an appointment."
+   },
+   {
+    "jp": "Gostava de um café, se faz favor.",
+    "romaji": "",
+    "en": "I'd like a coffee, please."
+   },
+   {
+    "jp": "Queria uma mesa para dois.",
+    "romaji": "",
+    "en": "I'd like a table for two."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g11",
+  "level": 2,
+  "title": "Imperfect — used to / was -ing",
+  "pattern": "eu ia, nós fazíamos, era",
+  "explanation": "The imperfect describes habits and backgrounds in the past: 'Trabalhava remotamente' (I used to work remotely), 'Estava a chover' (it was raining), 'Quando era criança' (when I was a kid).",
+  "examples": [
+   {
+    "jp": "Trabalhava numa empresa americana.",
+    "romaji": "",
+    "en": "I used to work at an American company."
+   },
+   {
+    "jp": "Estava muito quente ontem.",
+    "romaji": "",
+    "en": "It was very hot yesterday."
+   },
+   {
+    "jp": "Quando era criança, morava no campo.",
+    "romaji": "",
+    "en": "When I was a kid, I lived in the countryside."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l2-g12",
+  "level": 2,
+  "title": "Há — time expressions",
+  "pattern": "há + time (ago/for) / há quanto tempo?",
+  "explanation": "'Há quanto tempo?' = for how long? 'Há dez anos' = for ten years. With preterite it means ago: 'Cheguei há dois dias' (I arrived two days ago).",
+  "examples": [
+   {
+    "jp": "Trabalho nisto há mais de dez anos.",
+    "romaji": "",
+    "en": "I've worked in this for more than ten years."
+   },
+   {
+    "jp": "Há quanto tempo se sente assim?",
+    "romaji": "",
+    "en": "How long have you been feeling like this?"
+   },
+   {
+    "jp": "Ele chegou há uma hora.",
+    "romaji": "",
+    "en": "He arrived an hour ago."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g1",
+  "level": 3,
+  "title": "Casual contractions: 'tou, 'tá, 'tava",
+  "pattern": "estou→'tou, está→'tá, estava→'tava",
+  "explanation": "Spoken Portuguese clips 'estar' constantly: 'tou (I am), 'tá (is/are), 'tava (was). ''Tou cansado', ''Tá frio?', ''Tava no metro'. Write formal, speak casual — recognize and use both.",
+  "examples": [
+   {
+    "jp": "'Tou com fome, vamos comer?",
+    "romaji": "",
+    "en": "I'm hungry, shall we eat?"
+   },
+   {
+    "jp": "'Tá muito quente hoje.",
+    "romaji": "",
+    "en": "It's very hot today."
+   },
+   {
+    "jp": "Eu 'tava no metro quando começou a chover.",
+    "romaji": "",
+    "en": "I was on the metro when it started raining."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g2",
+  "level": 3,
+  "title": "Nós — the real 'we' (not 'a gente')",
+  "pattern": "nós + -amos/-emos/-imos",
+  "explanation": "In Portugal 'we' is NÓS with full plural endings: 'Nós comemos grelhados' (we ate grilled food), 'Vamos sair às nove'. (The Brazilian shortcut 'a gente' is understood but marks you as Brazilian-sounding.)",
+  "examples": [
+   {
+    "jp": "Nós vamos sair às nove.",
+    "romaji": "",
+    "en": "We're going out at nine."
+   },
+   {
+    "jp": "Conhecemo-nos no trabalho.",
+    "romaji": "",
+    "en": "We met at work."
+   },
+   {
+    "jp": "Ao fim de semana nós descansamos.",
+    "romaji": "",
+    "en": "On the weekend we rest."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g3",
+  "level": 3,
+  "title": "Subjunctive with espero que",
+  "pattern": "espero que + subjunctive",
+  "explanation": "Hopes about others use the present subjunctive: 'Espero que dê certo' (I hope it works out), 'Espero que melhores' (I hope you get better). Trigger words: espero que, tomara que, quero que.",
+  "examples": [
+   {
+    "jp": "Espero que o meu português melhore.",
+    "romaji": "",
+    "en": "I hope my Portuguese improves."
+   },
+   {
+    "jp": "Tomara que não chova amanhã!",
+    "romaji": "",
+    "en": "I hope it doesn't rain tomorrow!"
+   },
+   {
+    "jp": "Quero que conheças a minha família.",
+    "romaji": "",
+    "en": "I want you to meet my family."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g4",
+  "level": 3,
+  "title": "Diminutives — -inho/-inha",
+  "pattern": "cafezinho, pertinho, bocadinho",
+  "explanation": "Portugal shrinks everything too, but with its own flavor: 'um bocadinho' (a tiny bit — you hear it hourly), 'pertinho' (nice and close), 'rapidinho' (real quick), 'um cafezinho' (in the North).",
+  "examples": [
+   {
+    "jp": "Falo um bocadinho de português.",
+    "romaji": "",
+    "en": "I speak a tiny bit of Portuguese."
+   },
+   {
+    "jp": "A pastelaria fica aqui pertinho.",
+    "romaji": "",
+    "en": "The pastry shop is right nearby."
+   },
+   {
+    "jp": "Vou ali rapidinho.",
+    "romaji": "",
+    "en": "I'll go there real quick."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g5",
+  "level": 3,
+  "title": "Slang — fixe, pá, porreiro",
+  "pattern": "fixe, porreiro, pá, podes crer",
+  "explanation": "Core Portuguese slang: 'fixe' = cool/fine (the #1 word), 'porreiro' = cool/nice, 'pá' = man/dude ('Então pá!'), 'podes crer' = you bet, 'giro' = cute/cool, 'brutal' = awesome, 'espetáculo' = great.",
+  "examples": [
+   {
+    "jp": "Então pá, tudo fixe? — Tudo!",
+    "romaji": "",
+    "en": "Hey man, all good? — All good!"
+   },
+   {
+    "jp": "O concerto foi brutal.",
+    "romaji": "",
+    "en": "The concert was awesome."
+   },
+   {
+    "jp": "Combinado, até sábado. Podes crer!",
+    "romaji": "",
+    "en": "Agreed, see you Saturday. You bet!"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g6",
+  "level": 3,
+  "title": "Achar vs Pensar — opinions",
+  "pattern": "acho que / acho que não",
+  "explanation": "'Achar' is the everyday opinion verb: 'Acho que sim' (I think so), 'Acho que ele fica' (I think he stays). Negative: 'Acho que não'. 'Pensar' is about deliberating: ''Tou a pensar ir àquele bar'.",
+  "examples": [
+   {
+    "jp": "O que é que achaste do jogo?",
+    "romaji": "",
+    "en": "What did you think of the game?"
+   },
+   {
+    "jp": "Acho que vão despedir o selecionador.",
+    "romaji": "",
+    "en": "I think they'll fire the national coach."
+   },
+   {
+    "jp": "'Tou a pensar naquele bar com música ao vivo.",
+    "romaji": "",
+    "en": "I'm thinking about that bar with live music."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g7",
+  "level": 3,
+  "title": "Formal address for elders & family visits",
+  "pattern": "senhor/senhora + 3rd person",
+  "explanation": "Meeting Portuguese families: 'o senhor / a senhora' shows respect to the parents' generation, with 3rd-person verbs: 'A senhora quer mais café?' Also: 'está à vontade' (make yourself at home), 'faça favor de entrar' (do come in).",
+  "examples": [
+   {
+    "jp": "Boa noite, senhora. Muito prazer.",
+    "romaji": "",
+    "en": "Good evening, ma'am. Nice to meet you."
+   },
+   {
+    "jp": "O senhor aceita mais um bocado?",
+    "romaji": "",
+    "en": "Would you like another piece, sir?"
+   },
+   {
+    "jp": "Está à vontade, a casa é sua.",
+    "romaji": "",
+    "en": "Make yourself at home, the house is yours."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g8",
+  "level": 3,
+  "title": "Imperatives — casual commands (tu)",
+  "pattern": "conta! olha! descontrai! cuida-te!",
+  "explanation": "Casual tu-imperative: 'Conta!' (tell me!), 'Olha!' (look/listen!), 'Descontrai!' (relax!). Reflexives attach: 'Cuida-te!' (take care!). Negative tu commands add -s: 'Não fales!', 'Não esqueças!'.",
+  "examples": [
+   {
+    "jp": "Conta lá, o que é que aconteceu?",
+    "romaji": "",
+    "en": "Tell me, what happened?"
+   },
+   {
+    "jp": "Descontrai, tu és convidado.",
+    "romaji": "",
+    "en": "Relax, you're a guest."
+   },
+   {
+    "jp": "Cuida-te! Até para a semana.",
+    "romaji": "",
+    "en": "Take care! See you next week."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g9",
+  "level": 3,
+  "title": "Storytelling: 'tava a + infinitive",
+  "pattern": "estava a + infinitive for stories",
+  "explanation": "Set the scene of a story with the imperfect progressive: 'Eu 'tava no metro quando começou a chover a potes' (I was on the metro when it started pouring). Background = 'tava a + infinitive; interrupting event = preterite.",
+  "examples": [
+   {
+    "jp": "Eu 'tava a dormir quando ligaste.",
+    "romaji": "",
+    "en": "I was sleeping when you called."
+   },
+   {
+    "jp": "Nós estávamos a jantar quando ele chegou.",
+    "romaji": "",
+    "en": "We were having dinner when he arrived."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g10",
+  "level": 3,
+  "title": "Conditional — seria, gostaria, poderia",
+  "pattern": "-ia endings for hypotheticals",
+  "explanation": "The conditional ('would') is easy: verb + -ia: 'Seria incrível' (it would be amazing), 'Gostaria de jantar convosco' (I'd love to have dinner with you all), 'Podia enviar-me a foto?' (could you send me the photo?).",
+  "examples": [
+   {
+    "jp": "Seria incrível morar em Portugal.",
+    "romaji": "",
+    "en": "It would be amazing to live in Portugal."
+   },
+   {
+    "jp": "Gostaria de jantar connosco?",
+    "romaji": "",
+    "en": "Would you like to have dinner with us?"
+   },
+   {
+    "jp": "Podia enviar-me a foto?",
+    "romaji": "",
+    "en": "Could you send me the photo?"
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g11",
+  "level": 3,
+  "title": "Fixe, giro, brutal — saying 'cool'",
+  "pattern": "approval vocabulary",
+  "explanation": "Portuguese approval words: 'fixe' (cool — the everyday one), 'giro' (nice/cute), 'porreiro' (cool), 'brutal' (awesome), 'espetáculo' (great — 'Foi um espetáculo!'), 'ótimo' (great).",
+  "examples": [
+   {
+    "jp": "Tudo fixe por aqui!",
+    "romaji": "",
+    "en": "Everything's cool here!"
+   },
+   {
+    "jp": "A tua casa é muito gira.",
+    "romaji": "",
+    "en": "Your home is really nice."
+   },
+   {
+    "jp": "A festa foi brutal.",
+    "romaji": "",
+    "en": "The party was awesome."
+   }
+  ],
+  "tip": ""
+ },
+ {
+  "id": "l3-g12",
+  "level": 3,
+  "title": "Keeping conversation alive",
+  "pattern": "e tu? / conta lá / a sério? / pois!",
+  "explanation": "Conversation maintenance kit: 'E tu?' (and you?), 'Conta lá!' (tell me!), 'A sério?' (really?), 'Que giro!' (how cool!), 'Pois!' (yeah! — the universal Portuguese agreement), 'Exato!' (exactly!), 'Então?' (so?/and?). Use them constantly — Portugal runs on these little reactions.",
+  "examples": [
+   {
+    "jp": "Não vais acreditar! — Conta lá!",
+    "romaji": "",
+    "en": "You won't believe it! — Tell me!"
+   },
+   {
+    "jp": "A sério? Que giro, conta-me tudo.",
+    "romaji": "",
+    "en": "Really? How cool, tell me everything."
+   },
+   {
+    "jp": "— Gostei muito. — Pois, eu também.",
+    "romaji": "",
+    "en": "— I liked it a lot. — Yeah, me too."
+   }
+  ],
+  "tip": ""
+ }
+]

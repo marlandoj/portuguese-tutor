@@ -1,0 +1,4632 @@
+[
+ {
+  "lessonId": "l1-day01",
+  "level": 1,
+  "title": "Day 1 — Greetings & First Contact",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Bom dia! Tudo bem?",
+    "promptSub": "",
+    "options": [
+     "I'm fine, thanks. And you? (informal tu)",
+     "Can you repeat, please?",
+     "For three, please. (se faz favor = please, very Portuguese)",
+     "Good morning! How are you? (literally: everything well?)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Good morning!",
+    "promptSub": "",
+    "options": [
+     "Como está?",
+     "Bom dia!",
+     "Sem açúcar, obrigado.",
+     "Queria o prato do dia, se faz favor."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Muito prazer!",
+    "promptSub": "",
+    "options": [
+     "Everything's great! I'm loving Portugal.",
+     "I know a perfect place! (sítio = place)",
+     "Good evening! Do you have a free table?",
+     "Nice to meet you!"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm well, thank you (said by a woman).",
+    "promptSub": "",
+    "options": [
+     "Um, dois, três, quatro, cinco.",
+     "Estou bem, obrigada.",
+     "Duas pessoas.",
+     "Como está o tempo hoje?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "O meu nome é Kevin.",
+    "promptSub": "",
+    "options": [
+     "A still water, please.",
+     "Keep the change.",
+     "It's super sunny!",
+     "My name is Kevin."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "The pleasure is mine.",
+    "promptSub": "",
+    "options": [
+     "Estou só a ver, obrigado.",
+     "Excelente escolha. Já venho.",
+     "O prazer é meu.",
+     "Uma bica e um pastel de nata, se faz favor."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Como está?",
+    "promptSub": "",
+    "options": [
+     "How are you? (neutral/polite)",
+     "One person. Just me.",
+     "You say 'água'.",
+     "Go straight and turn right at the traffic light. (formal imperative)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm fine, thanks. And you? (informal tu)",
+    "promptSub": "",
+    "options": [
+     "Fico com ele!",
+     "Tudo bem, obrigado. E tu?",
+     "Bom dia! Para a Avenida da Liberdade, se faz favor.",
+     "Para três, se faz favor."
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day02",
+  "level": 1,
+  "title": "Day 2 — Numbers & People",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Quanto custa?",
+    "promptSub": "",
+    "options": [
+     "I'm well, thank you (said by a woman).",
+     "Do you have a bigger size?",
+     "How much does it cost?",
+     "Does the room have Wi-Fi?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It costs twenty euros.",
+    "promptSub": "",
+    "options": [
+     "O quarto tem Wi-Fi?",
+     "Custa vinte euros.",
+     "Duas pessoas.",
+     "O que é que vais fazer amanhã?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Uma pessoa. Só eu.",
+    "promptSub": "",
+    "options": [
+     "One person. Just me.",
+     "To the airport, please.",
+     "The bill, please.",
+     "How long does it take from here to there? (demorar = to take time)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Six, seven, eight, nine, ten.",
+    "promptSub": "",
+    "options": [
+     "Duas pessoas.",
+     "Seis, sete, oito, nove, dez.",
+     "Temos promoção! Bananas a dois euros o quilo!",
+     "A que horas vais sair?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Um, dois, três, quatro, cinco.",
+    "promptSub": "",
+    "options": [
+     "At carousel number three, to the right. (tapete = carousel belt)",
+     "One, two, three, four, five.",
+     "Without sugar, thanks.",
+     "How are you? (neutral/polite)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "For three, please. (se faz favor = please, very Portuguese)",
+    "promptSub": "",
+    "options": [
+     "Esse custa cinquenta euros.",
+     "Para três, se faz favor.",
+     "Como é que eu chego lá?",
+     "Uma água sem gás, se faz favor."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Quantas pessoas?",
+    "promptSub": "",
+    "options": [
+     "How many people?",
+     "Twenty minutes, more or less.",
+     "I'm going to leave at eight in the morning.",
+     "How much does it cost?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Two people.",
+    "promptSub": "",
+    "options": [
+     "Posso pagar com cartão?",
+     "Duas pessoas.",
+     "Seis, sete, oito, nove, dez.",
+     "És daqui?"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day03",
+  "level": 1,
+  "title": "Day 3 — Restaurant: Getting a Table",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Boa noite! Bem-vindo!",
+    "promptSub": "",
+    "options": [
+     "Good evening! Welcome!",
+     "How is the weather today?",
+     "Twenty minutes, more or less.",
+     "That's right. Can I check in now?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Good evening! Do you have a free table?",
+    "promptSub": "",
+    "options": [
+     "Desculpe, estamos cheios neste momento.",
+     "Boa noite! Tem mesa livre?",
+     "Estou bem, obrigada.",
+     "Um sumo de laranja natural, se faz favor."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Para duas pessoas.",
+    "promptSub": "",
+    "options": [
+     "For three, please. (se faz favor = please, very Portuguese)",
+     "For two people.",
+     "You say 'água'.",
+     "Do you speak English?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "About ten minutes.",
+    "promptSub": "",
+    "options": [
+     "Isso mesmo. Posso fazer o check-in agora?",
+     "Posso ajudar?",
+     "Conheço um sítio perfeito!",
+     "Uns dez minutos."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Quanto tempo de espera?",
+    "promptSub": "",
+    "options": [
+     "Everything's great!",
+     "One, two, three, four, five.",
+     "Good evening! Table for how many?",
+     "How long is the wait?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "This way, please.",
+    "promptSub": "",
+    "options": [
+     "Como está?",
+     "O seu quarto é o quinhentos e dois, no quinto andar.",
+     "Desculpe, estamos cheios neste momento.",
+     "Por aqui, se faz favor."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Desculpe, estamos cheios neste momento.",
+    "promptSub": "",
+    "options": [
+     "Sorry, we're full right now.",
+     "Twenty minutes, more or less.",
+     "A fresh orange juice, please. (sumo = juice)",
+     "Thanks! I'm practicing every day."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yes, we do. For how many people?",
+    "promptSub": "",
+    "options": [
+     "Dê-me um quilo de bananas, se faz favor.",
+     "Pode repetir, se faz favor?",
+     "Ali no bar amarelo.",
+     "Temos sim. Para quantas pessoas?"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day04",
+  "level": 1,
+  "title": "Day 4 — Restaurant: Ordering Food",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Posso pagar com cartão?",
+    "promptSub": "",
+    "options": [
+     "Twenty minutes, more or less.",
+     "Great. What time is breakfast? (pequeno-almoço = breakfast)",
+     "Can I pay by card?",
+     "The bacalhau à Brás is the house specialty."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "A still water, please.",
+    "promptSub": "",
+    "options": [
+     "Um café, se faz favor.",
+     "Uma água sem gás, se faz favor.",
+     "Aqui está a ementa.",
+     "Boa noite! Bem-vindo!"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Como deseja pagar?",
+    "promptSub": "",
+    "options": [
+     "No, that's all. Thank you.",
+     "Where is the fitting room?",
+     "How would you like to pay?",
+     "Your room is five-oh-two, on the fifth floor."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Anything to drink?",
+    "promptSub": "",
+    "options": [
+     "Turismo. Vou ficar duas semanas.",
+     "Tem um tamanho maior?",
+     "Muito obrigado pela ajuda!",
+     "Para beber?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Não, só isso. Obrigado.",
+    "promptSub": "",
+    "options": [
+     "To the airport, please.",
+     "Can I pay by card?",
+     "No, that's all. Thank you.",
+     "Can you speak more slowly?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "For me, the bitoque (steak with egg and fries).",
+    "promptSub": "",
+    "options": [
+     "Uns dez minutos.",
+     "Para mim, o bitoque.",
+     "Temos promoção! Bananas a dois euros o quilo!",
+     "Muito prazer, Kevin. Eu sou a Ana."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Mais alguma coisa?",
+    "promptSub": "",
+    "options": [
+     "Give me a kilo of bananas, please. (dê-me = give me, formal imperative)",
+     "Anything else?",
+     "With or without ice?",
+     "No, that's all. Thank you."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'd like the dish of the day, please. (queria = polite I'd like)",
+    "promptSub": "",
+    "options": [
+     "Quero comer um bacalhau à Brás de verdade.",
+     "Não, só isso. Obrigado.",
+     "Queria o prato do dia, se faz favor.",
+     "Um, dois, três, quatro, cinco."
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day05",
+  "level": 1,
+  "title": "Day 5 — Café & Pastelaria",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Sem açúcar, obrigado.",
+    "promptSub": "",
+    "options": [
+     "We've arrived. Eighteen euros.",
+     "With or without ice?",
+     "I'm just looking, thanks. (estar a + infinitive = European progressive)",
+     "Without sugar, thanks."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "A bica (Lisbon espresso) and a custard tart, please.",
+    "promptSub": "",
+    "options": [
+     "Para dois, se faz favor.",
+     "O que significa esta palavra?",
+     "Uma bica e um pastel de nata, se faz favor.",
+     "Está sim, senhor. Docinho!"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Quer o pastel quente, com canela?",
+    "promptSub": "",
+    "options": [
+     "A bica (Lisbon espresso) and a custard tart, please.",
+     "Do you want the tart warm, with cinnamon?",
+     "To the airport, please.",
+     "An espresso, please."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yes, please! I love pastel de nata.",
+    "promptSub": "",
+    "options": [
+     "Dê-me um quilo de bananas, se faz favor.",
+     "Duas pessoas.",
+     "Quero sim! Adoro pastel de nata.",
+     "Tudo bem, obrigado. E tu?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Bom dia! Diga-me.",
+    "promptSub": "",
+    "options": [
+     "Are you from here? (informal tu)",
+     "Can I pay with MB Way? (the Portuguese payment app)",
+     "Do you speak English?",
+     "Good morning! Tell me. (typical café greeting)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "An espresso, please.",
+    "promptSub": "",
+    "options": [
+     "Boa noite. Tenho uma reserva em nome de Jackson.",
+     "Com licença, táxi!",
+     "Para o senhor, faço!",
+     "Um café, se faz favor."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "É para cá ou para levar?",
+    "promptSub": "",
+    "options": [
+     "Thank you! Have a good trip!",
+     "What are you going to do tomorrow? (informal tu)",
+     "At the Avenida Palace hotel, in Lisbon.",
+     "Is it for here or to go?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "To go, please.",
+    "promptSub": "",
+    "options": [
+     "Para levar, se faz favor.",
+     "Obrigado! Estou a praticar todos os dias.",
+     "Custa vinte euros.",
+     "Para beber?"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day06",
+  "level": 1,
+  "title": "Day 6 — Hotel Check-in",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Das sete às dez e meia da manhã.",
+    "promptSub": "",
+    "options": [
+     "For two people.",
+     "From seven to ten thirty in the morning.",
+     "All good. Welcome to Portugal!",
+     "To the airport, please."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "On the third floor. The elevator is over there.",
+    "promptSub": "",
+    "options": [
+     "No terceiro andar. O elevador é ali.",
+     "Claro, sem problema.",
+     "Para dois, se faz favor.",
+     "És daqui?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Boa tarde! Posso ajudar?",
+    "promptSub": "",
+    "options": [
+     "Good afternoon! Can I help you?",
+     "Is everything good with you? (contigo = with you, informal)",
+     "Really? From which city?",
+     "I'm going to leave at eight in the morning."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Does the room have Wi-Fi?",
+    "promptSub": "",
+    "options": [
+     "Como está?",
+     "Uns trinta minutos, dependendo do trânsito.",
+     "O quarto tem Wi-Fi?",
+     "Que giro! Queres companhia?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Tem sim. A palavra-passe está no cartão.",
+    "promptSub": "",
+    "options": [
+     "Yes, it does. The password is on the card. (palavra-passe = password)",
+     "About thirty minutes, depending on traffic.",
+     "To the airport, please.",
+     "Good afternoon. Where to?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I have a reservation. My name is Kevin Jackson.",
+    "promptSub": "",
+    "options": [
+     "Está sim, senhor. Docinho!",
+     "Tenho uma reserva. O meu nome é Kevin Jackson.",
+     "Obrigado! Boa reunião!",
+     "Está imenso sol!"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Deixe-me ver... Sim, encontrei. Quarto para duas noites.",
+    "promptSub": "",
+    "options": [
+     "I'm going by metro. It's faster.",
+     "Yes, we do. Do you want to try it on?",
+     "Let me see... Yes, I found it. Room for two nights.",
+     "Can I pay by card?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thank you. What floor is the room on?",
+    "promptSub": "",
+    "options": [
+     "Bom dia! Tudo bem?",
+     "Obrigado. Em que andar fica o quarto?",
+     "É longe daqui?",
+     "Deixe-me ver... Sim, encontrei. Quarto para duas noites."
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day07",
+  "level": 1,
+  "title": "Day 7 — Taxi & TVDE",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Uns trinta minutos, dependendo do trânsito.",
+    "promptSub": "",
+    "options": [
+     "Everything's great!",
+     "About thirty minutes, depending on traffic.",
+     "To go, please.",
+     "On the third floor. The elevator is over there."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "To the airport, please.",
+    "promptSub": "",
+    "options": [
+     "Conheço um sítio perfeito!",
+     "Onde é que vai ficar hospedado?",
+     "Tudo bem contigo?",
+     "Para o aeroporto, se faz favor."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Pode ficar com o troco.",
+    "promptSub": "",
+    "options": [
+     "Keep the change.",
+     "Six, seven, eight, nine, ten.",
+     "Yes, we do. Do you want to try it on?",
+     "Sure. Do you want to go via the Segunda Circular? It's faster. (Lisbon expressway)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "How long does it take from here to there? (demorar = to take time)",
+    "promptSub": "",
+    "options": [
+     "Quanto tempo demora daqui até lá?",
+     "Isso mesmo. Posso fazer o check-in agora?",
+     "Onde queres almoçar hoje?",
+     "Sem açúcar, obrigado."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Chegámos. São vinte e cinco euros.",
+    "promptSub": "",
+    "options": [
+     "Really? From which city?",
+     "From seven to ten thirty in the morning.",
+     "To the airport, please.",
+     "We've arrived. That's twenty-five euros."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thank you! Have a good trip!",
+    "promptSub": "",
+    "options": [
+     "Obrigado! Boa viagem!",
+     "Boa ideia! Estás a falar cada vez melhor.",
+     "Tudo bem contigo?",
+     "Falas português muito bem!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Com licença, táxi!",
+    "promptSub": "",
+    "options": [
+     "Sorry, I didn't understand. (perceber = to understand)",
+     "How do I get there?",
+     "Excuse me, taxi!",
+     "Your room is five-oh-two, on the fifth floor."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Okay. I'm in a hurry. (Portugal: ter pressa, not estar com pressa)",
+    "promptSub": "",
+    "options": [
+     "Estava delicioso! A conta, se faz favor.",
+     "Boa noite. Tenho uma reserva em nome de Jackson.",
+     "Tudo ótimo!",
+     "Está bem. Tenho pressa."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day08",
+  "level": 1,
+  "title": "Day 8 — Directions",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Siga em frente e vire à direita no semáforo.",
+    "promptSub": "",
+    "options": [
+     "Go straight and turn right at the traffic light. (formal imperative)",
+     "To the airport, please.",
+     "Can you speak more slowly?",
+     "Good morning! How are you? (literally: everything well?)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thank you very much for the help!",
+    "promptSub": "",
+    "options": [
+     "Obrigado! Ainda estou a aprender.",
+     "Há uma casa de banho por aqui?",
+     "Muito obrigado pela ajuda!",
+     "Temos sim. Para quantas pessoas?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "É longe daqui?",
+    "promptSub": "",
+    "options": [
+     "Is it far from here?",
+     "One moment... Found it. Three nights, breakfast included.",
+     "I want to eat a proper bacalhau à Brás (codfish dish).",
+     "Yes, it does. The password is on the card. (palavra-passe = password)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yes, there on the corner.",
+    "promptSub": "",
+    "options": [
+     "Pode falar mais devagar?",
+     "Temos promoção! Bananas a dois euros o quilo!",
+     "Para mim, o bitoque.",
+     "Há, ali na esquina."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Como é que eu chego lá?",
+    "promptSub": "",
+    "options": [
+     "Thank you! Where do I pick up my luggage? (levantar = to pick up)",
+     "How do I get there?",
+     "For you, sir, I'll do it!",
+     "About ten minutes."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Is there a bathroom around here? (casa de banho = bathroom)",
+    "promptSub": "",
+    "options": [
+     "Um sumo de laranja natural, se faz favor.",
+     "Quero sim! Adoro pastel de nata.",
+     "Quero comer um bacalhau à Brás de verdade.",
+     "Há uma casa de banho por aqui?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Não, é mesmo perto. Dois minutos a pé.",
+    "promptSub": "",
+    "options": [
+     "Thank you very much for the help!",
+     "No, it's really close. Two minutes on foot.",
+     "I'm from Mesa, in Arizona. And you?",
+     "It's too expensive. Can you do a discount?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It's five minutes from here, straight ahead.",
+    "promptSub": "",
+    "options": [
+     "Fica a cinco minutos daqui, sempre em frente.",
+     "O que é que vais fazer amanhã?",
+     "O que deseja?",
+     "O bacalhau à Brás é o prato da casa."
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day09",
+  "level": 1,
+  "title": "Day 9 — Shopping & Prices",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Estou só a ver, obrigado.",
+    "promptSub": "",
+    "options": [
+     "No, it's the second time. I love Portugal.",
+     "I'm just looking, thanks. (estar a + infinitive = European progressive)",
+     "How long does it take from here to there? (demorar = to take time)",
+     "No, I'm from the United States."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Where is the fitting room?",
+    "promptSub": "",
+    "options": [
+     "Com ou sem gelo?",
+     "Não, só isso. Obrigado.",
+     "É a primeira vez em Portugal?",
+     "Onde fica o provador?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Está muito caro. Faz algum desconto?",
+    "promptSub": "",
+    "options": [
+     "I want to eat a proper bacalhau à Brás (codfish dish).",
+     "How much is this?",
+     "It's too expensive. Can you do a discount?",
+     "That's right. Can I check in now?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Do you have a bigger size?",
+    "promptSub": "",
+    "options": [
+     "Tem um tamanho maior?",
+     "Que giro! Queres companhia?",
+     "Desculpe, estamos cheios neste momento.",
+     "É para cá ou para levar?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Esse custa cinquenta euros.",
+    "promptSub": "",
+    "options": [
+     "Can I pay with MB Way? (the Portuguese payment app)",
+     "I'm well, thank you (said by a woman).",
+     "Where will you be staying?",
+     "That one costs fifty euros."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'll take it! (literally: I stay with it — the classic way to buy)",
+    "promptSub": "",
+    "options": [
+     "Fico com ele!",
+     "Boa noite! Bem-vindo!",
+     "Boa tarde. Para onde?",
+     "Onde é que vai ficar hospedado?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Quanto é isto?",
+    "promptSub": "",
+    "options": [
+     "Good evening. I have a reservation under Jackson.",
+     "How much is this?",
+     "Thanks! See you next time!",
+     "With sugar?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Cash payment has ten percent off. (a pronto = cash)",
+    "promptSub": "",
+    "options": [
+     "Vinte minutos, mais ou menos.",
+     "Uma pessoa. Só eu.",
+     "A pronto pagamento tem dez por cento de desconto.",
+     "Com licença, táxi!"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day10",
+  "level": 1,
+  "title": "Day 10 — At the Market (Mercado)",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Obrigado! Até à próxima!",
+    "promptSub": "",
+    "options": [
+     "How long does it take from here to there? (demorar = to take time)",
+     "Thanks! See you next time!",
+     "For me, the bitoque (steak with egg and fries).",
+     "On the third floor. The elevator is over there."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "For you, sir, I'll do it!",
+    "promptSub": "",
+    "options": [
+     "Bom dia! Diga-me.",
+     "Para o senhor, faço!",
+     "Para mim, o bitoque.",
+     "Com ou sem gelo?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "A quanto está o quilo do tomate?",
+    "promptSub": "",
+    "options": [
+     "At noon. Rest well!",
+     "About thirty minutes, depending on traffic.",
+     "How much is a kilo of tomatoes?",
+     "Can I help you?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yes sir. Nice and sweet!",
+    "promptSub": "",
+    "options": [
+     "Uns dez minutos.",
+     "Temos promoção! Bananas a dois euros o quilo!",
+     "Está sim, senhor. Docinho!",
+     "Desculpe, estamos cheios neste momento."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Temos promoção! Bananas a dois euros o quilo!",
+    "promptSub": "",
+    "options": [
+     "How would you like to pay?",
+     "We've got a deal! Bananas two euros a kilo!",
+     "One person. Just me.",
+     "Thank you. What floor is the room on?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Can you do it for five for me?",
+    "promptSub": "",
+    "options": [
+     "Faz-me por cinco?",
+     "Para duas pessoas.",
+     "Boa noite! Tem mesa livre?",
+     "Aqui está."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Este ananás está maduro?",
+    "promptSub": "",
+    "options": [
+     "Can you do it for five for me?",
+     "Good afternoon. Where to?",
+     "Is this pineapple ripe? (ananás = pineapple in Portugal)",
+     "Does the room have Wi-Fi?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Six euros a kilo.",
+    "promptSub": "",
+    "options": [
+     "A seis euros o quilo.",
+     "Seis, sete, oito, nove, dez.",
+     "Duas pessoas.",
+     "Quero sim! Adoro pastel de nata."
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day11",
+  "level": 1,
+  "title": "Day 11 — Beach & Weather",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Com bastante gelo!",
+    "promptSub": "",
+    "options": [
+     "With plenty of ice!",
+     "Give me a kilo of bananas, please. (dê-me = give me, formal imperative)",
+     "Yes sir. Nice and sweet!",
+     "Thank you very much for the help!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "With or without ice?",
+    "promptSub": "",
+    "options": [
+     "Com ou sem gelo?",
+     "Boa noite! Tem mesa livre?",
+     "Desculpe, não percebi.",
+     "Posso pagar com cartão?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "A água está fria?",
+    "promptSub": "",
+    "options": [
+     "Is the water cold?",
+     "How cool! Do you want company?",
+     "Two people.",
+     "Thank you! I'm still learning."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "There at the yellow beach bar.",
+    "promptSub": "",
+    "options": [
+     "Onde é que vai ficar hospedado?",
+     "Desculpe, não percebi.",
+     "Ali no bar amarelo.",
+     "Bom dia! Diga-me."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Está imenso sol!",
+    "promptSub": "",
+    "options": [
+     "What is the reason for your trip?",
+     "Do you want the tart warm, with cinnamon?",
+     "It's super sunny!",
+     "Good morning!"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "A fresh orange juice, please. (sumo = juice)",
+    "promptSub": "",
+    "options": [
+     "Boa noite! Tem mesa livre?",
+     "Onde é que vai ficar hospedado?",
+     "Um sumo de laranja natural, se faz favor.",
+     "Por aqui, se faz favor."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Onde posso alugar uma espreguiçadeira?",
+    "promptSub": "",
+    "options": [
+     "What do you recommend?",
+     "Give me a kilo of bananas, please. (dê-me = give me, formal imperative)",
+     "Where can I rent a sun lounger? (espreguiçadeira = sun lounger)",
+     "I'm going by metro. It's faster."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "No, it's wonderful!",
+    "promptSub": "",
+    "options": [
+     "Perfeito, tenho pressa para uma reunião.",
+     "Não, está uma maravilha!",
+     "A seis euros o quilo.",
+     "Uns trinta minutos, dependendo do trânsito."
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day12",
+  "level": 1,
+  "title": "Day 12 — Making Plans",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Vou visitar a Torre de Belém.",
+    "promptSub": "",
+    "options": [
+     "Thank you very much for the help!",
+     "No, I'm from the United States.",
+     "There at the yellow beach bar.",
+     "I'm going to visit the Belém Tower."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "On the weekend I'm going to the beach.",
+    "promptSub": "",
+    "options": [
+     "Diz-se 'água'.",
+     "No fim de semana vou para a praia.",
+     "Obrigado! Boa reunião!",
+     "Aqui está. Pode ficar com o troco."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Claro! Vamos juntos.",
+    "promptSub": "",
+    "options": [
+     "How is the weather today?",
+     "Of course! Let's go together.",
+     "No, I'm from the United States.",
+     "Thank you! Have a good meeting!"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm going to leave at eight in the morning.",
+    "promptSub": "",
+    "options": [
+     "Um, dois, três, quatro, cinco.",
+     "Onde posso alugar uma espreguiçadeira?",
+     "Uns dez minutos.",
+     "Vou sair às oito da manhã."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "A que horas vais sair?",
+    "promptSub": "",
+    "options": [
+     "Do you speak English?",
+     "What time are you going to leave?",
+     "Is this pineapple ripe? (ananás = pineapple in Portugal)",
+     "Cash payment has ten percent off. (a pronto = cash)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What are you going to do tomorrow? (informal tu)",
+    "promptSub": "",
+    "options": [
+     "O que é que vais fazer amanhã?",
+     "Bom dia! Diga-me.",
+     "Está bem, nós esperamos.",
+     "São trinta e oito euros."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Que giro! Queres companhia?",
+    "promptSub": "",
+    "options": [
+     "Keep the change.",
+     "Are you from here? (informal tu)",
+     "How cool! Do you want company?",
+     "You say 'água'."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Are you going by car or by bus? (autocarro = bus)",
+    "promptSub": "",
+    "options": [
+     "Claro. Quer ir pela Segunda Circular? É mais rápido.",
+     "Está tudo certo. Bem-vindo a Portugal!",
+     "Deixe-me ver... Sim, encontrei. Quarto para duas noites.",
+     "Vais de carro ou de autocarro?"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day13",
+  "level": 1,
+  "title": "Day 13 — Small Talk: Where Are You From",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Eu sou de Lisboa.",
+    "promptSub": "",
+    "options": [
+     "I'm from Lisbon.",
+     "It was delicious! The bill, please.",
+     "I'm well, thank you (said by a woman).",
+     "Two people."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Really? From which city?",
+    "promptSub": "",
+    "options": [
+     "A sério? De que cidade?",
+     "Muito prazer!",
+     "Obrigado! Boa viagem!",
+     "Falas português muito bem!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "És daqui?",
+    "promptSub": "",
+    "options": [
+     "Good idea! You're speaking better and better.",
+     "We've arrived. Eighteen euros.",
+     "Are you from here? (informal tu)",
+     "No, it's really close. Two minutes on foot."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "No, it's the second time. I love Portugal.",
+    "promptSub": "",
+    "options": [
+     "São trinta e oito euros.",
+     "Qual é o motivo da sua viagem?",
+     "Como é que eu chego lá?",
+     "Não, é a segunda vez. Adoro Portugal."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "É a primeira vez em Portugal?",
+    "promptSub": "",
+    "options": [
+     "Is it your first time in Portugal?",
+     "Nice to meet you!",
+     "There at the yellow beach bar.",
+     "Good morning! To Avenida da Liberdade, please."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm from Mesa, in Arizona. And you?",
+    "promptSub": "",
+    "options": [
+     "Uns trinta minutos, dependendo do trânsito.",
+     "Pode repetir, se faz favor?",
+     "Sou de Mesa, no Arizona. E tu?",
+     "O prazer é meu."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Não, sou dos Estados Unidos.",
+    "promptSub": "",
+    "options": [
+     "No, I'm from the United States.",
+     "Good evening! Do you have a free table?",
+     "It's too expensive. Can you do a discount?",
+     "Can I pay by card?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thank you! I'm still learning.",
+    "promptSub": "",
+    "options": [
+     "O seu quarto é o quinhentos e dois, no quinto andar.",
+     "No tapete número três, à direita.",
+     "Obrigado! Ainda estou a aprender.",
+     "Não, sou dos Estados Unidos."
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day14",
+  "level": 1,
+  "title": "Day 14 — Communication Help",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Pode repetir, se faz favor?",
+    "promptSub": "",
+    "options": [
+     "Anything else?",
+     "Can you repeat, please?",
+     "At carousel number three, to the right. (tapete = carousel belt)",
+     "One, two, three, four, five."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "How do you say 'water' in Portuguese?",
+    "promptSub": "",
+    "options": [
+     "Custa vinte euros.",
+     "A que horas vais sair?",
+     "Fala inglês?",
+     "Como se diz 'water' em português?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "O que significa esta palavra?",
+    "promptSub": "",
+    "options": [
+     "On the weekend I'm going to the beach.",
+     "Yes, we do. Do you want to try it on?",
+     "What does this word mean?",
+     "Excuse me. Where is the metro station?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Of course, no problem.",
+    "promptSub": "",
+    "options": [
+     "Está bem, nós esperamos.",
+     "A que horas vais sair?",
+     "Claro, sem problema.",
+     "Para duas pessoas."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Falo um bocadinho.",
+    "promptSub": "",
+    "options": [
+     "It costs twenty euros.",
+     "That's thirty-eight euros.",
+     "I speak a tiny bit. (bocadinho = little bit)",
+     "Is there a bathroom around here? (casa de banho = bathroom)"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Sorry, I didn't understand. (perceber = to understand)",
+    "promptSub": "",
+    "options": [
+     "Quanto custa?",
+     "Posso pagar com cartão?",
+     "Há, ali na esquina.",
+     "Desculpe, não percebi."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Diz-se 'água'.",
+    "promptSub": "",
+    "options": [
+     "You say 'água'.",
+     "I'm well, thank you (said by a woman).",
+     "For you, sir, I'll do it!",
+     "Of course! Let's go together."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It means 'thank you' in English.",
+    "promptSub": "",
+    "options": [
+     "Uns trinta minutos, dependendo do trânsito.",
+     "Não, sou dos Estados Unidos.",
+     "Conheço um sítio perfeito!",
+     "Significa 'thank you' em inglês."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-day15",
+  "level": 1,
+  "title": "Day 15 — Review & Mixed Practice",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Conheço um sítio perfeito!",
+    "promptSub": "",
+    "options": [
+     "Go straight and turn right at the traffic light. (formal imperative)",
+     "Can you do it for five for me?",
+     "I know a perfect place! (sítio = place)",
+     "Good evening. I have a reservation under Jackson."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Where do you want to have lunch today?",
+    "promptSub": "",
+    "options": [
+     "Com licença, táxi!",
+     "Vais de carro ou de autocarro?",
+     "Onde queres almoçar hoje?",
+     "Onde fica o provador?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Boa ideia! Estás a falar cada vez melhor.",
+    "promptSub": "",
+    "options": [
+     "An espresso, please.",
+     "I'm going by metro. It's faster.",
+     "Good idea! You're speaking better and better.",
+     "At the Avenida Palace hotel, in Lisbon."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I want to eat a proper bacalhau à Brás (codfish dish).",
+    "promptSub": "",
+    "options": [
+     "Boa noite! Mesa para quantos?",
+     "Fico com ele!",
+     "Obrigado! Onde levanto a minha bagagem?",
+     "Quero comer um bacalhau à Brás de verdade."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Tudo bem contigo?",
+    "promptSub": "",
+    "options": [
+     "Is everything good with you? (contigo = with you, informal)",
+     "What time is checkout?",
+     "Here it is.",
+     "Can I help you?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thanks! I'm practicing every day.",
+    "promptSub": "",
+    "options": [
+     "Não, é mesmo perto. Dois minutos a pé.",
+     "Obrigado! Estou a praticar todos os dias.",
+     "Para dois, se faz favor.",
+     "Onde posso alugar uma espreguiçadeira?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Tudo ótimo! Estou a adorar Portugal.",
+    "promptSub": "",
+    "options": [
+     "Is it far from here?",
+     "Yes, we do. For how many people?",
+     "I'll take it! (literally: I stay with it — the classic way to buy)",
+     "Everything's great! I'm loving Portugal."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Afterwards shall we have a coffee?",
+    "promptSub": "",
+    "options": [
+     "Com bastante gelo!",
+     "O prazer é meu.",
+     "O bacalhau à Brás é o prato da casa.",
+     "Depois vamos tomar um café?"
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-airport",
+  "level": 1,
+  "title": "Scenario: Airport Arrival",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "No hotel Avenida Palace, em Lisboa.",
+    "promptSub": "",
+    "options": [
+     "Without sugar, thanks.",
+     "Of course, no problem.",
+     "At the Avenida Palace hotel, in Lisbon.",
+     "What time is checkout?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Here it is.",
+    "promptSub": "",
+    "options": [
+     "Onde queres almoçar hoje?",
+     "Um café, se faz favor.",
+     "Perfeito. Um bacalhau à Brás e dois sumos de maracujá.",
+     "Aqui está."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Passaporte, se faz favor.",
+    "promptSub": "",
+    "options": [
+     "Passport, please.",
+     "This way, please.",
+     "Really? From which city?",
+     "It's super sunny!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What is the reason for your trip?",
+    "promptSub": "",
+    "options": [
+     "Das sete às dez e meia da manhã.",
+     "Para levar, se faz favor.",
+     "Qual é o motivo da sua viagem?",
+     "Quanto tempo demora?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "No tapete número três, à direita.",
+    "promptSub": "",
+    "options": [
+     "No, that's all. Thank you.",
+     "It's too expensive. Can you do a discount?",
+     "Here it is.",
+     "At carousel number three, to the right. (tapete = carousel belt)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Where will you be staying?",
+    "promptSub": "",
+    "options": [
+     "Uma bica e um pastel de nata, se faz favor.",
+     "Aqui está a ementa.",
+     "Diz-se 'água'.",
+     "Onde é que vai ficar hospedado?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Obrigado! Onde levanto a minha bagagem?",
+    "promptSub": "",
+    "options": [
+     "Two people.",
+     "Passport, please.",
+     "Here is the menu. (ementa = menu)",
+     "Thank you! Where do I pick up my luggage? (levantar = to pick up)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Tourism. I'm going to stay two weeks.",
+    "promptSub": "",
+    "options": [
+     "Tudo ótimo! Estou a adorar Portugal.",
+     "O que é que vais fazer amanhã?",
+     "O que recomenda?",
+     "Turismo. Vou ficar duas semanas."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-restaurant",
+  "level": 1,
+  "title": "Scenario: Full Restaurant Dialogue",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Boa noite! Mesa para quantos?",
+    "promptSub": "",
+    "options": [
+     "It's five minutes from here, straight ahead.",
+     "I'd like the dish of the day, please. (queria = polite I'd like)",
+     "Good evening! Table for how many?",
+     "What time is checkout?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yes you can! The number is here.",
+    "promptSub": "",
+    "options": [
+     "Bom dia! Diga-me.",
+     "Está bem. Tenho pressa.",
+     "Quanto é isto?",
+     "Pode sim! O número está aqui."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Excelente escolha. Já venho.",
+    "promptSub": "",
+    "options": [
+     "Excellent choice. Be right back.",
+     "You speak Portuguese very well!",
+     "How do you say 'water' in Portuguese?",
+     "Is the water cold?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "The bacalhau à Brás is the house specialty.",
+    "promptSub": "",
+    "options": [
+     "Chegámos. São vinte e cinco euros.",
+     "Ali no bar amarelo.",
+     "Muito prazer!",
+     "O bacalhau à Brás é o prato da casa."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Perfeito. Um bacalhau à Brás e dois sumos de maracujá.",
+    "promptSub": "",
+    "options": [
+     "Can you do it for five for me?",
+     "I have a reservation. My name is Kevin Jackson.",
+     "Perfect. One bacalhau à Brás and two passion fruit juices.",
+     "Good afternoon. Where to?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It was delicious! The bill, please.",
+    "promptSub": "",
+    "options": [
+     "Estava delicioso! A conta, se faz favor.",
+     "Está tudo certo. Bem-vindo a Portugal!",
+     "Quanto é isto?",
+     "Ótimo. A que horas é o pequeno-almoço?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Para dois, se faz favor.",
+    "promptSub": "",
+    "options": [
+     "No, that's all. Thank you.",
+     "How much does it cost?",
+     "Table for how many?",
+     "For two, please."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Here is the menu. (ementa = menu)",
+    "promptSub": "",
+    "options": [
+     "Quanto é isto?",
+     "Ótimo. A que horas é o pequeno-almoço?",
+     "Aqui está a ementa.",
+     "Para duas pessoas."
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-hotel",
+  "level": 1,
+  "title": "Scenario: Full Hotel Dialogue",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Isso mesmo. Posso fazer o check-in agora?",
+    "promptSub": "",
+    "options": [
+     "Everything's great!",
+     "That's right. Can I check in now?",
+     "Yes, we do. For how many people?",
+     "Give me a kilo of bananas, please. (dê-me = give me, formal imperative)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "One moment... Found it. Three nights, breakfast included.",
+    "promptSub": "",
+    "options": [
+     "Um momento... Encontrei. Três noites, com pequeno-almoço inc",
+     "Como está o tempo hoje?",
+     "O bacalhau à Brás é o prato da casa.",
+     "Pode repetir, se faz favor?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "O seu quarto é o quinhentos e dois, no quinto andar.",
+    "promptSub": "",
+    "options": [
+     "Your room is five-oh-two, on the fifth floor.",
+     "Afterwards shall we have a coffee?",
+     "Do you want the tart warm, with cinnamon?",
+     "Give me a kilo of bananas, please. (dê-me = give me, formal imperative)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Here is my passport.",
+    "promptSub": "",
+    "options": [
+     "Onde fica o provador?",
+     "É para cá ou para levar?",
+     "Chegámos. Dezoito euros.",
+     "Aqui está o meu passaporte."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Ao meio-dia. Bom descanso!",
+    "promptSub": "",
+    "options": [
+     "Okay, we'll wait.",
+     "At noon. Rest well!",
+     "One moment... Found it. Three nights, breakfast included.",
+     "Sorry, I didn't understand. (perceber = to understand)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What time is checkout?",
+    "promptSub": "",
+    "options": [
+     "O checkout é a que horas?",
+     "Obrigado! Ainda estou a aprender.",
+     "Bom dia! Para a Avenida da Liberdade, se faz favor.",
+     "Onde queres almoçar hoje?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Boa noite. Tenho uma reserva em nome de Jackson.",
+    "promptSub": "",
+    "options": [
+     "Thanks! I'm practicing every day.",
+     "Good evening. I have a reservation under Jackson.",
+     "Here is my passport.",
+     "Six, seven, eight, nine, ten."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Of course. I need an ID document.",
+    "promptSub": "",
+    "options": [
+     "Muito prazer, Kevin. Eu sou a Ana.",
+     "Vinte minutos, mais ou menos.",
+     "No fim de semana vou para a praia.",
+     "Claro. Preciso de um documento de identificação."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l1-taxi",
+  "level": 1,
+  "title": "Scenario: Full Taxi Dialogue",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Chegámos. Dezoito euros.",
+    "promptSub": "",
+    "options": [
+     "Of course. I need an ID document.",
+     "We've arrived. Eighteen euros.",
+     "The bill, please.",
+     "That's right. Can I check in now?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Sure. Do you want to go via the Segunda Circular? It's faster. (Lisbon expressway)",
+    "promptSub": "",
+    "options": [
+     "Com açúcar?",
+     "Esse custa cinquenta euros.",
+     "O que recomenda?",
+     "Claro. Quer ir pela Segunda Circular? É mais rápido."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Perfeito, tenho pressa para uma reunião.",
+    "promptSub": "",
+    "options": [
+     "What is the reason for your trip?",
+     "Good morning! How are you? (literally: everything well?)",
+     "Perfect, I'm in a hurry for a meeting.",
+     "Of course. I need an ID document."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Twenty minutes, more or less.",
+    "promptSub": "",
+    "options": [
+     "Vinte minutos, mais ou menos.",
+     "No tapete número três, à direita.",
+     "Falo um bocadinho.",
+     "Obrigado. Em que andar fica o quarto?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Bom dia! Para a Avenida da Liberdade, se faz favor.",
+    "promptSub": "",
+    "options": [
+     "Are you from here? (informal tu)",
+     "Twenty minutes, more or less.",
+     "For you, sir, I'll do it!",
+     "Good morning! To Avenida da Liberdade, please."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thank you! Have a good meeting!",
+    "promptSub": "",
+    "options": [
+     "Muito prazer!",
+     "É a primeira vez em Portugal?",
+     "Quanto tempo demora daqui até lá?",
+     "Obrigado! Boa reunião!"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Quanto tempo demora?",
+    "promptSub": "",
+    "options": [
+     "How long does it take?",
+     "Excuse me. Where is the metro station?",
+     "To the airport, please.",
+     "Is it your first time in Portugal?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Here you go. Keep the change.",
+    "promptSub": "",
+    "options": [
+     "Este ananás está maduro?",
+     "O que é que vais fazer amanhã?",
+     "Aqui está. Pode ficar com o troco.",
+     "Não, sou dos Estados Unidos."
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day01",
+  "level": 2,
+  "title": "Day 1 — Ser vs Estar in Real Life",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Estou a adorar! Estou muito feliz aqui.",
+    "promptSub": "",
+    "options": [
+     "Good morning. I want to exchange dollars for euros.",
+     "I'd love to! At what time?",
+     "I am. I want a place near the metro.",
+     "I'm loving it! I'm very happy here."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yes I am. I'm from Arizona.",
+    "promptSub": "",
+    "options": [
+     "Preciso de voltar aqui?",
+     "Já marcaste a consulta que precisavas?",
+     "Sou sim. Sou do Arizona.",
+     "Estou um bocado, mas estou entusiasmado."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Estás cansado da viagem?",
+    "promptSub": "",
+    "options": [
+     "Are you tired from the trip?",
+     "How much? (montante = amount)",
+     "Bacalhau à Brás, no doubt. And pastel de nata, of course.",
+     "I work in tech. I'm a project manager. (gestor = manager)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It's hot and dry, like the Alentejo.",
+    "promptSub": "",
+    "options": [
+     "É quente e seca, como o Alentejo.",
+     "Vou examiná-lo. Respire fundo, se faz favor.",
+     "É algo sério, doutora?",
+     "O que é que não gostas de fazer?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "És americano?",
+    "promptSub": "",
+    "options": [
+     "Are you American? (permanent characteristic — ser; informal tu)",
+     "Number two clippers on the sides?",
+     "Perfect. Can you book it for me, please?",
+     "It's hot and dry, like the Alentejo."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I am a bit, but I'm excited. (bocado = a bit)",
+    "promptSub": "",
+    "options": [
+     "Vou examiná-lo. Respire fundo, se faz favor.",
+     "Estou um bocado, mas estou entusiasmado.",
+     "Já experimentaste ginjinha?",
+     "Isso! Muito prazer. Estou entusiasmado para trabalhar convos"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "E estás a gostar de Portugal?",
+    "promptSub": "",
+    "options": [
+     "I did. I called yesterday and got a slot.",
+     "Do you work remotely or at the office?",
+     "And are you enjoying Portugal? (estar a + infinitive = European progressive)",
+     "Does MB Way work for foreigners?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What is your city like?",
+    "promptSub": "",
+    "options": [
+     "Só um aparo, se faz favor. Nada muito curto.",
+     "Já marcaste a consulta que precisavas?",
+     "Como é a tua cidade?",
+     "Fui com uns amigos portugueses. Comemos peixe grelhado à bei"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day02",
+  "level": 2,
+  "title": "Day 2 — At the Pharmacy",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Bom dia. Tenho dores de cabeça.",
+    "promptSub": "",
+    "options": [
+     "Good morning. I have a headache.",
+     "Since last night.",
+     "Take one pill every eight hours.",
+     "I exercise three times a week. I run in the park."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Does it need a prescription?",
+    "promptSub": "",
+    "options": [
+     "Precisa de receita médica?",
+     "Perfeito. Pode marcar para mim, se faz favor?",
+     "Um bocado de tosse seca.",
+     "Tem, cinco euros por operação."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Também tenho dores de garganta.",
+    "promptSub": "",
+    "options": [
+     "I am a bit, but I'm excited. (bocado = a bit)",
+     "Good morning. I want to exchange dollars for euros.",
+     "How was your week?",
+     "I have a sore throat too."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It doesn't. It's sold without a prescription.",
+    "promptSub": "",
+    "options": [
+     "Está marcado. Quinta-feira às duas. Confirme um dia antes, s",
+     "Bom dia. Tenho dores de cabeça.",
+     "Não precisa. Vende-se sem receita.",
+     "Adoro! Gosto muito de fado."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Tem alergia a algum medicamento?",
+    "promptSub": "",
+    "options": [
+     "Are you allergic to any medication? (medicamento = medicine)",
+     "I worked at an American tech company, remotely.",
+     "What did you do on the weekend? (fizeste = tu preterite)",
+     "How much? (montante = amount)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "No, I'm not.",
+    "promptSub": "",
+    "options": [
+     "Não, não tenho.",
+     "Leve estas pastilhas também. As melhoras!",
+     "Está? Cabeleireiro Estrela.",
+     "Bom dia. Tenho dores de cabeça."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Tome um comprimido de oito em oito horas.",
+    "promptSub": "",
+    "options": [
+     "Take one pill every eight hours.",
+     "I work in tech. I'm a project manager. (gestor = manager)",
+     "Thank you! Now I can handle almost everything by myself.",
+     "Are you allergic to any medication? (medicamento = medicine)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "How long have you been feeling like this?",
+    "promptSub": "",
+    "options": [
+     "Com certeza! Onde vai ser?",
+     "Há quanto tempo se sente assim?",
+     "Adoro! Gosto muito de fado.",
+     "Está marcado. Quinta-feira às duas. Confirme um dia antes, s"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day03",
+  "level": 2,
+  "title": "Day 3 — Appointments by Phone",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Com que médico?",
+    "promptSub": "",
+    "options": [
+     "With which doctor?",
+     "I did. I called yesterday and got a slot.",
+     "What do you do? (work)",
+     "Did you like it?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Good morning. I'd like to book an appointment.",
+    "promptSub": "",
+    "options": [
+     "O MB Way funciona para estrangeiros?",
+     "Bom dia. Gostaria de marcar uma consulta.",
+     "Vou examiná-lo. Respire fundo, se faz favor.",
+     "Lá fora, do lado direito."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Kevin Jackson. J-A-C-K-S-O-N.",
+    "promptSub": "",
+    "options": [
+     "Good afternoon. What are you feeling?",
+     "Good morning. I want to exchange dollars for euros.",
+     "Kevin Jackson. J-A-C-K-S-O-N.",
+     "I exercise three times a week. I run in the park."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Perfect. Can you book it for me, please?",
+    "promptSub": "",
+    "options": [
+     "É quente e seca, como o Alentejo.",
+     "Estás a procurar apartamento?",
+     "Um quarto chega. É só para mim.",
+     "Perfeito. Pode marcar para mim, se faz favor?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Ela tem uma vaga na quinta-feira, às catorze horas.",
+    "promptSub": "",
+    "options": [
+     "Did you like it?",
+     "What is your budget?",
+     "She has a slot on Thursday at 2 PM.",
+     "Are you allergic to any medication? (medicamento = medicine)"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Hello? Santa Maria clinic, good morning. (Está? = phone greeting)",
+    "promptSub": "",
+    "options": [
+     "E o que é que achas de trabalhar com uma equipa portuguesa?",
+     "Está? Clínica Santa Maria, bom dia.",
+     "Isso. E em cima, só as pontas.",
+     "Bom dia. Gostaria de marcar uma consulta."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Está marcado. Quinta-feira às duas. Confirme um dia antes, s",
+    "promptSub": "",
+    "options": [
+     "Booked. Thursday at two. Please confirm one day before.",
+     "Three hundred dollars. What's the exchange rate today? (câmbio = rate)",
+     "Hi! How do you want the cut today?",
+     "One bedroom is enough. It's just for me. (chegar = to be enough)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "With Doctor Fernanda, if possible.",
+    "promptSub": "",
+    "options": [
+     "Com a doutora Fernanda, se for possível.",
+     "Bacalhau à Brás, sem dúvida. E pastel de nata, claro.",
+     "Tem dor de garganta ou tosse?",
+     "Tem alergia a algum medicamento?"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day04",
+  "level": 2,
+  "title": "Day 4 — At the Barber & Salon",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Corte e barba, vinte euros.",
+    "promptSub": "",
+    "options": [
+     "I wake up at six thirty, have breakfast and start working.",
+     "Cut and beard, twenty euros.",
+     "Are you American? (permanent characteristic — ser; informal tu)",
+     "Do you like your job?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Number two clippers on the sides?",
+    "promptSub": "",
+    "options": [
+     "Só um aparo, se faz favor. Nada muito curto.",
+     "Máquina número dois dos lados?",
+     "Acordo às seis e meia, tomo o pequeno-almoço e começo a trab",
+     "És americano?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Só um aparo, se faz favor. Nada muito curto.",
+    "promptSub": "",
+    "options": [
+     "Hello? Estrela hair salon.",
+     "I work in tech. I'm a project manager. (gestor = manager)",
+     "Just a trim, please. Nothing too short. (aparo = trim)",
+     "Kevin Jackson. J-A-C-K-S-O-N."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Great. Thank you!",
+    "promptSub": "",
+    "options": [
+     "Gostas de música portuguesa?",
+     "Está bem. Obrigado!",
+     "O que é que fazes?",
+     "Marquei sim. Liguei ontem e consegui uma vaga."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Isso. E em cima, só as pontas.",
+    "promptSub": "",
+    "options": [
+     "Cut and beard, twenty euros.",
+     "That's it. And on top, just the ends.",
+     "Do you like Portuguese music?",
+     "Kevin Jackson. J-A-C-K-S-O-N."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Hi! How do you want the cut today?",
+    "promptSub": "",
+    "options": [
+     "Com que médico?",
+     "O MB Way funciona para estrangeiros?",
+     "Bom dia. Gostaria de marcar uma consulta.",
+     "Olá! Como queres o corte hoje?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Quero sim. Quanto fica tudo?",
+    "promptSub": "",
+    "options": [
+     "I like it a lot. My team is great — there are people from Tokyo. (equipa = team)",
+     "Yes, please. How much is everything?",
+     "Friday there's a get-together with the team. Are you coming? (convívio = social gathering)",
+     "Hello? Santa Maria clinic, good morning. (Está? = phone greeting)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Do you want me to do your beard too?",
+    "promptSub": "",
+    "options": [
+     "Bacalhau à Brás, sem dúvida. E pastel de nata, claro.",
+     "Queres que eu faça a barba também?",
+     "Precisa de receita médica?",
+     "Acordo às seis e meia, tomo o pequeno-almoço e começo a trab"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day05",
+  "level": 2,
+  "title": "Day 5 — Bank & Money",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Onde há um Multibanco?",
+    "promptSub": "",
+    "options": [
+     "Nice! Who did you go with? (fixe = cool, everyday slang)",
+     "Where is there an ATM? (Multibanco = the Portuguese ATM network)",
+     "Your Portuguese improved so much this month! (imenso = hugely)",
+     "I have a sore throat too."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It's one euro ten today.",
+    "promptSub": "",
+    "options": [
+     "Um quarto chega. É só para mim.",
+     "Está a um euro e dez hoje.",
+     "Com que médico?",
+     "Já marcaste a consulta que precisavas?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Trezentos dólares. Qual é o câmbio hoje?",
+    "promptSub": "",
+    "options": [
+     "Hello? Santa Maria clinic, good morning. (Está? = phone greeting)",
+     "What do you not like doing?",
+     "Three hundred dollars. What's the exchange rate today? (câmbio = rate)",
+     "It's one euro ten today."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It works with a Portuguese account.",
+    "promptSub": "",
+    "options": [
+     "Tenho febre e dores no corpo desde ontem.",
+     "Funciona com conta portuguesa.",
+     "Marquei sim. Liguei ontem e consegui uma vaga.",
+     "Tem, cinco euros por operação."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Lá fora, do lado direito.",
+    "promptSub": "",
+    "options": [
+     "Three hundred dollars. What's the exchange rate today? (câmbio = rate)",
+     "Do you want to go out for dinner on Friday?",
+     "Outside, on the right side.",
+     "It's one euro ten today."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Good morning. I want to exchange dollars for euros.",
+    "promptSub": "",
+    "options": [
+     "Sexta há um convívio com a equipa. Vens?",
+     "Bom dia. Quero trocar dólares por euros.",
+     "O MB Way funciona para estrangeiros?",
+     "Perfeito. Pode marcar para mim, se faz favor?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Qual é o montante?",
+    "promptSub": "",
+    "options": [
+     "Three hundred dollars. What's the exchange rate today? (câmbio = rate)",
+     "Good morning. I'd like to book an appointment.",
+     "No, it's just a mild flu. Rest and lots of fluids.",
+     "How much? (montante = amount)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Is there a service fee? (comissão = fee)",
+    "promptSub": "",
+    "options": [
+     "Tem comissão de serviço?",
+     "Estás a procurar apartamento?",
+     "A Juliana e o Marcos. Vou enviar a localização.",
+     "Marquei sim. Liguei ontem e consegui uma vaga."
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day06",
+  "level": 2,
+  "title": "Day 6 — Housing & Neighborhood",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Estás a procurar apartamento?",
+    "promptSub": "",
+    "options": [
+     "Are you looking for an apartment?",
+     "Thank you! See you tomorrow.",
+     "Do you have a sore throat or cough?",
+     "It works with a Portuguese account."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Is the neighborhood safe?",
+    "promptSub": "",
+    "options": [
+     "Nós agradecemos! Até amanhã.",
+     "O bairro é seguro?",
+     "Há quanto tempo se sente assim?",
+     "Com certeza! Onde vai ser?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Até oitocentos euros por mês, com condomínio incluído.",
+    "promptSub": "",
+    "options": [
+     "Do you like your job?",
+     "Up to eight hundred euros a month, including building fees.",
+     "Do I need to come back?",
+     "Since last night."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It's calm. There's a pastry shop and a mini-market on the corner.",
+    "promptSub": "",
+    "options": [
+     "Sou sim. Sou do Arizona.",
+     "Foi uma correria, mas boa. Trabalhei muito e estudei todos o",
+     "É tranquilo. Tem uma pastelaria e um minimercado na esquina.",
+     "Está a um euro e dez hoje."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Um quarto chega. É só para mim.",
+    "promptSub": "",
+    "options": [
+     "Yes I am. I'm from Arizona.",
+     "Do you work remotely or at the office?",
+     "What time do you normally wake up?",
+     "One bedroom is enough. It's just for me. (chegar = to be enough)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I am. I want a place near the metro.",
+    "promptSub": "",
+    "options": [
+     "Estou sim. Quero um sítio perto do metro.",
+     "Queres sair para jantar sexta-feira?",
+     "Perfeito. Pode marcar para mim, se faz favor?",
+     "Só corte desta vez. Muito obrigado!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "De quantos quartos?",
+    "promptSub": "",
+    "options": [
+     "She has a slot on Thursday at 2 PM.",
+     "Nice! Who did you go with? (fixe = cool, everyday slang)",
+     "With how many bedrooms?",
+     "Hybrid. Three days at home, two at the office."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What is your budget?",
+    "promptSub": "",
+    "options": [
+     "Cozinho, estudo português um bocado e deito-me cedo.",
+     "Boa tarde. O que é que sente?",
+     "Qual é o teu orçamento?",
+     "Vou examiná-lo. Respire fundo, se faz favor."
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day07",
+  "level": 2,
+  "title": "Day 7 — Talking About Work",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Trabalho em tecnologia. Sou gestor de projetos.",
+    "promptSub": "",
+    "options": [
+     "And at night, what do you do?",
+     "I work in tech. I'm a project manager. (gestor = manager)",
+     "Definitely! Where will it be?",
+     "Outside, on the right side."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What do you do? (work)",
+    "promptSub": "",
+    "options": [
+     "Qual é a tua comida portuguesa favorita?",
+     "Às dez, se faz favor. Em nome de Kevin.",
+     "O que é que fazes?",
+     "Pode sim! Sábado então, à mesma hora."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Que interessante! Trabalhas nisso há quanto tempo?",
+    "promptSub": "",
+    "options": [
+     "Number two clippers on the sides?",
+     "How interesting! How long have you worked in that?",
+     "And kizomba? Do you like to dance? (hugely popular in Portugal)",
+     "How much? (montante = amount)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Do you work remotely or at the office?",
+    "promptSub": "",
+    "options": [
+     "Lá fora, do lado direito.",
+     "Tem alergia a algum medicamento?",
+     "Não, é só uma gripe ligeira. Repouso e muitos líquidos.",
+     "Trabalhas remotamente ou no escritório?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Há mais de dez anos.",
+    "promptSub": "",
+    "options": [
+     "For more than ten years.",
+     "No, I'm not.",
+     "No, it's just a mild flu. Rest and lots of fluids.",
+     "Number two clippers on the sides?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I like it a lot. My team is great — there are people from Tokyo. (equipa = team)",
+    "promptSub": "",
+    "options": [
+     "Gosto muito. A minha equipa é ótima — tem gente de Tóquio.",
+     "Só se a febre não passar em três dias.",
+     "Faço exercício três vezes por semana. Corro no parque.",
+     "Precisa de receita médica?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Híbrido. Três dias em casa, dois no escritório.",
+    "promptSub": "",
+    "options": [
+     "Do I need to come back?",
+     "I have! I tried it yesterday. It's strong!",
+     "Hello? Estrela hair salon.",
+     "Hybrid. Three days at home, two at the office."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Do you like your job?",
+    "promptSub": "",
+    "options": [
+     "Híbrido. Três dias em casa, dois no escritório.",
+     "Bacalhau à Brás, sem dúvida. E pastel de nata, claro.",
+     "Gostas do teu trabalho?",
+     "Anotado. Corte e barba?"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day08",
+  "level": 2,
+  "title": "Day 8 — Invitations & Making Plans",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Às oito. Conheces aquele restaurante em Alfama?",
+    "promptSub": "",
+    "options": [
+     "Number two clippers on the sides?",
+     "Hi! How do you want the cut today?",
+     "How much? (montante = amount)",
+     "At eight. Do you know that restaurant in Alfama?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'd love to! At what time?",
+    "promptSub": "",
+    "options": [
+     "Já experimentaste ginjinha?",
+     "Adorava! A que horas?",
+     "Não gosto de acordar cedo, mas estou a habituar-me.",
+     "A que horas acordas normalmente?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Queres sair para jantar sexta-feira?",
+    "promptSub": "",
+    "options": [
+     "Do you want to go out for dinner on Friday?",
+     "I have! I tried it yesterday. It's strong!",
+     "Did you like it?",
+     "What is your budget?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yes it can! Saturday then, same time.",
+    "promptSub": "",
+    "options": [
+     "Bom dia. Gostaria de marcar uma consulta.",
+     "Sexta há um convívio com a equipa. Vens?",
+     "É tranquilo. Tem uma pastelaria e um minimercado na esquina.",
+     "Pode sim! Sábado então, à mesma hora."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Conheço! É ótimo. Quem mais vai?",
+    "promptSub": "",
+    "options": [
+     "I do! It's great. Who else is going?",
+     "I exercise three times a week. I run in the park.",
+     "What is your favorite Portuguese food?",
+     "Where is there an ATM? (Multibanco = the Portuguese ATM network)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Unfortunately I can't on Friday. Can it be Saturday?",
+    "promptSub": "",
+    "options": [
+     "O que é que fazes?",
+     "Qual é a tua comida portuguesa favorita?",
+     "Infelizmente não posso na sexta. Pode ser no sábado?",
+     "Está a um euro e dez hoje."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "A Juliana e o Marcos. Vou enviar a localização.",
+    "promptSub": "",
+    "options": [
+     "What is your city like?",
+     "Hi! How do you want the cut today?",
+     "And what do you think about working with a Portuguese team?",
+     "Juliana and Marcos. I'll send the location."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day09",
+  "level": 2,
+  "title": "Day 9 — Likes & Dislikes",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "E kizomba? Gostas de dançar?",
+    "promptSub": "",
+    "options": [
+     "We have ten or three PM. Which do you prefer?",
+     "I wake up at six thirty, have breakfast and start working.",
+     "And kizomba? Do you like to dance? (hugely popular in Portugal)",
+     "You're Kevin, right? Welcome to the team!"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What do you not like doing?",
+    "promptSub": "",
+    "options": [
+     "Bom dia. Tenho dores de cabeça.",
+     "Sexta há um convívio com a equipa. Vens?",
+     "Boa tarde. O que é que sente?",
+     "O que é que não gostas de fazer?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Qual é a tua comida portuguesa favorita?",
+    "promptSub": "",
+    "options": [
+     "It's hot and dry, like the Alentejo.",
+     "I went to the beach on Saturday and rested on Sunday.",
+     "I love it! I really like fado. (Portugal's soul music)",
+     "What is your favorite Portuguese food?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I love it! I really like fado. (Portugal's soul music)",
+    "promptSub": "",
+    "options": [
+     "Às oito. Conheces aquele restaurante em Alfama?",
+     "Estás cansado da viagem?",
+     "Adoro! Gosto muito de fado.",
+     "Com certeza! Onde vai ser?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Bacalhau à Brás, sem dúvida. E pastel de nata, claro.",
+    "promptSub": "",
+    "options": [
+     "I wake up at six thirty, have breakfast and start working.",
+     "Are you adapting well to the time zone?",
+     "I'd love to! At what time?",
+     "Bacalhau à Brás, no doubt. And pastel de nata, of course."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Do you like Portuguese music?",
+    "promptSub": "",
+    "options": [
+     "O que é que fazes?",
+     "Gostas de música portuguesa?",
+     "E à noite, o que é que fazes?",
+     "Estou a adorar. Quero aprender mais sobre a cultura daqui."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Gosto, mas danço muito mal!",
+    "promptSub": "",
+    "options": [
+     "Are you American? (permanent characteristic — ser; informal tu)",
+     "I do, but I dance very badly!",
+     "I work in tech. I'm a project manager. (gestor = manager)",
+     "Only if the fever doesn't go away in three days."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I don't like waking up early, but I'm getting used to it. (habituar-me = European clitic p",
+    "promptSub": "",
+    "options": [
+     "Está marcado. Quinta-feira às duas. Confirme um dia antes, s",
+     "Qual é o seu nome completo?",
+     "Não gosto de acordar cedo, mas estou a habituar-me.",
+     "Há mais de dez anos."
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day10",
+  "level": 2,
+  "title": "Day 10 — What You Did (Past Tense)",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Gostaste?",
+    "promptSub": "",
+    "options": [
+     "At eight. Do you know that restaurant in Alfama?",
+     "What time do you normally wake up?",
+     "Did you like it?",
+     "What is your full name?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I liked it a lot, but I only had one.",
+    "promptSub": "",
+    "options": [
+     "Quero sim. Quanto fica tudo?",
+     "Leve estas pastilhas também. As melhoras!",
+     "Conheço! É ótimo. Quem mais vai?",
+     "Gostei muito, mas só bebi uma."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Já experimentaste ginjinha?",
+    "promptSub": "",
+    "options": [
+     "Have you tried ginjinha yet? (Lisbon's cherry liqueur)",
+     "Yes I am. I'm from Arizona.",
+     "Where is there an ATM? (Multibanco = the Portuguese ATM network)",
+     "It was a rush, but good. I worked a lot and studied every day."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I went to the beach on Saturday and rested on Sunday.",
+    "promptSub": "",
+    "options": [
+     "Também tenho dores de garganta.",
+     "Qual é o teu orçamento?",
+     "Fui à praia no sábado e descansei no domingo.",
+     "Estou sim. Quero um sítio perto do metro."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "O que é que fizeste no fim de semana?",
+    "promptSub": "",
+    "options": [
+     "Are you adapting well to the time zone?",
+     "It doesn't. It's sold without a prescription.",
+     "What did you do on the weekend? (fizeste = tu preterite)",
+     "You're Kevin, right? Welcome to the team!"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Nice! Who did you go with? (fixe = cool, everyday slang)",
+    "promptSub": "",
+    "options": [
+     "Às oito. Conheces aquele restaurante em Alfama?",
+     "Estou a adaptar-me devagar. Ainda acordo de madrugada às vez",
+     "Que fixe! Com quem foste?",
+     "Olá, bom dia. Queria marcar para amanhã."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Fui com uns amigos portugueses. Comemos peixe grelhado à bei",
+    "promptSub": "",
+    "options": [
+     "It was a rush, but good. I worked a lot and studied every day.",
+     "Good morning. I have a headache.",
+     "With how many bedrooms?",
+     "I went with some Portuguese friends. We ate grilled fish by the sea."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I have! I tried it yesterday. It's strong!",
+    "promptSub": "",
+    "options": [
+     "Gosto muito. A minha equipa é ótima — tem gente de Tóquio.",
+     "Já! Experimentei ontem. É forte!",
+     "Qual é o montante?",
+     "Não, não tenho."
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day11",
+  "level": 2,
+  "title": "Day 11 — Daily Routine",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "E à noite, o que é que fazes?",
+    "promptSub": "",
+    "options": [
+     "And at night, what do you do?",
+     "I am a bit, but I'm excited. (bocado = a bit)",
+     "One bedroom is enough. It's just for me. (chegar = to be enough)",
+     "It's hot and dry, like the Alentejo."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm adapting slowly. I still wake up in the middle of the night sometimes.",
+    "promptSub": "",
+    "options": [
+     "Olá! Como queres o corte hoje?",
+     "Estou a adaptar-me devagar. Ainda acordo de madrugada às vez",
+     "Um quarto chega. É só para mim.",
+     "Há mais de dez anos."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Faço exercício três vezes por semana. Corro no parque.",
+    "promptSub": "",
+    "options": [
+     "I wake up at six thirty, have breakfast and start working.",
+     "Good morning. I want to exchange dollars for euros.",
+     "I have! I tried it yesterday. It's strong!",
+     "I exercise three times a week. I run in the park."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I wake up at six thirty, have breakfast and start working.",
+    "promptSub": "",
+    "options": [
+     "Só um aparo, se faz favor. Nada muito curto.",
+     "Estou um bocado, mas estou entusiasmado.",
+     "Acordo às seis e meia, tomo o pequeno-almoço e começo a trab",
+     "Temos às dez ou às quinze horas. Qual prefere?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Estás a adaptar-te bem ao fuso horário?",
+    "promptSub": "",
+    "options": [
+     "Definitely! Where will it be?",
+     "Hi, good morning. I'd like to book for tomorrow.",
+     "Are you adapting well to the time zone?",
+     "Do you work remotely or at the office?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Do you usually exercise in the morning? (costumar = to usually do)",
+    "promptSub": "",
+    "options": [
+     "Costumas fazer exercício de manhã?",
+     "Tem dor de garganta ou tosse?",
+     "Trezentos dólares. Qual é o câmbio hoje?",
+     "Já! Experimentei ontem. É forte!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Cozinho, estudo português um bocado e deito-me cedo.",
+    "promptSub": "",
+    "options": [
+     "I liked it a lot, but I only had one.",
+     "I cook, study Portuguese a bit and go to bed early. (deitar-se = to go to bed)",
+     "I exercise three times a week. I run in the park.",
+     "What is your full name?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "What time do you normally wake up?",
+    "promptSub": "",
+    "options": [
+     "A que horas acordas normalmente?",
+     "Tome um comprimido de oito em oito horas.",
+     "Isso. E em cima, só as pontas.",
+     "Está a um euro e dez hoje."
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-day12",
+  "level": 2,
+  "title": "Day 12 — Level 2 Review",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Foi uma correria, mas boa. Trabalhei muito e estudei todos o",
+    "promptSub": "",
+    "options": [
+     "It was a rush, but good. I worked a lot and studied every day.",
+     "How long have you been feeling like this?",
+     "Does it need a prescription?",
+     "Do you want to go out for dinner on Friday?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "How was your week?",
+    "promptSub": "",
+    "options": [
+     "Como foi a tua semana?",
+     "Estou um bocado, mas estou entusiasmado.",
+     "Qual é o seu nome completo?",
+     "Tome um comprimido de oito em oito horas."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Já marcaste a consulta que precisavas?",
+    "promptSub": "",
+    "options": [
+     "Did you already book the appointment you needed?",
+     "What is your city like?",
+     "One bedroom is enough. It's just for me. (chegar = to be enough)",
+     "I have! I tried it yesterday. It's strong!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thank you! Now I can handle almost everything by myself.",
+    "promptSub": "",
+    "options": [
+     "O que é que não gostas de fazer?",
+     "De quantos quartos?",
+     "Obrigado! Agora consigo resolver quase tudo sozinho.",
+     "Olá! Como queres o corte hoje?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Marquei sim. Liguei ontem e consegui uma vaga.",
+    "promptSub": "",
+    "options": [
+     "Up to eight hundred euros a month, including building fees.",
+     "How long have you been feeling like this?",
+     "I worked at an American tech company, remotely.",
+     "I did. I called yesterday and got a slot."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Your Portuguese improved so much this month! (imenso = hugely)",
+    "promptSub": "",
+    "options": [
+     "O teu português melhorou imenso este mês!",
+     "Boa tarde. O que é que sente?",
+     "Tome um comprimido de oito em oito horas.",
+     "O que é que não gostas de fazer?"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-doctor",
+  "level": 2,
+  "title": "Scenario: At the Doctor",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Tem dor de garganta ou tosse?",
+    "promptSub": "",
+    "options": [
+     "Only if the fever doesn't go away in three days.",
+     "Do you have a sore throat or cough?",
+     "Cut and beard, twenty euros.",
+     "With how many bedrooms?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Only if the fever doesn't go away in three days.",
+    "promptSub": "",
+    "options": [
+     "Tem alergia a algum medicamento?",
+     "Estás a procurar apartamento?",
+     "Como é a tua cidade?",
+     "Só se a febre não passar em três dias."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "É algo sério, doutora?",
+    "promptSub": "",
+    "options": [
+     "Is it something serious, doctor?",
+     "What do you do? (work)",
+     "Are you American? (permanent characteristic — ser; informal tu)",
+     "And at night, what do you do?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm going to examine you. Take a deep breath, please. (examiná-lo = examine you, European ",
+    "promptSub": "",
+    "options": [
+     "Bom dia. Quero trocar dólares por euros.",
+     "Vou examiná-lo. Respire fundo, se faz favor.",
+     "Foi uma correria, mas boa. Trabalhei muito e estudei todos o",
+     "Qual é o teu orçamento?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Preciso de voltar aqui?",
+    "promptSub": "",
+    "options": [
+     "Do I need to come back?",
+     "I do! It's great. Who else is going?",
+     "Good afternoon. What are you feeling?",
+     "How interesting! How long have you worked in that?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "A bit of a dry cough.",
+    "promptSub": "",
+    "options": [
+     "Um bocado de tosse seca.",
+     "Foi uma correria, mas boa. Trabalhei muito e estudei todos o",
+     "Só se a febre não passar em três dias.",
+     "Fui à praia no sábado e descansei no domingo."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Boa tarde. O que é que sente?",
+    "promptSub": "",
+    "options": [
+     "Did you like it?",
+     "Good afternoon. What are you feeling?",
+     "Do you want to go out for dinner on Friday?",
+     "I am a bit, but I'm excited. (bocado = a bit)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I've had a fever and body aches since yesterday.",
+    "promptSub": "",
+    "options": [
+     "Kevin Jackson. J-A-C-K-S-O-N.",
+     "Estás cansado da viagem?",
+     "Tu és o Kevin, certo? Bem-vindo à equipa!",
+     "Tenho febre e dores no corpo desde ontem."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-phone",
+  "level": 2,
+  "title": "Scenario: Phone Appointment",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Às dez, se faz favor. Em nome de Kevin.",
+    "promptSub": "",
+    "options": [
+     "At ten, please. Under Kevin.",
+     "Since last night.",
+     "It works with a Portuguese account.",
+     "Take these lozenges too. Get well! (as melhoras = get well)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "We have ten or three PM. Which do you prefer?",
+    "promptSub": "",
+    "options": [
+     "E o que é que achas de trabalhar com uma equipa portuguesa?",
+     "Temos às dez ou às quinze horas. Qual prefere?",
+     "Gostaste?",
+     "Está a um euro e dez hoje."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Só corte desta vez. Muito obrigado!",
+    "promptSub": "",
+    "options": [
+     "Do you like your job?",
+     "Are you adapting well to the time zone?",
+     "Number two clippers on the sides?",
+     "Just a cut this time. Thank you very much!"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Thank you! See you tomorrow.",
+    "promptSub": "",
+    "options": [
+     "Nós agradecemos! Até amanhã.",
+     "Tem alergia a algum medicamento?",
+     "Gosto muito. A minha equipa é ótima — tem gente de Tóquio.",
+     "Tome um comprimido de oito em oito horas."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Anotado. Corte e barba?",
+    "promptSub": "",
+    "options": [
+     "Do I need to come back?",
+     "Noted. Cut and beard?",
+     "Did you like it?",
+     "It's calm. There's a pastry shop and a mini-market on the corner."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Hello? Estrela hair salon.",
+    "promptSub": "",
+    "options": [
+     "Está? Cabeleireiro Estrela.",
+     "Fui à praia no sábado e descansei no domingo.",
+     "Não, é só uma gripe ligeira. Repouso e muitos líquidos.",
+     "Às oito. Conheces aquele restaurante em Alfama?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Olá, bom dia. Queria marcar para amanhã.",
+    "promptSub": "",
+    "options": [
+     "With Doctor Fernanda, if possible.",
+     "What is your budget?",
+     "With how many bedrooms?",
+     "Hi, good morning. I'd like to book for tomorrow."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l2-interview",
+  "level": 2,
+  "title": "Scenario: Meeting Coworkers",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Trabalhava numa empresa de tecnologia americana, remotamente",
+    "promptSub": "",
+    "options": [
+     "What is your full name?",
+     "Cut and beard, twenty euros.",
+     "I worked at an American tech company, remotely.",
+     "It's hot and dry, like the Alentejo."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Friday there's a get-together with the team. Are you coming? (convívio = social gathering)",
+    "promptSub": "",
+    "options": [
+     "Sou sim. Sou do Arizona.",
+     "Sexta há um convívio com a equipa. Vens?",
+     "Só um aparo, se faz favor. Nada muito curto.",
+     "Temos às dez ou às quinze horas. Qual prefere?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Estou a adorar. Quero aprender mais sobre a cultura daqui.",
+    "promptSub": "",
+    "options": [
+     "Did you already book the appointment you needed?",
+     "I'm loving it. I want to learn more about the culture here.",
+     "Are you adapting well to the time zone?",
+     "No, it's just a mild flu. Rest and lots of fluids."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "And what do you think about working with a Portuguese team?",
+    "promptSub": "",
+    "options": [
+     "Há mais de dez anos.",
+     "O teu português melhorou imenso este mês!",
+     "Não precisa. Vende-se sem receita.",
+     "E o que é que achas de trabalhar com uma equipa portuguesa?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Isso! Muito prazer. Estou entusiasmado para trabalhar convos",
+    "promptSub": "",
+    "options": [
+     "What do you not like doing?",
+     "Perfect. Can you book it for me, please?",
+     "Yes I am. I'm from Arizona.",
+     "That's me! Nice to meet you. I'm excited to work with you all. (convosco = with you all)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "You're Kevin, right? Welcome to the team!",
+    "promptSub": "",
+    "options": [
+     "Tu és o Kevin, certo? Bem-vindo à equipa!",
+     "Gostas de música portuguesa?",
+     "Como foi a tua semana?",
+     "Lá fora, do lado direito."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Onde trabalhavas antes?",
+    "promptSub": "",
+    "options": [
+     "One bedroom is enough. It's just for me. (chegar = to be enough)",
+     "Where did you work before?",
+     "I went with some Portuguese friends. We ate grilled fish by the sea.",
+     "Just a cut this time. Thank you very much!"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Definitely! Where will it be?",
+    "promptSub": "",
+    "options": [
+     "Com certeza! Onde vai ser?",
+     "Cozinho, estudo português um bocado e deito-me cedo.",
+     "Acordo às seis e meia, tomo o pequeno-almoço e começo a trab",
+     "Corte e barba, vinte euros."
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day01",
+  "level": 3,
+  "title": "Day 1 — Casual Greetings & Slang",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Pois é, 'tava uma correria no trabalho.",
+    "promptSub": "",
+    "options": [
+     "Yeah, work was a real rush. ('tava = estava, casual)",
+     "I think Portugal played very badly. (acho que = I think)",
+     "Lots of good things. Work is going well and my Portuguese is flowing.",
+     "The pleasure is mine, Kevin. Come in, make yourself at home!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "All good! And with you, everything alright?",
+    "promptSub": "",
+    "options": [
+     "Tudo fixe! E contigo, tudo bem?",
+     "Conta lá! Estou curioso.",
+     "Seria incrível! Já és quase português.",
+     "Claro! Quanta mais gente, melhor."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Tudo porreiro! Tens andado desaparecido!",
+    "promptSub": "",
+    "options": [
+     "I'm thinking about that bar with live music. ('tou = estou, casual)",
+     "At nine? I'll come by to pick you up. (ir buscar = to pick up)",
+     "I studied on my own and practiced a lot with Ana. She's a great teacher.",
+     "All great! You've been missing in action! (porreiro = cool)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Take care! See you soon! (fica bem = take care)",
+    "promptSub": "",
+    "options": [
+     "Combinado. Posso levar a minha prima?",
+     "Vou ouvir hoje à noite. Manda-me o nome da música.",
+     "O prazer é meu, Kevin. Entra, está à vontade!",
+     "Fica bem! Até já!"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Deixa lá, 'bora tomar um café qualquer dia.",
+    "promptSub": "",
+    "options": [
+     "And Sunday, what did you do?",
+     "Marcos is the official grill master of the group.",
+     "What kind of music do you listen to?",
+     "Never mind, let's grab a coffee sometime. (deixa lá = never mind)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Done! Thanks, man! (combinado = agreed)",
+    "promptSub": "",
+    "options": [
+     "Espero que sim! Ela é muito fixe.",
+     "Combinado. Posso levar a minha prima?",
+     "Gostava de morar aqui um tempo, quem sabe um dia.",
+     "Combinado! Obrigado, pá!"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "'Bora! Manda-me mensagem no WhatsApp.",
+    "promptSub": "",
+    "options": [
+     "I slept in and stayed home watching series.",
+     "Let's! Send me a message on WhatsApp.",
+     "Marcos is the official grill master of the group.",
+     "I'd like to live here for a while, maybe someday. (gostava = I'd like)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Hey man, all good? (pá = dude; fixe = cool/fine — everyday Portuguese slang)",
+    "promptSub": "",
+    "options": [
+     "Então pá, tudo fixe?",
+     "Tudo porreiro! Tens andado desaparecido!",
+     "O teu português é muito bom! Onde aprendeste?",
+     "Seria incrível! Já és quase português."
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day02",
+  "level": 3,
+  "title": "Day 2 — Giving Opinions",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Concordo contigo nessa parte.",
+    "promptSub": "",
+    "options": [
+     "Good evening, ma'am. Very nice to meet you. (formal; conhecê-la = meet you)",
+     "We have. We went to dinner on Saturday. It was really good.",
+     "I'm thinking about that bar with live music. ('tou = estou, casual)",
+     "I agree with you on that part."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "And the national coach? Do you think he stays? (selecionador = national team coach)",
+    "promptSub": "",
+    "options": [
+     "Ela puxou à mãe, que também é professora.",
+     "Que doideira! Pelo menos havia café.",
+     "E o selecionador? Achas que ele fica?",
+     "'Tou a conhecer uma pessoa. Ainda é cedo."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Para mim, o problema foi a defesa.",
+    "promptSub": "",
+    "options": [
+     "I hope my Portuguese improves by then. (subjunctive)",
+     "For me, the problem was the defense.",
+     "I insist. It's a custom in my family too. (fazer questão = to insist)",
+     "You bet! Let's plan a dinner when I get back. (podes crer = you bet, slang)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Maybe. But the attack didn't help either.",
+    "promptSub": "",
+    "options": [
+     "Acho que Portugal jogou muito mal.",
+     "A carne está no ponto perfeito. Parabéns!",
+     "'Bora! Manda-me mensagem no WhatsApp.",
+     "Pode ser. Mas o ataque também não ajudou."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Duvido. Acho que o vão despedir.",
+    "promptSub": "",
+    "options": [
+     "I doubt it. I think they'll fire him.",
+     "Agreed. Can I bring my cousin?",
+     "So, tell me the news!",
+     "For me, the problem was the defense."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I disagree. In my opinion, the team did well. (equipa = team)",
+    "promptSub": "",
+    "options": [
+     "Vai haver um segundo encontro?",
+     "Discordo. Na minha opinião, a equipa esteve bem.",
+     "Para mim, o problema foi a defesa.",
+     "Combinado. Posso levar a minha prima?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "O que é que achaste do jogo ontem?",
+    "promptSub": "",
+    "options": [
+     "What did you think of the game yesterday?",
+     "I hope to come back to Portugal two more times. (espero + infinitive)",
+     "Welcome, Kevin! Ana has told us so much about you.",
+     "Agreed. Can I bring my cousin?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I think Portugal played very badly. (acho que = I think)",
+    "promptSub": "",
+    "options": [
+     "Faço questão. É um costume da minha família também.",
+     "Posso ajudar com alguma coisa?",
+     "Vais adorar. Manda-me fotos!",
+     "Acho que Portugal jogou muito mal."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day03",
+  "level": 3,
+  "title": "Day 3 — Weekend Stories",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Merecias, depois de uma semana daquelas.",
+    "promptSub": "",
+    "options": [
+     "Of course! The more people, the better.",
+     "Tell me! I'm curious.",
+     "You bet! Let's plan a dinner when I get back. (podes crer = you bet, slang)",
+     "You deserved it, after that kind of week."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "And Sunday, what did you do?",
+    "promptSub": "",
+    "options": [
+     "A que horas queres ir?",
+     "Vou ouvir hoje à noite. Manda-me o nome da música.",
+     "A sério? De que fadista gostas mais?",
+     "E domingo, o que é que fizeste?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Conta lá! O que é que aconteceu no fim de semana?",
+    "promptSub": "",
+    "options": [
+     "That's crazy! At least there was coffee. (doideira = craziness)",
+     "Maybe. But the attack didn't help either.",
+     "Tell me! What happened on the weekend? (conta lá = tell me)",
+     "Listen to Amália Rodrigues. She's a classic. (the queen of fado)"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "There were about thirty people. We ate grilled food all afternoon.",
+    "promptSub": "",
+    "options": [
+     "Tomara que dê certo!",
+     "'Bora! Manda-me mensagem no WhatsApp.",
+     "Havia umas trinta pessoas. Comemos grelhados a tarde toda.",
+     "A que horas queres ir?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Havia muita gente?",
+    "promptSub": "",
+    "options": [
+     "And the national coach? Do you think he stays? (selecionador = national team coach)",
+     "Take care! See you soon! (fica bem = take care)",
+     "Can I help with anything?",
+     "Were there a lot of people?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I slept in and stayed home watching series.",
+    "promptSub": "",
+    "options": [
+     "Conta lá! O que é que aconteceu no fim de semana?",
+     "Ela puxou à mãe, que também é professora.",
+     "Este é o melhor programa de domingo. Obrigado pelo convite, ",
+     "Dormi até tarde e fiquei em casa a ver séries."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Fui a um aniversário de um amigo. Foi muito giro.",
+    "promptSub": "",
+    "options": [
+     "I went to a friend's birthday. It was really nice. (giro = cool/nice)",
+     "In a Portuguese course. She's Portuguese.",
+     "Let's! Send me a message on WhatsApp.",
+     "Really? Which fado singer do you like the most?"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day04",
+  "level": 3,
+  "title": "Day 4 — Inviting People Out",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "A que horas queres ir?",
+    "promptSub": "",
+    "options": [
+     "Marcos is the official grill master of the group.",
+     "For me, the problem was the defense.",
+     "What time do you want to go?",
+     "I'd love to, thank you very much. It smells great!"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Agreed. Can I bring my cousin?",
+    "promptSub": "",
+    "options": [
+     "Obrigado! Serve-te de mais pão de alho.",
+     "Combinado. Posso levar a minha prima?",
+     "Espero que sim! Ela é muito fixe.",
+     "Fico contente. Ela é uma pessoa muito especial."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Claro! Quanta mais gente, melhor.",
+    "promptSub": "",
+    "options": [
+     "Of course! The more people, the better.",
+     "I went to a friend's birthday. It was really nice. (giro = cool/nice)",
+     "I'm thinking about that bar with live music. ('tou = estou, casual)",
+     "Really? Which fado singer do you like the most?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Let's! Do you have somewhere in mind?",
+    "promptSub": "",
+    "options": [
+     "O teu português é muito bom! Onde aprendeste?",
+     "Quais são os teus planos para o próximo ano?",
+     "Vamos! Tens algum sítio em mente?",
+     "Merecias, depois de uma semana daquelas."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "'Tou a pensar naquele bar com música ao vivo.",
+    "promptSub": "",
+    "options": [
+     "I hope to come back to Portugal two more times. (espero + infinitive)",
+     "I'm thinking about that bar with live music. ('tou = estou, casual)",
+     "This is the best Sunday plan. Thanks for the invite, everyone. (pessoal = everyone/guys)",
+     "I was on the metro and, suddenly, it started pouring rain. (chover a potes = to pour)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Shall we go out tonight?",
+    "promptSub": "",
+    "options": [
+     "Às nove? Passo aí para te ir buscar.",
+     "Boas! Aceito sim. Os grelhados têm ótimo aspeto.",
+     "Vamos sair hoje à noite?",
+     "Que doideira! Pelo menos havia café."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Às nove? Passo aí para te ir buscar.",
+    "promptSub": "",
+    "options": [
+     "At nine? I'll come by to pick you up. (ir buscar = to pick up)",
+     "I agree with you on that part.",
+     "I went to a friend's birthday. It was really nice. (giro = cool/nice)",
+     "So, are you seeing anyone? (andar a + inf = to be doing regularly)"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day05",
+  "level": 3,
+  "title": "Day 5 — Dating Talk",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Vai haver um segundo encontro?",
+    "promptSub": "",
+    "options": [
+     "I really like one a friend showed me. And you, what do you recommend?",
+     "You deserved it, after that kind of week.",
+     "Will there be a second date?",
+     "I doubt it. I think they'll fire him."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I hope so! She's really cool.",
+    "promptSub": "",
+    "options": [
+     "Espero que sim! Ela é muito fixe.",
+     "Discordo. Na minha opinião, a equipa esteve bem.",
+     "Vamos! Tens algum sítio em mente?",
+     "Vê-se de onde vem a paciência dela!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Onde é que se conheceram?",
+    "promptSub": "",
+    "options": [
+     "So, are you seeing anyone? (andar a + inf = to be doing regularly)",
+     "Wow! And then what did you do?",
+     "I'll listen tonight. Send me the song name.",
+     "Where did you two meet?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm getting to know someone. It's still early.",
+    "promptSub": "",
+    "options": [
+     "Para mim, o problema foi a defesa.",
+     "Conta lá! Estou curioso.",
+     "'Tou a conhecer uma pessoa. Ainda é cedo.",
+     "Muito obrigado! Ainda erro bastante, mas já não tenho medo d"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Num curso de português. Ela é portuguesa.",
+    "promptSub": "",
+    "options": [
+     "In a Portuguese course. She's Portuguese.",
+     "I'd love to, thank you very much. It smells great!",
+     "The pleasure is mine, Kevin. Come in, make yourself at home!",
+     "What time do you want to go?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "So, are you seeing anyone? (andar a + inf = to be doing regularly)",
+    "promptSub": "",
+    "options": [
+     "Que doideira! Pelo menos havia café.",
+     "A sério? De que fadista gostas mais?",
+     "Espero que sim! Ela é muito fixe.",
+     "Então, andas a sair com alguém?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Que fofo! E já saíram?",
+    "promptSub": "",
+    "options": [
+     "Juliana speaks very well of you.",
+     "I insist. It's a custom in my family too. (fazer questão = to insist)",
+     "How cute! And have you gone out yet?",
+     "I hope so! She's really cool."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "We have. We went to dinner on Saturday. It was really good.",
+    "promptSub": "",
+    "options": [
+     "Às nove? Passo aí para te ir buscar.",
+     "O teu português é muito bom! Onde aprendeste?",
+     "Seria incrível! Já és quase português.",
+     "Já. Fomos jantar no sábado. Foi muito bom."
+    ],
+    "answer": 3
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day06",
+  "level": 3,
+  "title": "Day 6 — Meeting the Family",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Queres jantar connosco? Fiz uma lasanha.",
+    "promptSub": "",
+    "options": [
+     "Your Portuguese is very good! Where did you learn?",
+     "Do you want to have dinner with us? I made lasagna. (connosco = with us)",
+     "I started watching one this week. It's great for training my ear.",
+     "This is the best Sunday plan. Thanks for the invite, everyone. (pessoal = everyone/guys)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "The pleasure is mine, Kevin. Come in, make yourself at home!",
+    "promptSub": "",
+    "options": [
+     "O prazer é meu, Kevin. Entra, está à vontade!",
+     "O Marcos é o mestre da grelha oficial do grupo.",
+     "Posso ajudar com alguma coisa?",
+     "Podes crer! Vamos combinar um jantar quando eu voltar."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Adorava, muito obrigado. Cheira muito bem!",
+    "promptSub": "",
+    "options": [
+     "I'd love to, thank you very much. It smells great!",
+     "Juliana speaks very well of you.",
+     "Thank you so much for having me. I brought a dessert.",
+     "I really like one a friend showed me. And you, what do you recommend?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Good evening, ma'am. Very nice to meet you. (formal; conhecê-la = meet you)",
+    "promptSub": "",
+    "options": [
+     "A sua casa é linda. Obrigado pelo convite.",
+     "Fui a um aniversário de um amigo. Foi muito giro.",
+     "Nossa! E depois, o que é que fizeste?",
+     "Boa noite, senhora. Muito prazer em conhecê-la."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "A sua casa é linda. Obrigado pelo convite.",
+    "promptSub": "",
+    "options": [
+     "Your Portuguese is very good! Where did you learn?",
+     "Lots of good things. Work is going well and my Portuguese is flowing.",
+     "Juliana speaks very well of you.",
+     "Your home is beautiful. Thank you for the invitation."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm glad. She's a very special person. (ficar contente = to be glad)",
+    "promptSub": "",
+    "options": [
+     "Tudo fixe! E contigo, tudo bem?",
+     "Adorava, muito obrigado. Cheira muito bem!",
+     "Fico contente. Ela é uma pessoa muito especial.",
+     "É, no fim de contas até foi bom."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "A Juliana fala muito bem de ti.",
+    "promptSub": "",
+    "options": [
+     "Thank you so much for having me. I brought a dessert.",
+     "Juliana speaks very well of you.",
+     "Hey man, all good? (pá = dude; fixe = cool/fine — everyday Portuguese slang)",
+     "Do you want to have dinner with us? I made lasagna. (connosco = with us)"
+    ],
+    "answer": 1
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day07",
+  "level": 3,
+  "title": "Day 7 — Telling Stories",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Não vais acreditar no que me aconteceu!",
+    "promptSub": "",
+    "options": [
+     "You can tell where her patience comes from!",
+     "You're not going to believe what happened to me!",
+     "There were about thirty people. We ate grilled food all afternoon.",
+     "Done! Thanks, man! (combinado = agreed)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Wow! And then what did you do?",
+    "promptSub": "",
+    "options": [
+     "Nossa! E depois, o que é que fizeste?",
+     "E o selecionador? Achas que ele fica?",
+     "Claro! Quanta mais gente, melhor.",
+     "Dormi até tarde e fiquei em casa a ver séries."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Que doideira! Pelo menos havia café.",
+    "promptSub": "",
+    "options": [
+     "That's crazy! At least there was coffee. (doideira = craziness)",
+     "Can I help with anything?",
+     "Let's! Send me a message on WhatsApp.",
+     "What did you think of the game yesterday?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I ran to a pastry shop and stayed there an hour waiting.",
+    "promptSub": "",
+    "options": [
+     "Corri para uma pastelaria e fiquei lá uma hora à espera.",
+     "E domingo, o que é que fizeste?",
+     "Havia umas trinta pessoas. Comemos grelhados a tarde toda.",
+     "Tudo porreiro! Tens andado desaparecido!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Eu 'tava no metro e, de repente, começou a chover a potes.",
+    "promptSub": "",
+    "options": [
+     "I was on the metro and, suddenly, it started pouring rain. (chover a potes = to pour)",
+     "I studied on my own and practiced a lot with Ana. She's a great teacher.",
+     "I'll listen tonight. Send me the song name.",
+     "That's crazy! At least there was coffee. (doideira = craziness)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Yeah, in the end it was actually fine.",
+    "promptSub": "",
+    "options": [
+     "Vamos! Tens algum sítio em mente?",
+     "Para mim, o problema foi a defesa.",
+     "É, no fim de contas até foi bom.",
+     "Nossa! E depois, o que é que fizeste?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Conta lá! Estou curioso.",
+    "promptSub": "",
+    "options": [
+     "Tell me! I'm curious.",
+     "I insist. It's a custom in my family too. (fazer questão = to insist)",
+     "Relax, you're a guest. Just enjoy! (descontrai = relax, tu imperative)",
+     "Do you want to have dinner with us? I made lasagna. (connosco = with us)"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day08",
+  "level": 3,
+  "title": "Day 8 — Hopes & Wishes",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Vai melhorar de certeza. Praticas todos os dias.",
+    "promptSub": "",
+    "options": [
+     "It will improve for sure. You practice every day.",
+     "Done! Thanks, man! (combinado = agreed)",
+     "Maybe. But the attack didn't help either.",
+     "Good evening, ma'am. Very nice to meet you. (formal; conhecê-la = meet you)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I hope it works out!",
+    "promptSub": "",
+    "options": [
+     "Não vais acreditar no que me aconteceu!",
+     "Notei! Estás a falar tal e qual um português.",
+     "Que doideira! Pelo menos havia café.",
+     "Tomara que dê certo!"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Quais são os teus planos para o próximo ano?",
+    "promptSub": "",
+    "options": [
+     "Hey Kevin! You made it! Want a beer?",
+     "Tell me! I'm curious.",
+     "What are your plans for next year?",
+     "I ran to a pastry shop and stayed there an hour waiting."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'd like to live here for a while, maybe someday. (gostava = I'd like)",
+    "promptSub": "",
+    "options": [
+     "Ouve Amália Rodrigues. Ela é um clássico.",
+     "Merecias, depois de uma semana daquelas.",
+     "A que horas queres ir?",
+     "Gostava de morar aqui um tempo, quem sabe um dia."
+    ],
+    "answer": 3
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Espero que o meu português melhore até lá.",
+    "promptSub": "",
+    "options": [
+     "I hope my Portuguese improves by then. (subjunctive)",
+     "Marcos is the official grill master of the group.",
+     "I slept in and stayed home watching series.",
+     "I started watching one this week. It's great for training my ear."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "It would be amazing! You're almost Portuguese already.",
+    "promptSub": "",
+    "options": [
+     "Esse é o segredo. E os planos para o próximo mês?",
+     "Espero voltar a Portugal mais duas vezes.",
+     "Seria incrível! Já és quase português.",
+     "Muita coisa boa. O trabalho vai bem e o meu português está a"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Espero voltar a Portugal mais duas vezes.",
+    "promptSub": "",
+    "options": [
+     "Hey man, all good? (pá = dude; fixe = cool/fine — everyday Portuguese slang)",
+     "You're not going to believe what happened to me!",
+     "I hope to come back to Portugal two more times. (espero + infinitive)",
+     "You bet! Let's plan a dinner when I get back. (podes crer = you bet, slang)"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day09",
+  "level": 3,
+  "title": "Day 9 — Music & Culture Talk",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Gosto muito de uma que um amigo me mostrou. E tu, o que reco",
+    "promptSub": "",
+    "options": [
+     "I really like one a friend showed me. And you, what do you recommend?",
+     "I insist. It's a custom in my family too. (fazer questão = to insist)",
+     "The meat is perfectly cooked. Congrats!",
+     "You can tell where her patience comes from!"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'll listen tonight. Send me the song name.",
+    "promptSub": "",
+    "options": [
+     "Então, conta-me as novidades!",
+     "Vou ouvir hoje à noite. Manda-me o nome da música.",
+     "Boas! Aceito sim. Os grelhados têm ótimo aspeto.",
+     "Obrigado! Serve-te de mais pão de alho."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Comecei a ver uma esta semana. É ótima para treinar o ouvido",
+    "promptSub": "",
+    "options": [
+     "I started watching one this week. It's great for training my ear.",
+     "How kind! You really didn't have to.",
+     "You deserved it, after that kind of week.",
+     "Agreed. Can I bring my cousin?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Listen to Amália Rodrigues. She's a classic. (the queen of fado)",
+    "promptSub": "",
+    "options": [
+     "Pois é, 'tava uma correria no trabalho.",
+     "Ouve Amália Rodrigues. Ela é um clássico.",
+     "Ela puxou à mãe, que também é professora.",
+     "Bem-vindo, Kevin! A Ana falou tanto de ti."
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Que tipo de música ouves?",
+    "promptSub": "",
+    "options": [
+     "What kind of music do you listen to?",
+     "Juliana speaks very well of you.",
+     "I slept in and stayed home watching series.",
+     "Thank you so much for having me. I brought a dessert."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Really? Which fado singer do you like the most?",
+    "promptSub": "",
+    "options": [
+     "'Tou a pensar naquele bar com música ao vivo.",
+     "Conta lá! Estou curioso.",
+     "A sério? De que fadista gostas mais?",
+     "Onde é que se conheceram?"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Já viste telenovelas portuguesas?",
+    "promptSub": "",
+    "options": [
+     "It will improve for sure. You practice every day.",
+     "You're going to love it. Send me photos!",
+     "I'm thinking about that bar with live music. ('tou = estou, casual)",
+     "Have you seen Portuguese soap operas?"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "A bit of everything. In Portugal, I got hooked on fado.",
+    "promptSub": "",
+    "options": [
+     "Um bocado de tudo. Em Portugal, fiquei viciado em fado.",
+     "'Tou a conhecer uma pessoa. Ainda é cedo.",
+     "Então, conta-me as novidades!",
+     "O teu português é muito bom! Onde aprendeste?"
+    ],
+    "answer": 0
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-day10",
+  "level": 3,
+  "title": "Day 10 — Level 3 Review: Free Conversation",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Esse é o segredo. E os planos para o próximo mês?",
+    "promptSub": "",
+    "options": [
+     "That's the secret. And plans for next month?",
+     "And the national coach? Do you think he stays? (selecionador = national team coach)",
+     "The meat is perfectly cooked. Congrats!",
+     "I'm thinking about that bar with live music. ('tou = estou, casual)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "You bet! Let's plan a dinner when I get back. (podes crer = you bet, slang)",
+    "promptSub": "",
+    "options": [
+     "Notei! Estás a falar tal e qual um português.",
+     "Podes crer! Vamos combinar um jantar quando eu voltar.",
+     "Espero que sim! Ela é muito fixe.",
+     "E domingo, o que é que fizeste?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Então, conta-me as novidades!",
+    "promptSub": "",
+    "options": [
+     "So, tell me the news!",
+     "I started watching one this week. It's great for training my ear.",
+     "You bet! Let's plan a dinner when I get back. (podes crer = you bet, slang)",
+     "This is the best Sunday plan. Thanks for the invite, everyone. (pessoal = everyone/guys)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I'm traveling to the Algarve with Juliana. It'll be my first time there.",
+    "promptSub": "",
+    "options": [
+     "Vou viajar para o Algarve com a Juliana. Vai ser a minha pri",
+     "É, no fim de contas até foi bom.",
+     "Seria incrível! Já és quase português.",
+     "O que é que achaste do jogo ontem?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Muito obrigado! Ainda erro bastante, mas já não tenho medo d",
+    "promptSub": "",
+    "options": [
+     "Thank you so much! I still make mistakes, but I'm not afraid of making them anymore.",
+     "You're going to love it. Send me photos!",
+     "Do you want to have dinner with us? I made lasagna. (connosco = with us)",
+     "All great! You've been missing in action! (porreiro = cool)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "You're going to love it. Send me photos!",
+    "promptSub": "",
+    "options": [
+     "Vamos sair hoje à noite?",
+     "Tudo porreiro! Tens andado desaparecido!",
+     "Vais adorar. Manda-me fotos!",
+     "Descontrai, tu és convidado. Aproveita!"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Muita coisa boa. O trabalho vai bem e o meu português está a",
+    "promptSub": "",
+    "options": [
+     "Lots of good things. Work is going well and my Portuguese is flowing.",
+     "There were about thirty people. We ate grilled food all afternoon.",
+     "Take care! See you soon! (fica bem = take care)",
+     "I noticed! You're speaking just like a Portuguese person. (tal e qual = exactly like)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I noticed! You're speaking just like a Portuguese person. (tal e qual = exactly like)",
+    "promptSub": "",
+    "options": [
+     "A sua casa é linda. Obrigado pelo convite.",
+     "Havia muita gente?",
+     "Notei! Estás a falar tal e qual um português.",
+     "A Juliana fala muito bem de ti."
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-churrasco",
+  "level": 3,
+  "title": "Scenario: Grelhada with Friends",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Descontrai, tu és convidado. Aproveita!",
+    "promptSub": "",
+    "options": [
+     "Done! Thanks, man! (combinado = agreed)",
+     "Relax, you're a guest. Just enjoy! (descontrai = relax, tu imperative)",
+     "I hope to come back to Portugal two more times. (espero + infinitive)",
+     "Will there be a second date?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Hey! I'll take one. The grilled food looks great. (boas = casual hi; aspeto = look)",
+    "promptSub": "",
+    "options": [
+     "Combinado! Obrigado, pá!",
+     "Havia muita gente?",
+     "Boas! Aceito sim. Os grelhados têm ótimo aspeto.",
+     "Espero que sim! Ela é muito fixe."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "A carne está no ponto perfeito. Parabéns!",
+    "promptSub": "",
+    "options": [
+     "The meat is perfectly cooked. Congrats!",
+     "At nine? I'll come by to pick you up. (ir buscar = to pick up)",
+     "It would be amazing! You're almost Portuguese already.",
+     "I started watching one this week. It's great for training my ear."
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Hey Kevin! You made it! Want a beer?",
+    "promptSub": "",
+    "options": [
+     "Obrigado! Serve-te de mais pão de alho.",
+     "Esse é o segredo. E os planos para o próximo mês?",
+     "Ó Kevin! Chegaste! Queres uma cerveja?",
+     "Vê-se de onde vem a paciência dela!"
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Posso ajudar com alguma coisa?",
+    "promptSub": "",
+    "options": [
+     "Can I help with anything?",
+     "And the national coach? Do you think he stays? (selecionador = national team coach)",
+     "Shall we go out tonight?",
+     "Let's! Do you have somewhere in mind?"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Marcos is the official grill master of the group.",
+    "promptSub": "",
+    "options": [
+     "É, no fim de contas até foi bom.",
+     "A carne está no ponto perfeito. Parabéns!",
+     "O Marcos é o mestre da grelha oficial do grupo.",
+     "Espero voltar a Portugal mais duas vezes."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Obrigado! Serve-te de mais pão de alho.",
+    "promptSub": "",
+    "options": [
+     "At nine? I'll come by to pick you up. (ir buscar = to pick up)",
+     "It will improve for sure. You practice every day.",
+     "So, tell me the news!",
+     "Thanks! Help yourself to more garlic bread. (serve-te = help yourself)"
+    ],
+    "answer": 3
+   },
+   {
+    "type": "en2jp",
+    "prompt": "This is the best Sunday plan. Thanks for the invite, everyone. (pessoal = everyone/guys)",
+    "promptSub": "",
+    "options": [
+     "Nossa! E depois, o que é que fizeste?",
+     "'Bora! Manda-me mensagem no WhatsApp.",
+     "Este é o melhor programa de domingo. Obrigado pelo convite, ",
+     "Tudo fixe! E contigo, tudo bem?"
+    ],
+    "answer": 2
+   }
+  ]
+ },
+ {
+  "lessonId": "l3-family",
+  "level": 3,
+  "title": "Scenario: Meeting Your Partner's Family",
+  "questions": [
+   {
+    "type": "jp2en",
+    "prompt": "Vê-se de onde vem a paciência dela!",
+    "promptSub": "",
+    "options": [
+     "I noticed! You're speaking just like a Portuguese person. (tal e qual = exactly like)",
+     "You can tell where her patience comes from!",
+     "I think Portugal played very badly. (acho que = I think)",
+     "Hey Kevin! You made it! Want a beer?"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "Welcome, Kevin! Ana has told us so much about you.",
+    "promptSub": "",
+    "options": [
+     "Faço questão. É um costume da minha família também.",
+     "O teu português é muito bom! Onde aprendeste?",
+     "Bem-vindo, Kevin! A Ana falou tanto de ti.",
+     "Pois é, 'tava uma correria no trabalho."
+    ],
+    "answer": 2
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Muito obrigado por me receberem. Trouxe uma sobremesa.",
+    "promptSub": "",
+    "options": [
+     "Thank you so much for having me. I brought a dessert.",
+     "The pleasure is mine, Kevin. Come in, make yourself at home!",
+     "Take care! See you soon! (fica bem = take care)",
+     "This is the best Sunday plan. Thanks for the invite, everyone. (pessoal = everyone/guys)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "How kind! You really didn't have to.",
+    "promptSub": "",
+    "options": [
+     "Que gentil! Não precisavas, a sério.",
+     "Gosto muito de uma que um amigo me mostrou. E tu, o que reco",
+     "Fica bem! Até já!",
+     "Comecei a ver uma esta semana. É ótima para treinar o ouvido"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "Estudei sozinho e pratiquei muito com a Ana. Ela é uma ótima",
+    "promptSub": "",
+    "options": [
+     "I studied on my own and practiced a lot with Ana. She's a great teacher.",
+     "Thanks! Help yourself to more garlic bread. (serve-te = help yourself)",
+     "Hey man, all good? (pá = dude; fixe = cool/fine — everyday Portuguese slang)",
+     "Yeah, work was a real rush. ('tava = estava, casual)"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "en2jp",
+    "prompt": "I insist. It's a custom in my family too. (fazer questão = to insist)",
+    "promptSub": "",
+    "options": [
+     "Faço questão. É um costume da minha família também.",
+     "Queres jantar connosco? Fiz uma lasanha.",
+     "O Marcos é o mestre da grelha oficial do grupo.",
+     "Comecei a ver uma esta semana. É ótima para treinar o ouvido"
+    ],
+    "answer": 0
+   },
+   {
+    "type": "jp2en",
+    "prompt": "O teu português é muito bom! Onde aprendeste?",
+    "promptSub": "",
+    "options": [
+     "You're not going to believe what happened to me!",
+     "Your Portuguese is very good! Where did you learn?",
+     "I ran to a pastry shop and stayed there an hour waiting.",
+     "Yeah, work was a real rush. ('tava = estava, casual)"
+    ],
+    "answer": 1
+   },
+   {
+    "type": "en2jp",
+    "prompt": "She takes after her mother, who is also a teacher.",
+    "promptSub": "",
+    "options": [
+     "Merecias, depois de uma semana daquelas.",
+     "Ela puxou à mãe, que também é professora.",
+     "Já viste telenovelas portuguesas?",
+     "Havia muita gente?"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+]

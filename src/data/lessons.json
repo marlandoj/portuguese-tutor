@@ -1,0 +1,3217 @@
+[
+ {
+  "id": "l1-day01",
+  "level": 1,
+  "kind": "day",
+  "day": 1,
+  "title": "Day 1 — Greetings & First Contact",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Bom dia!",
+    "romaji": "",
+    "en": "Good morning!",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Bom dia! Tudo bem?",
+    "romaji": "",
+    "en": "Good morning! How are you? (literally: everything well?)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Tudo bem, obrigado. E tu?",
+    "romaji": "",
+    "en": "I'm fine, thanks. And you? (informal tu)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tudo ótimo!",
+    "romaji": "",
+    "en": "Everything's great!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Muito prazer!",
+    "romaji": "",
+    "en": "Nice to meet you!",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O prazer é meu.",
+    "romaji": "",
+    "en": "The pleasure is mine.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "O meu nome é Kevin.",
+    "romaji": "",
+    "en": "My name is Kevin.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Muito prazer, Kevin. Eu sou a Ana.",
+    "romaji": "",
+    "en": "Nice to meet you, Kevin. I'm Ana.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Como está?",
+    "romaji": "",
+    "en": "How are you? (neutral/polite)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Estou bem, obrigada.",
+    "romaji": "",
+    "en": "I'm well, thank you (said by a woman).",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day02",
+  "level": 1,
+  "kind": "day",
+  "day": 2,
+  "title": "Day 2 — Numbers & People",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Quantas pessoas?",
+    "romaji": "",
+    "en": "How many people?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Duas pessoas.",
+    "romaji": "",
+    "en": "Two people.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Uma pessoa. Só eu.",
+    "romaji": "",
+    "en": "One person. Just me.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Mesa para quantos?",
+    "romaji": "",
+    "en": "Table for how many?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Para três, se faz favor.",
+    "romaji": "",
+    "en": "For three, please. (se faz favor = please, very Portuguese)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quanto custa?",
+    "romaji": "",
+    "en": "How much does it cost?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Custa vinte euros.",
+    "romaji": "",
+    "en": "It costs twenty euros.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Um, dois, três, quatro, cinco.",
+    "romaji": "",
+    "en": "One, two, three, four, five.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Seis, sete, oito, nove, dez.",
+    "romaji": "",
+    "en": "Six, seven, eight, nine, ten.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day03",
+  "level": 1,
+  "kind": "day",
+  "day": 3,
+  "title": "Day 3 — Restaurant: Getting a Table",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Boa noite! Bem-vindo!",
+    "romaji": "",
+    "en": "Good evening! Welcome!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Boa noite! Tem mesa livre?",
+    "romaji": "",
+    "en": "Good evening! Do you have a free table?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Temos sim. Para quantas pessoas?",
+    "romaji": "",
+    "en": "Yes, we do. For how many people?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Para duas pessoas.",
+    "romaji": "",
+    "en": "For two people.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Por aqui, se faz favor.",
+    "romaji": "",
+    "en": "This way, please.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quanto tempo de espera?",
+    "romaji": "",
+    "en": "How long is the wait?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Uns dez minutos.",
+    "romaji": "",
+    "en": "About ten minutes.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Está bem, nós esperamos.",
+    "romaji": "",
+    "en": "Okay, we'll wait.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Desculpe, estamos cheios neste momento.",
+    "romaji": "",
+    "en": "Sorry, we're full right now.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day04",
+  "level": 1,
+  "kind": "day",
+  "day": 4,
+  "title": "Day 4 — Restaurant: Ordering Food",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "O que deseja?",
+    "romaji": "",
+    "en": "What would you like? (classic waiter line)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Queria o prato do dia, se faz favor.",
+    "romaji": "",
+    "en": "I'd like the dish of the day, please. (queria = polite I'd like)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Para mim, o bitoque.",
+    "romaji": "",
+    "en": "For me, the bitoque (steak with egg and fries).",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Para beber?",
+    "romaji": "",
+    "en": "Anything to drink?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Uma água sem gás, se faz favor.",
+    "romaji": "",
+    "en": "A still water, please.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Mais alguma coisa?",
+    "romaji": "",
+    "en": "Anything else?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Não, só isso. Obrigado.",
+    "romaji": "",
+    "en": "No, that's all. Thank you.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "A conta, se faz favor.",
+    "romaji": "",
+    "en": "The bill, please.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Como deseja pagar?",
+    "romaji": "",
+    "en": "How would you like to pay?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Posso pagar com cartão?",
+    "romaji": "",
+    "en": "Can I pay by card?",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day05",
+  "level": 1,
+  "kind": "day",
+  "day": 5,
+  "title": "Day 5 — Café & Pastelaria",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Bom dia! Diga-me.",
+    "romaji": "",
+    "en": "Good morning! Tell me. (typical café greeting)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Um café, se faz favor.",
+    "romaji": "",
+    "en": "An espresso, please.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Com açúcar?",
+    "romaji": "",
+    "en": "With sugar?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Sem açúcar, obrigado.",
+    "romaji": "",
+    "en": "Without sugar, thanks.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Uma bica e um pastel de nata, se faz favor.",
+    "romaji": "",
+    "en": "A bica (Lisbon espresso) and a custard tart, please.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Quer o pastel quente, com canela?",
+    "romaji": "",
+    "en": "Do you want the tart warm, with cinnamon?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quero sim! Adoro pastel de nata.",
+    "romaji": "",
+    "en": "Yes, please! I love pastel de nata.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "É para cá ou para levar?",
+    "romaji": "",
+    "en": "Is it for here or to go?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Para levar, se faz favor.",
+    "romaji": "",
+    "en": "To go, please.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day06",
+  "level": 1,
+  "kind": "day",
+  "day": 6,
+  "title": "Day 6 — Hotel Check-in",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Boa tarde! Posso ajudar?",
+    "romaji": "",
+    "en": "Good afternoon! Can I help you?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Tenho uma reserva. O meu nome é Kevin Jackson.",
+    "romaji": "",
+    "en": "I have a reservation. My name is Kevin Jackson.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Deixe-me ver... Sim, encontrei. Quarto para duas noites.",
+    "romaji": "",
+    "en": "Let me see... Yes, I found it. Room for two nights.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Ótimo. A que horas é o pequeno-almoço?",
+    "romaji": "",
+    "en": "Great. What time is breakfast? (pequeno-almoço = breakfast)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Das sete às dez e meia da manhã.",
+    "romaji": "",
+    "en": "From seven to ten thirty in the morning.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "O quarto tem Wi-Fi?",
+    "romaji": "",
+    "en": "Does the room have Wi-Fi?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tem sim. A palavra-passe está no cartão.",
+    "romaji": "",
+    "en": "Yes, it does. The password is on the card. (palavra-passe = password)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Obrigado. Em que andar fica o quarto?",
+    "romaji": "",
+    "en": "Thank you. What floor is the room on?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "No terceiro andar. O elevador é ali.",
+    "romaji": "",
+    "en": "On the third floor. The elevator is over there.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day07",
+  "level": 1,
+  "kind": "day",
+  "day": 7,
+  "title": "Day 7 — Taxi & TVDE",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Com licença, táxi!",
+    "romaji": "",
+    "en": "Excuse me, taxi!",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Boa tarde. Para onde?",
+    "romaji": "",
+    "en": "Good afternoon. Where to?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Para o aeroporto, se faz favor.",
+    "romaji": "",
+    "en": "To the airport, please.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quanto tempo demora daqui até lá?",
+    "romaji": "",
+    "en": "How long does it take from here to there? (demorar = to take time)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Uns trinta minutos, dependendo do trânsito.",
+    "romaji": "",
+    "en": "About thirty minutes, depending on traffic.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Está bem. Tenho pressa.",
+    "romaji": "",
+    "en": "Okay. I'm in a hurry. (Portugal: ter pressa, not estar com pressa)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Chegámos. São vinte e cinco euros.",
+    "romaji": "",
+    "en": "We've arrived. That's twenty-five euros.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Pode ficar com o troco.",
+    "romaji": "",
+    "en": "Keep the change.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Obrigado! Boa viagem!",
+    "romaji": "",
+    "en": "Thank you! Have a good trip!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day08",
+  "level": 1,
+  "kind": "day",
+  "day": 8,
+  "title": "Day 8 — Directions",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Com licença. Onde fica a estação de metro?",
+    "romaji": "",
+    "en": "Excuse me. Where is the metro station?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Fica a cinco minutos daqui, sempre em frente.",
+    "romaji": "",
+    "en": "It's five minutes from here, straight ahead.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Como é que eu chego lá?",
+    "romaji": "",
+    "en": "How do I get there?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Siga em frente e vire à direita no semáforo.",
+    "romaji": "",
+    "en": "Go straight and turn right at the traffic light. (formal imperative)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "É longe daqui?",
+    "romaji": "",
+    "en": "Is it far from here?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Não, é mesmo perto. Dois minutos a pé.",
+    "romaji": "",
+    "en": "No, it's really close. Two minutes on foot.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Há uma casa de banho por aqui?",
+    "romaji": "",
+    "en": "Is there a bathroom around here? (casa de banho = bathroom)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Há, ali na esquina.",
+    "romaji": "",
+    "en": "Yes, there on the corner.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Muito obrigado pela ajuda!",
+    "romaji": "",
+    "en": "Thank you very much for the help!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day09",
+  "level": 1,
+  "kind": "day",
+  "day": 9,
+  "title": "Day 9 — Shopping & Prices",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Posso ajudar?",
+    "romaji": "",
+    "en": "Can I help you?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estou só a ver, obrigado.",
+    "romaji": "",
+    "en": "I'm just looking, thanks. (estar a + infinitive = European progressive)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quanto é isto?",
+    "romaji": "",
+    "en": "How much is this?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Esse custa cinquenta euros.",
+    "romaji": "",
+    "en": "That one costs fifty euros.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Tem um tamanho maior?",
+    "romaji": "",
+    "en": "Do you have a bigger size?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Temos sim. Quer experimentar?",
+    "romaji": "",
+    "en": "Yes, we do. Do you want to try it on?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Onde fica o provador?",
+    "romaji": "",
+    "en": "Where is the fitting room?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Está muito caro. Faz algum desconto?",
+    "romaji": "",
+    "en": "It's too expensive. Can you do a discount?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "A pronto pagamento tem dez por cento de desconto.",
+    "romaji": "",
+    "en": "Cash payment has ten percent off. (a pronto = cash)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Fico com ele!",
+    "romaji": "",
+    "en": "I'll take it! (literally: I stay with it — the classic way to buy)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day10",
+  "level": 1,
+  "kind": "day",
+  "day": 10,
+  "title": "Day 10 — At the Market (Mercado)",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Temos promoção! Bananas a dois euros o quilo!",
+    "romaji": "",
+    "en": "We've got a deal! Bananas two euros a kilo!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Dê-me um quilo de bananas, se faz favor.",
+    "romaji": "",
+    "en": "Give me a kilo of bananas, please. (dê-me = give me, formal imperative)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Este ananás está maduro?",
+    "romaji": "",
+    "en": "Is this pineapple ripe? (ananás = pineapple in Portugal)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Está sim, senhor. Docinho!",
+    "romaji": "",
+    "en": "Yes sir. Nice and sweet!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "A quanto está o quilo do tomate?",
+    "romaji": "",
+    "en": "How much is a kilo of tomatoes?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "A seis euros o quilo.",
+    "romaji": "",
+    "en": "Six euros a kilo.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Faz-me por cinco?",
+    "romaji": "",
+    "en": "Can you do it for five for me?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Para o senhor, faço!",
+    "romaji": "",
+    "en": "For you, sir, I'll do it!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Obrigado! Até à próxima!",
+    "romaji": "",
+    "en": "Thanks! See you next time!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day11",
+  "level": 1,
+  "kind": "day",
+  "day": 11,
+  "title": "Day 11 — Beach & Weather",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Como está o tempo hoje?",
+    "romaji": "",
+    "en": "How is the weather today?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Está imenso sol!",
+    "romaji": "",
+    "en": "It's super sunny!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "A água está fria?",
+    "romaji": "",
+    "en": "Is the water cold?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Não, está uma maravilha!",
+    "romaji": "",
+    "en": "No, it's wonderful!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Onde posso alugar uma espreguiçadeira?",
+    "romaji": "",
+    "en": "Where can I rent a sun lounger? (espreguiçadeira = sun lounger)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Ali no bar amarelo.",
+    "romaji": "",
+    "en": "There at the yellow beach bar.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Um sumo de laranja natural, se faz favor.",
+    "romaji": "",
+    "en": "A fresh orange juice, please. (sumo = juice)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Com ou sem gelo?",
+    "romaji": "",
+    "en": "With or without ice?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Com bastante gelo!",
+    "romaji": "",
+    "en": "With plenty of ice!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day12",
+  "level": 1,
+  "kind": "day",
+  "day": 12,
+  "title": "Day 12 — Making Plans",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "O que é que vais fazer amanhã?",
+    "romaji": "",
+    "en": "What are you going to do tomorrow? (informal tu)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Vou visitar a Torre de Belém.",
+    "romaji": "",
+    "en": "I'm going to visit the Belém Tower.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "No fim de semana vou para a praia.",
+    "romaji": "",
+    "en": "On the weekend I'm going to the beach.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Que giro! Queres companhia?",
+    "romaji": "",
+    "en": "How cool! Do you want company?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Claro! Vamos juntos.",
+    "romaji": "",
+    "en": "Of course! Let's go together.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "A que horas vais sair?",
+    "romaji": "",
+    "en": "What time are you going to leave?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Vou sair às oito da manhã.",
+    "romaji": "",
+    "en": "I'm going to leave at eight in the morning.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Vais de carro ou de autocarro?",
+    "romaji": "",
+    "en": "Are you going by car or by bus? (autocarro = bus)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Vou de metro. É mais rápido.",
+    "romaji": "",
+    "en": "I'm going by metro. It's faster.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day13",
+  "level": 1,
+  "kind": "day",
+  "day": 13,
+  "title": "Day 13 — Small Talk: Where Are You From",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "És daqui?",
+    "romaji": "",
+    "en": "Are you from here? (informal tu)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Não, sou dos Estados Unidos.",
+    "romaji": "",
+    "en": "No, I'm from the United States.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "A sério? De que cidade?",
+    "romaji": "",
+    "en": "Really? From which city?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Sou de Mesa, no Arizona. E tu?",
+    "romaji": "",
+    "en": "I'm from Mesa, in Arizona. And you?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Eu sou de Lisboa.",
+    "romaji": "",
+    "en": "I'm from Lisbon.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "É a primeira vez em Portugal?",
+    "romaji": "",
+    "en": "Is it your first time in Portugal?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Não, é a segunda vez. Adoro Portugal.",
+    "romaji": "",
+    "en": "No, it's the second time. I love Portugal.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Falas português muito bem!",
+    "romaji": "",
+    "en": "You speak Portuguese very well!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Obrigado! Ainda estou a aprender.",
+    "romaji": "",
+    "en": "Thank you! I'm still learning.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day14",
+  "level": 1,
+  "kind": "day",
+  "day": 14,
+  "title": "Day 14 — Communication Help",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Desculpe, não percebi.",
+    "romaji": "",
+    "en": "Sorry, I didn't understand. (perceber = to understand)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Pode repetir, se faz favor?",
+    "romaji": "",
+    "en": "Can you repeat, please?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Pode falar mais devagar?",
+    "romaji": "",
+    "en": "Can you speak more slowly?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Claro, sem problema.",
+    "romaji": "",
+    "en": "Of course, no problem.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "O que significa esta palavra?",
+    "romaji": "",
+    "en": "What does this word mean?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Significa 'thank you' em inglês.",
+    "romaji": "",
+    "en": "It means 'thank you' in English.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Como se diz 'water' em português?",
+    "romaji": "",
+    "en": "How do you say 'water' in Portuguese?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Diz-se 'água'.",
+    "romaji": "",
+    "en": "You say 'água'.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Fala inglês?",
+    "romaji": "",
+    "en": "Do you speak English?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Falo um bocadinho.",
+    "romaji": "",
+    "en": "I speak a tiny bit. (bocadinho = little bit)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-day15",
+  "level": 1,
+  "kind": "day",
+  "day": 15,
+  "title": "Day 15 — Review & Mixed Practice",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Tudo bem contigo?",
+    "romaji": "",
+    "en": "Is everything good with you? (contigo = with you, informal)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Tudo ótimo! Estou a adorar Portugal.",
+    "romaji": "",
+    "en": "Everything's great! I'm loving Portugal.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Onde queres almoçar hoje?",
+    "romaji": "",
+    "en": "Where do you want to have lunch today?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quero comer um bacalhau à Brás de verdade.",
+    "romaji": "",
+    "en": "I want to eat a proper bacalhau à Brás (codfish dish).",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Conheço um sítio perfeito!",
+    "romaji": "",
+    "en": "I know a perfect place! (sítio = place)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Depois vamos tomar um café?",
+    "romaji": "",
+    "en": "Afterwards shall we have a coffee?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Boa ideia! Estás a falar cada vez melhor.",
+    "romaji": "",
+    "en": "Good idea! You're speaking better and better.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Obrigado! Estou a praticar todos os dias.",
+    "romaji": "",
+    "en": "Thanks! I'm practicing every day.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-airport",
+  "level": 1,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Airport Arrival",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Passaporte, se faz favor.",
+    "romaji": "",
+    "en": "Passport, please.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Aqui está.",
+    "romaji": "",
+    "en": "Here it is.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Qual é o motivo da sua viagem?",
+    "romaji": "",
+    "en": "What is the reason for your trip?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Turismo. Vou ficar duas semanas.",
+    "romaji": "",
+    "en": "Tourism. I'm going to stay two weeks.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Onde é que vai ficar hospedado?",
+    "romaji": "",
+    "en": "Where will you be staying?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "No hotel Avenida Palace, em Lisboa.",
+    "romaji": "",
+    "en": "At the Avenida Palace hotel, in Lisbon.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Está tudo certo. Bem-vindo a Portugal!",
+    "romaji": "",
+    "en": "All good. Welcome to Portugal!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Obrigado! Onde levanto a minha bagagem?",
+    "romaji": "",
+    "en": "Thank you! Where do I pick up my luggage? (levantar = to pick up)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "No tapete número três, à direita.",
+    "romaji": "",
+    "en": "At carousel number three, to the right. (tapete = carousel belt)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-restaurant",
+  "level": 1,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Full Restaurant Dialogue",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Boa noite! Mesa para quantos?",
+    "romaji": "",
+    "en": "Good evening! Table for how many?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Para dois, se faz favor.",
+    "romaji": "",
+    "en": "For two, please.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Aqui está a ementa.",
+    "romaji": "",
+    "en": "Here is the menu. (ementa = menu)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "O que recomenda?",
+    "romaji": "",
+    "en": "What do you recommend?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O bacalhau à Brás é o prato da casa.",
+    "romaji": "",
+    "en": "The bacalhau à Brás is the house specialty.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Perfeito. Um bacalhau à Brás e dois sumos de maracujá.",
+    "romaji": "",
+    "en": "Perfect. One bacalhau à Brás and two passion fruit juices.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Excelente escolha. Já venho.",
+    "romaji": "",
+    "en": "Excellent choice. Be right back.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estava delicioso! A conta, se faz favor.",
+    "romaji": "",
+    "en": "It was delicious! The bill, please.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "São trinta e oito euros.",
+    "romaji": "",
+    "en": "That's thirty-eight euros.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Posso pagar com MB Way?",
+    "romaji": "",
+    "en": "Can I pay with MB Way? (the Portuguese payment app)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Pode sim! O número está aqui.",
+    "romaji": "",
+    "en": "Yes you can! The number is here.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-hotel",
+  "level": 1,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Full Hotel Dialogue",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Boa noite. Tenho uma reserva em nome de Jackson.",
+    "romaji": "",
+    "en": "Good evening. I have a reservation under Jackson.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Um momento... Encontrei. Três noites, com pequeno-almoço incluído.",
+    "romaji": "",
+    "en": "One moment... Found it. Three nights, breakfast included.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Isso mesmo. Posso fazer o check-in agora?",
+    "romaji": "",
+    "en": "That's right. Can I check in now?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Claro. Preciso de um documento de identificação.",
+    "romaji": "",
+    "en": "Of course. I need an ID document.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Aqui está o meu passaporte.",
+    "romaji": "",
+    "en": "Here is my passport.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O seu quarto é o quinhentos e dois, no quinto andar.",
+    "romaji": "",
+    "en": "Your room is five-oh-two, on the fifth floor.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "O checkout é a que horas?",
+    "romaji": "",
+    "en": "What time is checkout?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Ao meio-dia. Bom descanso!",
+    "romaji": "",
+    "en": "At noon. Rest well!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l1-taxi",
+  "level": 1,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Full Taxi Dialogue",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Bom dia! Para a Avenida da Liberdade, se faz favor.",
+    "romaji": "",
+    "en": "Good morning! To Avenida da Liberdade, please.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Claro. Quer ir pela Segunda Circular? É mais rápido.",
+    "romaji": "",
+    "en": "Sure. Do you want to go via the Segunda Circular? It's faster. (Lisbon expressway)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quanto tempo demora?",
+    "romaji": "",
+    "en": "How long does it take?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Vinte minutos, mais ou menos.",
+    "romaji": "",
+    "en": "Twenty minutes, more or less.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Perfeito, tenho pressa para uma reunião.",
+    "romaji": "",
+    "en": "Perfect, I'm in a hurry for a meeting.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Chegámos. Dezoito euros.",
+    "romaji": "",
+    "en": "We've arrived. Eighteen euros.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Aqui está. Pode ficar com o troco.",
+    "romaji": "",
+    "en": "Here you go. Keep the change.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Obrigado! Boa reunião!",
+    "romaji": "",
+    "en": "Thank you! Have a good meeting!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day01",
+  "level": 2,
+  "kind": "day",
+  "day": 1,
+  "title": "Day 1 — Ser vs Estar in Real Life",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "És americano?",
+    "romaji": "",
+    "en": "Are you American? (permanent characteristic — ser; informal tu)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Sou sim. Sou do Arizona.",
+    "romaji": "",
+    "en": "Yes I am. I'm from Arizona.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "E estás a gostar de Portugal?",
+    "romaji": "",
+    "en": "And are you enjoying Portugal? (estar a + infinitive = European progressive)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estou a adorar! Estou muito feliz aqui.",
+    "romaji": "",
+    "en": "I'm loving it! I'm very happy here.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Como é a tua cidade?",
+    "romaji": "",
+    "en": "What is your city like?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "É quente e seca, como o Alentejo.",
+    "romaji": "",
+    "en": "It's hot and dry, like the Alentejo.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Estás cansado da viagem?",
+    "romaji": "",
+    "en": "Are you tired from the trip?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estou um bocado, mas estou entusiasmado.",
+    "romaji": "",
+    "en": "I am a bit, but I'm excited. (bocado = a bit)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day02",
+  "level": 2,
+  "kind": "day",
+  "day": 2,
+  "title": "Day 2 — At the Pharmacy",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Bom dia. Tenho dores de cabeça.",
+    "romaji": "",
+    "en": "Good morning. I have a headache.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Há quanto tempo se sente assim?",
+    "romaji": "",
+    "en": "How long have you been feeling like this?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Desde ontem à noite.",
+    "romaji": "",
+    "en": "Since last night.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tem alergia a algum medicamento?",
+    "romaji": "",
+    "en": "Are you allergic to any medication? (medicamento = medicine)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Não, não tenho.",
+    "romaji": "",
+    "en": "No, I'm not.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tome um comprimido de oito em oito horas.",
+    "romaji": "",
+    "en": "Take one pill every eight hours.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Precisa de receita médica?",
+    "romaji": "",
+    "en": "Does it need a prescription?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Não precisa. Vende-se sem receita.",
+    "romaji": "",
+    "en": "It doesn't. It's sold without a prescription.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Também tenho dores de garganta.",
+    "romaji": "",
+    "en": "I have a sore throat too.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Leve estas pastilhas também. As melhoras!",
+    "romaji": "",
+    "en": "Take these lozenges too. Get well! (as melhoras = get well)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day03",
+  "level": 2,
+  "kind": "day",
+  "day": 3,
+  "title": "Day 3 — Appointments by Phone",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Está? Clínica Santa Maria, bom dia.",
+    "romaji": "",
+    "en": "Hello? Santa Maria clinic, good morning. (Está? = phone greeting)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Bom dia. Gostaria de marcar uma consulta.",
+    "romaji": "",
+    "en": "Good morning. I'd like to book an appointment.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Com que médico?",
+    "romaji": "",
+    "en": "With which doctor?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Com a doutora Fernanda, se for possível.",
+    "romaji": "",
+    "en": "With Doctor Fernanda, if possible.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Ela tem uma vaga na quinta-feira, às catorze horas.",
+    "romaji": "",
+    "en": "She has a slot on Thursday at 2 PM.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Perfeito. Pode marcar para mim, se faz favor?",
+    "romaji": "",
+    "en": "Perfect. Can you book it for me, please?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Qual é o seu nome completo?",
+    "romaji": "",
+    "en": "What is your full name?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Kevin Jackson. J-A-C-K-S-O-N.",
+    "romaji": "",
+    "en": "Kevin Jackson. J-A-C-K-S-O-N.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Está marcado. Quinta-feira às duas. Confirme um dia antes, se faz favor.",
+    "romaji": "",
+    "en": "Booked. Thursday at two. Please confirm one day before.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day04",
+  "level": 2,
+  "kind": "day",
+  "day": 4,
+  "title": "Day 4 — At the Barber & Salon",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Olá! Como queres o corte hoje?",
+    "romaji": "",
+    "en": "Hi! How do you want the cut today?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Só um aparo, se faz favor. Nada muito curto.",
+    "romaji": "",
+    "en": "Just a trim, please. Nothing too short. (aparo = trim)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Máquina número dois dos lados?",
+    "romaji": "",
+    "en": "Number two clippers on the sides?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Isso. E em cima, só as pontas.",
+    "romaji": "",
+    "en": "That's it. And on top, just the ends.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Queres que eu faça a barba também?",
+    "romaji": "",
+    "en": "Do you want me to do your beard too?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Quero sim. Quanto fica tudo?",
+    "romaji": "",
+    "en": "Yes, please. How much is everything?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Corte e barba, vinte euros.",
+    "romaji": "",
+    "en": "Cut and beard, twenty euros.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Está bem. Obrigado!",
+    "romaji": "",
+    "en": "Great. Thank you!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day05",
+  "level": 2,
+  "kind": "day",
+  "day": 5,
+  "title": "Day 5 — Bank & Money",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Bom dia. Quero trocar dólares por euros.",
+    "romaji": "",
+    "en": "Good morning. I want to exchange dollars for euros.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Qual é o montante?",
+    "romaji": "",
+    "en": "How much? (montante = amount)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Trezentos dólares. Qual é o câmbio hoje?",
+    "romaji": "",
+    "en": "Three hundred dollars. What's the exchange rate today? (câmbio = rate)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Está a um euro e dez hoje.",
+    "romaji": "",
+    "en": "It's one euro ten today.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Tem comissão de serviço?",
+    "romaji": "",
+    "en": "Is there a service fee? (comissão = fee)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tem, cinco euros por operação.",
+    "romaji": "",
+    "en": "Yes, five euros per transaction.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Onde há um Multibanco?",
+    "romaji": "",
+    "en": "Where is there an ATM? (Multibanco = the Portuguese ATM network)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Lá fora, do lado direito.",
+    "romaji": "",
+    "en": "Outside, on the right side.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "O MB Way funciona para estrangeiros?",
+    "romaji": "",
+    "en": "Does MB Way work for foreigners?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Funciona com conta portuguesa.",
+    "romaji": "",
+    "en": "It works with a Portuguese account.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day06",
+  "level": 2,
+  "kind": "day",
+  "day": 6,
+  "title": "Day 6 — Housing & Neighborhood",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Estás a procurar apartamento?",
+    "romaji": "",
+    "en": "Are you looking for an apartment?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estou sim. Quero um sítio perto do metro.",
+    "romaji": "",
+    "en": "I am. I want a place near the metro.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "De quantos quartos?",
+    "romaji": "",
+    "en": "With how many bedrooms?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Um quarto chega. É só para mim.",
+    "romaji": "",
+    "en": "One bedroom is enough. It's just for me. (chegar = to be enough)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Qual é o teu orçamento?",
+    "romaji": "",
+    "en": "What is your budget?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Até oitocentos euros por mês, com condomínio incluído.",
+    "romaji": "",
+    "en": "Up to eight hundred euros a month, including building fees.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O bairro é seguro?",
+    "romaji": "",
+    "en": "Is the neighborhood safe?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "É tranquilo. Tem uma pastelaria e um minimercado na esquina.",
+    "romaji": "",
+    "en": "It's calm. There's a pastry shop and a mini-market on the corner.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day07",
+  "level": 2,
+  "kind": "day",
+  "day": 7,
+  "title": "Day 7 — Talking About Work",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "O que é que fazes?",
+    "romaji": "",
+    "en": "What do you do? (work)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Trabalho em tecnologia. Sou gestor de projetos.",
+    "romaji": "",
+    "en": "I work in tech. I'm a project manager. (gestor = manager)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Que interessante! Trabalhas nisso há quanto tempo?",
+    "romaji": "",
+    "en": "How interesting! How long have you worked in that?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Há mais de dez anos.",
+    "romaji": "",
+    "en": "For more than ten years.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Trabalhas remotamente ou no escritório?",
+    "romaji": "",
+    "en": "Do you work remotely or at the office?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Híbrido. Três dias em casa, dois no escritório.",
+    "romaji": "",
+    "en": "Hybrid. Three days at home, two at the office.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Gostas do teu trabalho?",
+    "romaji": "",
+    "en": "Do you like your job?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Gosto muito. A minha equipa é ótima — tem gente de Tóquio.",
+    "romaji": "",
+    "en": "I like it a lot. My team is great — there are people from Tokyo. (equipa = team)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day08",
+  "level": 2,
+  "kind": "day",
+  "day": 8,
+  "title": "Day 8 — Invitations & Making Plans",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Queres sair para jantar sexta-feira?",
+    "romaji": "",
+    "en": "Do you want to go out for dinner on Friday?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Adorava! A que horas?",
+    "romaji": "",
+    "en": "I'd love to! At what time?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Às oito. Conheces aquele restaurante em Alfama?",
+    "romaji": "",
+    "en": "At eight. Do you know that restaurant in Alfama?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Conheço! É ótimo. Quem mais vai?",
+    "romaji": "",
+    "en": "I do! It's great. Who else is going?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "A Juliana e o Marcos. Vou enviar a localização.",
+    "romaji": "",
+    "en": "Juliana and Marcos. I'll send the location.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Infelizmente não posso na sexta. Pode ser no sábado?",
+    "romaji": "",
+    "en": "Unfortunately I can't on Friday. Can it be Saturday?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Pode sim! Sábado então, à mesma hora.",
+    "romaji": "",
+    "en": "Yes it can! Saturday then, same time.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day09",
+  "level": 2,
+  "kind": "day",
+  "day": 9,
+  "title": "Day 9 — Likes & Dislikes",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Gostas de música portuguesa?",
+    "romaji": "",
+    "en": "Do you like Portuguese music?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Adoro! Gosto muito de fado.",
+    "romaji": "",
+    "en": "I love it! I really like fado. (Portugal's soul music)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "E kizomba? Gostas de dançar?",
+    "romaji": "",
+    "en": "And kizomba? Do you like to dance? (hugely popular in Portugal)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Gosto, mas danço muito mal!",
+    "romaji": "",
+    "en": "I do, but I dance very badly!",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O que é que não gostas de fazer?",
+    "romaji": "",
+    "en": "What do you not like doing?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Não gosto de acordar cedo, mas estou a habituar-me.",
+    "romaji": "",
+    "en": "I don't like waking up early, but I'm getting used to it. (habituar-me = European clitic placement)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Qual é a tua comida portuguesa favorita?",
+    "romaji": "",
+    "en": "What is your favorite Portuguese food?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Bacalhau à Brás, sem dúvida. E pastel de nata, claro.",
+    "romaji": "",
+    "en": "Bacalhau à Brás, no doubt. And pastel de nata, of course.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day10",
+  "level": 2,
+  "kind": "day",
+  "day": 10,
+  "title": "Day 10 — What You Did (Past Tense)",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "O que é que fizeste no fim de semana?",
+    "romaji": "",
+    "en": "What did you do on the weekend? (fizeste = tu preterite)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Fui à praia no sábado e descansei no domingo.",
+    "romaji": "",
+    "en": "I went to the beach on Saturday and rested on Sunday.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Que fixe! Com quem foste?",
+    "romaji": "",
+    "en": "Nice! Who did you go with? (fixe = cool, everyday slang)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Fui com uns amigos portugueses. Comemos peixe grelhado à beira-mar.",
+    "romaji": "",
+    "en": "I went with some Portuguese friends. We ate grilled fish by the sea.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Já experimentaste ginjinha?",
+    "romaji": "",
+    "en": "Have you tried ginjinha yet? (Lisbon's cherry liqueur)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Já! Experimentei ontem. É forte!",
+    "romaji": "",
+    "en": "I have! I tried it yesterday. It's strong!",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Gostaste?",
+    "romaji": "",
+    "en": "Did you like it?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Gostei muito, mas só bebi uma.",
+    "romaji": "",
+    "en": "I liked it a lot, but I only had one.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day11",
+  "level": 2,
+  "kind": "day",
+  "day": 11,
+  "title": "Day 11 — Daily Routine",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "A que horas acordas normalmente?",
+    "romaji": "",
+    "en": "What time do you normally wake up?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Acordo às seis e meia, tomo o pequeno-almoço e começo a trabalhar.",
+    "romaji": "",
+    "en": "I wake up at six thirty, have breakfast and start working.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Costumas fazer exercício de manhã?",
+    "romaji": "",
+    "en": "Do you usually exercise in the morning? (costumar = to usually do)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Faço exercício três vezes por semana. Corro no parque.",
+    "romaji": "",
+    "en": "I exercise three times a week. I run in the park.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "E à noite, o que é que fazes?",
+    "romaji": "",
+    "en": "And at night, what do you do?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Cozinho, estudo português um bocado e deito-me cedo.",
+    "romaji": "",
+    "en": "I cook, study Portuguese a bit and go to bed early. (deitar-se = to go to bed)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Estás a adaptar-te bem ao fuso horário?",
+    "romaji": "",
+    "en": "Are you adapting well to the time zone?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estou a adaptar-me devagar. Ainda acordo de madrugada às vezes.",
+    "romaji": "",
+    "en": "I'm adapting slowly. I still wake up in the middle of the night sometimes.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-day12",
+  "level": 2,
+  "kind": "day",
+  "day": 12,
+  "title": "Day 12 — Level 2 Review",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Como foi a tua semana?",
+    "romaji": "",
+    "en": "How was your week?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Foi uma correria, mas boa. Trabalhei muito e estudei todos os dias.",
+    "romaji": "",
+    "en": "It was a rush, but good. I worked a lot and studied every day.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Já marcaste a consulta que precisavas?",
+    "romaji": "",
+    "en": "Did you already book the appointment you needed?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Marquei sim. Liguei ontem e consegui uma vaga.",
+    "romaji": "",
+    "en": "I did. I called yesterday and got a slot.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O teu português melhorou imenso este mês!",
+    "romaji": "",
+    "en": "Your Portuguese improved so much this month! (imenso = hugely)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Obrigado! Agora consigo resolver quase tudo sozinho.",
+    "romaji": "",
+    "en": "Thank you! Now I can handle almost everything by myself.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-doctor",
+  "level": 2,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: At the Doctor",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Boa tarde. O que é que sente?",
+    "romaji": "",
+    "en": "Good afternoon. What are you feeling?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Tenho febre e dores no corpo desde ontem.",
+    "romaji": "",
+    "en": "I've had a fever and body aches since yesterday.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tem dor de garganta ou tosse?",
+    "romaji": "",
+    "en": "Do you have a sore throat or cough?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Um bocado de tosse seca.",
+    "romaji": "",
+    "en": "A bit of a dry cough.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Vou examiná-lo. Respire fundo, se faz favor.",
+    "romaji": "",
+    "en": "I'm going to examine you. Take a deep breath, please. (examiná-lo = examine you, European clitic)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "É algo sério, doutora?",
+    "romaji": "",
+    "en": "Is it something serious, doctor?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Não, é só uma gripe ligeira. Repouso e muitos líquidos.",
+    "romaji": "",
+    "en": "No, it's just a mild flu. Rest and lots of fluids.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Preciso de voltar aqui?",
+    "romaji": "",
+    "en": "Do I need to come back?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Só se a febre não passar em três dias.",
+    "romaji": "",
+    "en": "Only if the fever doesn't go away in three days.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-phone",
+  "level": 2,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Phone Appointment",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Está? Cabeleireiro Estrela.",
+    "romaji": "",
+    "en": "Hello? Estrela hair salon.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Olá, bom dia. Queria marcar para amanhã.",
+    "romaji": "",
+    "en": "Hi, good morning. I'd like to book for tomorrow.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Temos às dez ou às quinze horas. Qual prefere?",
+    "romaji": "",
+    "en": "We have ten or three PM. Which do you prefer?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Às dez, se faz favor. Em nome de Kevin.",
+    "romaji": "",
+    "en": "At ten, please. Under Kevin.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Anotado. Corte e barba?",
+    "romaji": "",
+    "en": "Noted. Cut and beard?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Só corte desta vez. Muito obrigado!",
+    "romaji": "",
+    "en": "Just a cut this time. Thank you very much!",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Nós agradecemos! Até amanhã.",
+    "romaji": "",
+    "en": "Thank you! See you tomorrow.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l2-interview",
+  "level": 2,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Meeting Coworkers",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Tu és o Kevin, certo? Bem-vindo à equipa!",
+    "romaji": "",
+    "en": "You're Kevin, right? Welcome to the team!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Isso! Muito prazer. Estou entusiasmado para trabalhar convosco.",
+    "romaji": "",
+    "en": "That's me! Nice to meet you. I'm excited to work with you all. (convosco = with you all)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Onde trabalhavas antes?",
+    "romaji": "",
+    "en": "Where did you work before?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Trabalhava numa empresa de tecnologia americana, remotamente.",
+    "romaji": "",
+    "en": "I worked at an American tech company, remotely.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "E o que é que achas de trabalhar com uma equipa portuguesa?",
+    "romaji": "",
+    "en": "And what do you think about working with a Portuguese team?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estou a adorar. Quero aprender mais sobre a cultura daqui.",
+    "romaji": "",
+    "en": "I'm loving it. I want to learn more about the culture here.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Sexta há um convívio com a equipa. Vens?",
+    "romaji": "",
+    "en": "Friday there's a get-together with the team. Are you coming? (convívio = social gathering)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Com certeza! Onde vai ser?",
+    "romaji": "",
+    "en": "Definitely! Where will it be?",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day01",
+  "level": 3,
+  "kind": "day",
+  "day": 1,
+  "title": "Day 1 — Casual Greetings & Slang",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Então pá, tudo fixe?",
+    "romaji": "",
+    "en": "Hey man, all good? (pá = dude; fixe = cool/fine — everyday Portuguese slang)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Tudo fixe! E contigo, tudo bem?",
+    "romaji": "",
+    "en": "All good! And with you, everything alright?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tudo porreiro! Tens andado desaparecido!",
+    "romaji": "",
+    "en": "All great! You've been missing in action! (porreiro = cool)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Pois é, 'tava uma correria no trabalho.",
+    "romaji": "",
+    "en": "Yeah, work was a real rush. ('tava = estava, casual)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Deixa lá, 'bora tomar um café qualquer dia.",
+    "romaji": "",
+    "en": "Never mind, let's grab a coffee sometime. (deixa lá = never mind)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "'Bora! Manda-me mensagem no WhatsApp.",
+    "romaji": "",
+    "en": "Let's! Send me a message on WhatsApp.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Combinado! Obrigado, pá!",
+    "romaji": "",
+    "en": "Done! Thanks, man! (combinado = agreed)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Fica bem! Até já!",
+    "romaji": "",
+    "en": "Take care! See you soon! (fica bem = take care)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day02",
+  "level": 3,
+  "kind": "day",
+  "day": 2,
+  "title": "Day 2 — Giving Opinions",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "O que é que achaste do jogo ontem?",
+    "romaji": "",
+    "en": "What did you think of the game yesterday?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Acho que Portugal jogou muito mal.",
+    "romaji": "",
+    "en": "I think Portugal played very badly. (acho que = I think)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Discordo. Na minha opinião, a equipa esteve bem.",
+    "romaji": "",
+    "en": "I disagree. In my opinion, the team did well. (equipa = team)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Para mim, o problema foi a defesa.",
+    "romaji": "",
+    "en": "For me, the problem was the defense.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Pode ser. Mas o ataque também não ajudou.",
+    "romaji": "",
+    "en": "Maybe. But the attack didn't help either.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Concordo contigo nessa parte.",
+    "romaji": "",
+    "en": "I agree with you on that part.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "E o selecionador? Achas que ele fica?",
+    "romaji": "",
+    "en": "And the national coach? Do you think he stays? (selecionador = national team coach)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Duvido. Acho que o vão despedir.",
+    "romaji": "",
+    "en": "I doubt it. I think they'll fire him.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day03",
+  "level": 3,
+  "kind": "day",
+  "day": 3,
+  "title": "Day 3 — Weekend Stories",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Conta lá! O que é que aconteceu no fim de semana?",
+    "romaji": "",
+    "en": "Tell me! What happened on the weekend? (conta lá = tell me)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Fui a um aniversário de um amigo. Foi muito giro.",
+    "romaji": "",
+    "en": "I went to a friend's birthday. It was really nice. (giro = cool/nice)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Havia muita gente?",
+    "romaji": "",
+    "en": "Were there a lot of people?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Havia umas trinta pessoas. Comemos grelhados a tarde toda.",
+    "romaji": "",
+    "en": "There were about thirty people. We ate grilled food all afternoon.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "E domingo, o que é que fizeste?",
+    "romaji": "",
+    "en": "And Sunday, what did you do?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Dormi até tarde e fiquei em casa a ver séries.",
+    "romaji": "",
+    "en": "I slept in and stayed home watching series.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Merecias, depois de uma semana daquelas.",
+    "romaji": "",
+    "en": "You deserved it, after that kind of week.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day04",
+  "level": 3,
+  "kind": "day",
+  "day": 4,
+  "title": "Day 4 — Inviting People Out",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Vamos sair hoje à noite?",
+    "romaji": "",
+    "en": "Shall we go out tonight?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Vamos! Tens algum sítio em mente?",
+    "romaji": "",
+    "en": "Let's! Do you have somewhere in mind?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "'Tou a pensar naquele bar com música ao vivo.",
+    "romaji": "",
+    "en": "I'm thinking about that bar with live music. ('tou = estou, casual)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "A que horas queres ir?",
+    "romaji": "",
+    "en": "What time do you want to go?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Às nove? Passo aí para te ir buscar.",
+    "romaji": "",
+    "en": "At nine? I'll come by to pick you up. (ir buscar = to pick up)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Combinado. Posso levar a minha prima?",
+    "romaji": "",
+    "en": "Agreed. Can I bring my cousin?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Claro! Quanta mais gente, melhor.",
+    "romaji": "",
+    "en": "Of course! The more people, the better.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day05",
+  "level": 3,
+  "kind": "day",
+  "day": 5,
+  "title": "Day 5 — Dating Talk",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Então, andas a sair com alguém?",
+    "romaji": "",
+    "en": "So, are you seeing anyone? (andar a + inf = to be doing regularly)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "'Tou a conhecer uma pessoa. Ainda é cedo.",
+    "romaji": "",
+    "en": "I'm getting to know someone. It's still early.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Onde é que se conheceram?",
+    "romaji": "",
+    "en": "Where did you two meet?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Num curso de português. Ela é portuguesa.",
+    "romaji": "",
+    "en": "In a Portuguese course. She's Portuguese.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Que fofo! E já saíram?",
+    "romaji": "",
+    "en": "How cute! And have you gone out yet?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Já. Fomos jantar no sábado. Foi muito bom.",
+    "romaji": "",
+    "en": "We have. We went to dinner on Saturday. It was really good.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Vai haver um segundo encontro?",
+    "romaji": "",
+    "en": "Will there be a second date?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Espero que sim! Ela é muito fixe.",
+    "romaji": "",
+    "en": "I hope so! She's really cool.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day06",
+  "level": 3,
+  "kind": "day",
+  "day": 6,
+  "title": "Day 6 — Meeting the Family",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "K",
+    "jp": "Boa noite, senhora. Muito prazer em conhecê-la.",
+    "romaji": "",
+    "en": "Good evening, ma'am. Very nice to meet you. (formal; conhecê-la = meet you)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O prazer é meu, Kevin. Entra, está à vontade!",
+    "romaji": "",
+    "en": "The pleasure is mine, Kevin. Come in, make yourself at home!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "A sua casa é linda. Obrigado pelo convite.",
+    "romaji": "",
+    "en": "Your home is beautiful. Thank you for the invitation.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "A Juliana fala muito bem de ti.",
+    "romaji": "",
+    "en": "Juliana speaks very well of you.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Fico contente. Ela é uma pessoa muito especial.",
+    "romaji": "",
+    "en": "I'm glad. She's a very special person. (ficar contente = to be glad)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Queres jantar connosco? Fiz uma lasanha.",
+    "romaji": "",
+    "en": "Do you want to have dinner with us? I made lasagna. (connosco = with us)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Adorava, muito obrigado. Cheira muito bem!",
+    "romaji": "",
+    "en": "I'd love to, thank you very much. It smells great!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day07",
+  "level": 3,
+  "kind": "day",
+  "day": 7,
+  "title": "Day 7 — Telling Stories",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Não vais acreditar no que me aconteceu!",
+    "romaji": "",
+    "en": "You're not going to believe what happened to me!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Conta lá! Estou curioso.",
+    "romaji": "",
+    "en": "Tell me! I'm curious.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Eu 'tava no metro e, de repente, começou a chover a potes.",
+    "romaji": "",
+    "en": "I was on the metro and, suddenly, it started pouring rain. (chover a potes = to pour)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Nossa! E depois, o que é que fizeste?",
+    "romaji": "",
+    "en": "Wow! And then what did you do?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Corri para uma pastelaria e fiquei lá uma hora à espera.",
+    "romaji": "",
+    "en": "I ran to a pastry shop and stayed there an hour waiting.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Que doideira! Pelo menos havia café.",
+    "romaji": "",
+    "en": "That's crazy! At least there was coffee. (doideira = craziness)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "É, no fim de contas até foi bom.",
+    "romaji": "",
+    "en": "Yeah, in the end it was actually fine.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day08",
+  "level": 3,
+  "kind": "day",
+  "day": 8,
+  "title": "Day 8 — Hopes & Wishes",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Quais são os teus planos para o próximo ano?",
+    "romaji": "",
+    "en": "What are your plans for next year?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Espero voltar a Portugal mais duas vezes.",
+    "romaji": "",
+    "en": "I hope to come back to Portugal two more times. (espero + infinitive)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Tomara que dê certo!",
+    "romaji": "",
+    "en": "I hope it works out!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Espero que o meu português melhore até lá.",
+    "romaji": "",
+    "en": "I hope my Portuguese improves by then. (subjunctive)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Vai melhorar de certeza. Praticas todos os dias.",
+    "romaji": "",
+    "en": "It will improve for sure. You practice every day.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Gostava de morar aqui um tempo, quem sabe um dia.",
+    "romaji": "",
+    "en": "I'd like to live here for a while, maybe someday. (gostava = I'd like)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Seria incrível! Já és quase português.",
+    "romaji": "",
+    "en": "It would be amazing! You're almost Portuguese already.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day09",
+  "level": 3,
+  "kind": "day",
+  "day": 9,
+  "title": "Day 9 — Music & Culture Talk",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Que tipo de música ouves?",
+    "romaji": "",
+    "en": "What kind of music do you listen to?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Um bocado de tudo. Em Portugal, fiquei viciado em fado.",
+    "romaji": "",
+    "en": "A bit of everything. In Portugal, I got hooked on fado.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "A sério? De que fadista gostas mais?",
+    "romaji": "",
+    "en": "Really? Which fado singer do you like the most?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Gosto muito de uma que um amigo me mostrou. E tu, o que recomendas?",
+    "romaji": "",
+    "en": "I really like one a friend showed me. And you, what do you recommend?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Ouve Amália Rodrigues. Ela é um clássico.",
+    "romaji": "",
+    "en": "Listen to Amália Rodrigues. She's a classic. (the queen of fado)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Vou ouvir hoje à noite. Manda-me o nome da música.",
+    "romaji": "",
+    "en": "I'll listen tonight. Send me the song name.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Já viste telenovelas portuguesas?",
+    "romaji": "",
+    "en": "Have you seen Portuguese soap operas?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Comecei a ver uma esta semana. É ótima para treinar o ouvido.",
+    "romaji": "",
+    "en": "I started watching one this week. It's great for training my ear.",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-day10",
+  "level": 3,
+  "kind": "day",
+  "day": 10,
+  "title": "Day 10 — Level 3 Review: Free Conversation",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Então, conta-me as novidades!",
+    "romaji": "",
+    "en": "So, tell me the news!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Muita coisa boa. O trabalho vai bem e o meu português está a fluir.",
+    "romaji": "",
+    "en": "Lots of good things. Work is going well and my Portuguese is flowing.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Notei! Estás a falar tal e qual um português.",
+    "romaji": "",
+    "en": "I noticed! You're speaking just like a Portuguese person. (tal e qual = exactly like)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Muito obrigado! Ainda erro bastante, mas já não tenho medo de errar.",
+    "romaji": "",
+    "en": "Thank you so much! I still make mistakes, but I'm not afraid of making them anymore.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Esse é o segredo. E os planos para o próximo mês?",
+    "romaji": "",
+    "en": "That's the secret. And plans for next month?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Vou viajar para o Algarve com a Juliana. Vai ser a minha primeira vez lá.",
+    "romaji": "",
+    "en": "I'm traveling to the Algarve with Juliana. It'll be my first time there.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Vais adorar. Manda-me fotos!",
+    "romaji": "",
+    "en": "You're going to love it. Send me photos!",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Podes crer! Vamos combinar um jantar quando eu voltar.",
+    "romaji": "",
+    "en": "You bet! Let's plan a dinner when I get back. (podes crer = you bet, slang)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-churrasco",
+  "level": 3,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Grelhada with Friends",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Ó Kevin! Chegaste! Queres uma cerveja?",
+    "romaji": "",
+    "en": "Hey Kevin! You made it! Want a beer?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Boas! Aceito sim. Os grelhados têm ótimo aspeto.",
+    "romaji": "",
+    "en": "Hey! I'll take one. The grilled food looks great. (boas = casual hi; aspeto = look)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O Marcos é o mestre da grelha oficial do grupo.",
+    "romaji": "",
+    "en": "Marcos is the official grill master of the group.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Posso ajudar com alguma coisa?",
+    "romaji": "",
+    "en": "Can I help with anything?",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Descontrai, tu és convidado. Aproveita!",
+    "romaji": "",
+    "en": "Relax, you're a guest. Just enjoy! (descontrai = relax, tu imperative)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "A carne está no ponto perfeito. Parabéns!",
+    "romaji": "",
+    "en": "The meat is perfectly cooked. Congrats!",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Obrigado! Serve-te de mais pão de alho.",
+    "romaji": "",
+    "en": "Thanks! Help yourself to more garlic bread. (serve-te = help yourself)",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Este é o melhor programa de domingo. Obrigado pelo convite, pessoal.",
+    "romaji": "",
+    "en": "This is the best Sunday plan. Thanks for the invite, everyone. (pessoal = everyone/guys)",
+    "flags": []
+   }
+  ],
+  "notes": []
+ },
+ {
+  "id": "l3-family",
+  "level": 3,
+  "kind": "scenario",
+  "day": null,
+  "title": "Scenario: Meeting Your Partner's Family",
+  "sourceFile": "authored",
+  "entries": [
+   {
+    "speaker": "P",
+    "jp": "Bem-vindo, Kevin! A Ana falou tanto de ti.",
+    "romaji": "",
+    "en": "Welcome, Kevin! Ana has told us so much about you.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Muito obrigado por me receberem. Trouxe uma sobremesa.",
+    "romaji": "",
+    "en": "Thank you so much for having me. I brought a dessert.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Que gentil! Não precisavas, a sério.",
+    "romaji": "",
+    "en": "How kind! You really didn't have to.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Faço questão. É um costume da minha família também.",
+    "romaji": "",
+    "en": "I insist. It's a custom in my family too. (fazer questão = to insist)",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "O teu português é muito bom! Onde aprendeste?",
+    "romaji": "",
+    "en": "Your Portuguese is very good! Where did you learn?",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Estudei sozinho e pratiquei muito com a Ana. Ela é uma ótima professora.",
+    "romaji": "",
+    "en": "I studied on my own and practiced a lot with Ana. She's a great teacher.",
+    "flags": []
+   },
+   {
+    "speaker": "P",
+    "jp": "Ela puxou à mãe, que também é professora.",
+    "romaji": "",
+    "en": "She takes after her mother, who is also a teacher.",
+    "flags": []
+   },
+   {
+    "speaker": "K",
+    "jp": "Vê-se de onde vem a paciência dela!",
+    "romaji": "",
+    "en": "You can tell where her patience comes from!",
+    "flags": []
+   }
+  ],
+  "notes": []
+ }
+]

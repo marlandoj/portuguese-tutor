@@ -1,0 +1,144 @@
+{
+ "sections": [
+  {
+   "title": "Reduced vowels — the signature of Portugal",
+   "items": [
+    {
+     "sound": "unstressed e",
+     "example": "telefone, pequeno, ele",
+     "note": "Unstressed 'e' shrinks to a weak 'uh' or vanishes: telefone ≈ 'tle-FON', pequeno ≈ 'p-KEH-noo'."
+    },
+    {
+     "sound": "unstressed o",
+     "example": "obrigado, português, bonito",
+     "note": "Sounds like 'oo': obrigado ≈ 'oo-bree-GA-doo', português ≈ 'poor-too-GESH'."
+    },
+    {
+     "sound": "unstressed a",
+     "example": "casa, amanhã, banana",
+     "note": "Softens to 'uh': casa ≈ 'KA-zuh', amanhã ≈ 'uh-muh-NYAHN'."
+    },
+    {
+     "sound": "final -e (silent)",
+     "example": "fome, noite, tarde",
+     "note": "Word-final -e is barely pronounced: fome ≈ 'FOM', noite ≈ 'NOYT', tarde ≈ 'TARD'."
+    }
+   ]
+  },
+  {
+   "title": "The 'sh' sounds of Lisbon",
+   "items": [
+    {
+     "sound": "s (final / before consonant)",
+     "example": "os dois, pastéis, as portas",
+     "note": "Turns into 'sh': os dois ≈ 'oosh DOISH', pastéis ≈ 'pash-TAYSH'."
+    },
+    {
+     "sound": "s between vowels",
+     "example": "casa, coisa, preciso",
+     "note": "Buzzes like 'z': casa ≈ 'KA-zuh'."
+    },
+    {
+     "sound": "z (final / before consonant)",
+     "example": "vez, faz favor, mesmo",
+     "note": "Also 'sh'/'zh': faz ≈ 'FASH', mesmo ≈ 'MEZH-moo'."
+    },
+    {
+     "sound": "x",
+     "example": "caixa, próximo, táxi",
+     "note": "Usually 'sh': caixa ≈ 'KY-shuh', táxi ≈ 'TAHK-shee'."
+    }
+   ]
+  },
+  {
+   "title": "Crisp d and t (unlike Brazil)",
+   "items": [
+    {
+     "sound": "d + i",
+     "example": "dia, cidade, bom dia",
+     "note": "Stays a clean 'd': dia ≈ 'DEE-uh' — never 'JEE-ah' like in Brazil."
+    },
+    {
+     "sound": "t + i",
+     "example": "noite, leite, tia",
+     "note": "Stays a clean 't': noite ≈ 'NOYT' — never 'NOY-chee' like in Brazil."
+    },
+    {
+     "sound": "l (final)",
+     "example": "Portugal, hotel, animal",
+     "note": "Stays a dark 'l': Portugal ≈ 'poor-too-GAHL' — not the Brazilian 'w' sound."
+    }
+   ]
+  },
+  {
+   "title": "Special consonants",
+   "items": [
+    {
+     "sound": "lh",
+     "example": "trabalho, orelha, filho",
+     "note": "Like 'lli' in million: trabalho ≈ 'truh-BA-lyoo'."
+    },
+    {
+     "sound": "nh",
+     "example": "amanhã, senhor, banho",
+     "note": "Like 'ny' in canyon: senhor ≈ 'suh-NYOR'."
+    },
+    {
+     "sound": "ç",
+     "example": "açúcar, praça, começo",
+     "note": "Always a soft 's': açúcar ≈ 'A-soo-kuhr'."
+    },
+    {
+     "sound": "rr / r (initial)",
+     "example": "carro, rua, Rio",
+     "note": "Guttural, made in the back of the throat (like the French r): rua ≈ 'RROO-uh'."
+    }
+   ]
+  },
+  {
+   "title": "Nasal vowels",
+   "items": [
+    {
+     "sound": "ão",
+     "example": "pão, não, coração",
+     "note": "Nasal 'ow(n)': pão ≈ 'POW(n)', não ≈ 'NOW(n)'."
+    },
+    {
+     "sound": "em (final)",
+     "example": "também, viagem, ninguém",
+     "note": "Nasal 'ayn(g)': também ≈ 'tahm-BAYN(g)'."
+    },
+    {
+     "sound": "im / in",
+     "example": "sim, fim, assim",
+     "note": "Nasal 'een(g)': sim ≈ 'SEEN(g)'."
+    },
+    {
+     "sound": "um",
+     "example": "um, nenhum, comum",
+     "note": "Nasal 'oon(g)': um ≈ 'OON(g)'."
+    }
+   ]
+  },
+  {
+   "title": "Stress rules (simple version)",
+   "items": [
+    {
+     "sound": "default",
+     "example": "fala, casa, bonito",
+     "note": "Words ending in a/e/o: stress the second-to-last syllable (FA-luh, bo-NEE-too)."
+    },
+    {
+     "sound": "accents",
+     "example": "você, café, português",
+     "note": "Written accents always mark the stressed syllable."
+    },
+    {
+     "sound": "other endings",
+     "example": "hotel, falar, comer",
+     "note": "Ending in -l, -r, -z: stress the last syllable (o-TEL, fuh-LAR)."
+    }
+   ]
+  }
+ ]
+}

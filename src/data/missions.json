@@ -1,0 +1,212 @@
+[
+ {
+  "id": "l1-m1",
+  "level": 1,
+  "title": "Greet someone in Portuguese",
+  "detail": "Tudo bem? + full exchange with a Portuguese speaker, online or in person.",
+  "xp": 50
+ },
+ {
+  "id": "l1-m2",
+  "level": 1,
+  "title": "Introduce yourself",
+  "detail": "Name, where you're from, one thing about you — out loud, no notes.",
+  "xp": 50
+ },
+ {
+  "id": "l1-m3",
+  "level": 1,
+  "title": "Order a bica and a pastel de nata",
+  "detail": "Full order in Portuguese only — 'Uma bica e um pastel de nata, se faz favor.'",
+  "xp": 75
+ },
+ {
+  "id": "l1-m4",
+  "level": 1,
+  "title": "Ask the price of something",
+  "detail": "Quanto custa isto? in a real or simulated shop, and understand the answer.",
+  "xp": 50
+ },
+ {
+  "id": "l1-m5",
+  "level": 1,
+  "title": "Count your party",
+  "detail": "Answer 'Mesa para quantos?' correctly in a restaurant scenario.",
+  "xp": 50
+ },
+ {
+  "id": "l1-m6",
+  "level": 1,
+  "title": "Direct a driver",
+  "detail": "Destination + 'Quanto tempo demora?' in a taxi/TVDE scenario.",
+  "xp": 75
+ },
+ {
+  "id": "l1-m7",
+  "level": 1,
+  "title": "Ask someone to slow down",
+  "detail": "Use 'Pode falar mais devagar?' or 'Pode repetir?' in a real conversation.",
+  "xp": 50
+ },
+ {
+  "id": "l1-m8",
+  "level": 1,
+  "title": "Weekend small talk",
+  "detail": "Ask a Portuguese speaker 'O que é que fizeste no fim de semana?' and share yours.",
+  "xp": 75
+ },
+ {
+  "id": "l1-m9",
+  "level": 1,
+  "title": "Talk about your Portugal plans",
+  "detail": "Vou + infinitive — tell someone where you're going to go.",
+  "xp": 50
+ },
+ {
+  "id": "l1-m10",
+  "level": 1,
+  "title": "Fado listening rep",
+  "detail": "Listen to one fado song (try Amália Rodrigues); write down 5 words you recognized.",
+  "xp": 100
+ },
+ {
+  "id": "l2-m1",
+  "level": 2,
+  "title": "Book an appointment by phone",
+  "detail": "Simulated or real: 'Queria marcar...' + name + time.",
+  "xp": 75
+ },
+ {
+  "id": "l2-m2",
+  "level": 2,
+  "title": "Describe a symptom",
+  "detail": "Tenho dores de... at a farmácia or to a friend.",
+  "xp": 50
+ },
+ {
+  "id": "l2-m3",
+  "level": 2,
+  "title": "Use 'já' and 'ainda não'",
+  "detail": "Answer a 'já experimentaste...?' question naturally in conversation.",
+  "xp": 50
+ },
+ {
+  "id": "l2-m4",
+  "level": 2,
+  "title": "Talk about your job",
+  "detail": "O que é que fazes? — 3+ sentences about your real work.",
+  "xp": 75
+ },
+ {
+  "id": "l2-m5",
+  "level": 2,
+  "title": "Tell a past-tense story",
+  "detail": "What you did last weekend, 5+ preterite verbs, no notes.",
+  "xp": 75
+ },
+ {
+  "id": "l2-m6",
+  "level": 2,
+  "title": "Ask for a discount",
+  "detail": "'Faz algum desconto?' / 'Faz-me por cinco?' at a market — mercado style.",
+  "xp": 50
+ },
+ {
+  "id": "l2-m7",
+  "level": 2,
+  "title": "Invite someone out",
+  "detail": "'Queres sair...?' + handle a schedule change gracefully.",
+  "xp": 75
+ },
+ {
+  "id": "l2-m8",
+  "level": 2,
+  "title": "Give a recommendation",
+  "detail": "'Conheço um sítio perfeito' — recommend a tasca, café or miradouro to someone.",
+  "xp": 50
+ },
+ {
+  "id": "l2-m9",
+  "level": 2,
+  "title": "Handle a money situation",
+  "detail": "Multibanco, exchange, or MB Way conversation — know the vocabulary cold.",
+  "xp": 50
+ },
+ {
+  "id": "l2-m10",
+  "level": 2,
+  "title": "Record a 1-minute video",
+  "detail": "Introduce yourself on camera in Portuguese. Watch it. Cringe. Improve.",
+  "xp": 100
+ },
+ {
+  "id": "l3-m1",
+  "level": 3,
+  "title": "Hold a 5-minute casual conversation",
+  "detail": "Slang included — fixe, pá, pois. With a Portuguese speaker or the AI chat.",
+  "xp": 100
+ },
+ {
+  "id": "l3-m2",
+  "level": 3,
+  "title": "Use tu forms naturally",
+  "detail": "Hold a conversation entirely in informal tu — falas, queres, achas.",
+  "xp": 50
+ },
+ {
+  "id": "l3-m3",
+  "level": 3,
+  "title": "Give a real opinion",
+  "detail": "Acho que... about football (a seleção!), music, or food — and defend it.",
+  "xp": 50
+ },
+ {
+  "id": "l3-m4",
+  "level": 3,
+  "title": "Invite a Portuguese speaker out",
+  "detail": "Vamos + specific place and time. Real invitation, real answer.",
+  "xp": 75
+ },
+ {
+  "id": "l3-m5",
+  "level": 3,
+  "title": "Tell a 'tava-a story",
+  "detail": "'Eu 'tava... quando...' — set a scene and deliver the punchline.",
+  "xp": 50
+ },
+ {
+  "id": "l3-m6",
+  "level": 3,
+  "title": "Meet someone's family",
+  "detail": "O senhor / a senhora + faz-questão politeness at a dinner or video call.",
+  "xp": 100
+ },
+ {
+  "id": "l3-m7",
+  "level": 3,
+  "title": "Use the subjunctive",
+  "detail": "'Espero que...' or 'Tomara que...' correctly in conversation.",
+  "xp": 75
+ },
+ {
+  "id": "l3-m8",
+  "level": 3,
+  "title": "Voice message in Portuguese",
+  "detail": "Send a real WhatsApp voice message in Portuguese (casual OK).",
+  "xp": 75
+ },
+ {
+  "id": "l3-m9",
+  "level": 3,
+  "title": "Discuss fado or telenovelas",
+  "detail": "Recommend and receive a recommendation — Amália counts.",
+  "xp": 50
+ },
+ {
+  "id": "l3-m10",
+  "level": 3,
+  "title": "Watch a telenovela episode, 80%+",
+  "detail": "Portuguese audio, PT subtitles max. Rate honestly in the tracker.",
+  "xp": 100
+ }
+]
