@@ -1,6 +1,6 @@
 import { resolve, sep } from "node:path";
 import { ProviderError, RemoteProviderGateway, type ProviderGateway } from "./providers";
-import { QuotaEngine, type IdentitySource } from "./quota";
+import { QuotaEngine, REALTIME_SESSION_MINUTES, type IdentitySource } from "./quota";
 import { loadProviderSecrets } from "./secrets";
 import {
   ApiError,
@@ -210,7 +210,7 @@ export function createHandler(options: HandlerOptions): (request: Request) => Pr
         const secret = requireSecret(options.secrets.OPENAI_API_KEY);
         const sdp = await readSdp(request, 64 * 1_024);
         return await realtimeGate.run(async () => {
-          const reservation = options.quota.reserve(request, "realtime", 10);
+          const reservation = options.quota.reserve(request, "realtime", REALTIME_SESSION_MINUTES);
           try {
             const answer = await options.providers.createRealtimeCall(secret, sdp);
             return new Response(answer, {

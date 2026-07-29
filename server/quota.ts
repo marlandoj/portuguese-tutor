@@ -7,6 +7,7 @@ import { ApiError } from "./validation";
 
 export type QuotaOperation = "chat" | "speech" | "realtime";
 export type IdentitySource = "forwarded" | "shared";
+export const REALTIME_SESSION_MINUTES = 10;
 
 interface LimitDefinition {
   perIpAmount: number;
@@ -29,9 +30,9 @@ export const QUOTA_LIMITS: Record<QuotaOperation, LimitDefinition> = {
     globalWindowSeconds: 24 * 60 * 60,
   },
   realtime: {
-    perIpAmount: 10,
+    perIpAmount: 60,
     perIpWindowSeconds: 24 * 60 * 60,
-    globalAmount: 120,
+    globalAmount: 600,
     globalWindowSeconds: 24 * 60 * 60,
   },
 };

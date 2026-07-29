@@ -12,7 +12,13 @@ import {
   type ProviderGateway,
   type SpeechAlternative,
 } from "./providers";
-import { QUOTA_LIMITS, QuotaEngine, extractClientAddress, type QuotaOperation } from "./quota";
+import {
+  QUOTA_LIMITS,
+  REALTIME_SESSION_MINUTES,
+  QuotaEngine,
+  extractClientAddress,
+  type QuotaOperation,
+} from "./quota";
 import { loadProviderSecrets } from "./secrets";
 import { readSdp } from "./validation";
 
@@ -285,7 +291,7 @@ describe("quota enforcement and privacy", () => {
     app.quota.close();
   });
 
-  test("realtime atomically reserves ten minutes and rolls back failed authorization", async () => {
+  test("realtime reserves bounded sessions and rolls back failed authorization", async () => {
     const app = createTestApplication();
     app.providers.failRealtime = true;
     const first = await app.handler(
@@ -297,14 +303,18 @@ describe("quota enforcement and privacy", () => {
     );
     expect(first.status).toBe(502);
     app.providers.failRealtime = false;
-    const second = await app.handler(
-      request("/api/realtime/session", {
-        method: "POST",
-        headers: { "Content-Type": "application/sdp" },
-        body: VALID_SDP,
-      })
-    );
-    expect(second.status).toBe(201);
+    const allowedSessions = QUOTA_LIMITS.realtime.perIpAmount / REALTIME_SESSION_MINUTES;
+    expect(Number.isInteger(allowedSessions)).toBeTrue();
+    for (let index = 0; index < allowedSessions; index += 1) {
+      const response = await app.handler(
+        request("/api/realtime/session", {
+          method: "POST",
+          headers: { "Content-Type": "application/sdp" },
+          body: VALID_SDP,
+        })
+      );
+      expect(response.status).toBe(201);
+    }
     const blocked = await app.handler(
       request("/api/realtime/session", {
         method: "POST",
@@ -313,7 +323,7 @@ describe("quota enforcement and privacy", () => {
       })
     );
     expect(blocked.status).toBe(429);
-    expect(app.providers.realtimeCalls).toBe(2);
+    expect(app.providers.realtimeCalls).toBe(allowedSessions + 1);
     app.quota.close();
   });
 
