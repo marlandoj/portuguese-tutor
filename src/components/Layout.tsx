@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router";
+import ThemeSelector from "@/components/ThemeSelector";
 import { cn } from "@/lib/utils";
 
 const NAV = [
@@ -22,63 +23,50 @@ const NAV_MORE = [
 
 export default function Layout() {
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
-      <header className="sticky top-0 z-20 border-b border-stone-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-1 px-4 py-3">
-          <NavLink to="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-600 text-sm font-bold text-white">
-              P
+    <div className="tutor-shell min-h-screen">
+      <div className="theme-atmosphere" aria-hidden="true" />
+      <a href="#main-content" className="skip-link">Skip to content</a>
+      <header className="tutor-header sticky top-0 z-20">
+        <div className="tutor-header-primary mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-3 px-4 py-3">
+          <NavLink to="/" className="tutor-brand flex min-w-0 items-center gap-2.5">
+            <span className="tutor-brand-mark" aria-hidden="true">P</span>
+            <span className="min-w-0 leading-tight">
+              <span className="block truncate font-bold">Português Tutor</span>
+              <span className="tutor-brand-subtitle block truncate text-xs">European Portuguese · Levels 1–3</span>
             </span>
-            <div className="leading-tight">
-              <div className="font-bold">Português Tutor</div>
-              <div className="text-xs text-stone-500">European Portuguese · Levels 1–3</div>
-            </div>
           </NavLink>
-          <nav className="ml-auto flex flex-wrap items-center gap-1">
-            {NAV.map((n) => (
+          <nav aria-label="Primary navigation" className="tutor-primary-nav order-3 flex w-full items-center gap-1 overflow-x-auto md:order-none md:ml-auto md:w-auto">
+            {NAV.map((item) => (
               <NavLink
-                key={n.to}
-                to={n.to}
-                end={n.end}
-                className={({ isActive }) =>
-                  cn(
-                    "rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
-                    isActive
-                      ? "bg-red-600 text-white"
-                      : "text-stone-600 hover:bg-stone-100 hover:text-stone-900"
-                  )
-                }
+                key={item.to}
+                to={item.to}
+                end={item.end}
+                className={({ isActive }) => cn("tutor-nav-link", isActive && "is-active")}
               >
-                {n.label}
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+          <ThemeSelector />
+        </div>
+        <div className="tutor-header-secondary">
+          <nav aria-label="Practice tools" className="mx-auto flex max-w-6xl items-center gap-1 overflow-x-auto px-4 py-1.5">
+            {NAV_MORE.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) => cn("tutor-subnav-link", isActive && "is-active")}
+              >
+                {item.label}
               </NavLink>
             ))}
           </nav>
         </div>
-        <div className="border-t border-stone-100">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-1 px-4 py-1.5">
-            {NAV_MORE.map((n) => (
-              <NavLink
-                key={n.to}
-                to={n.to}
-                className={({ isActive }) =>
-                  cn(
-                    "rounded-full px-2.5 py-1 text-xs font-medium transition-colors",
-                    isActive
-                      ? "bg-stone-900 text-white"
-                      : "text-stone-500 hover:bg-stone-100 hover:text-stone-900"
-                  )
-                }
-              >
-                {n.label}
-              </NavLink>
-            ))}
-          </div>
-        </div>
       </header>
-      <main className="mx-auto max-w-6xl px-4 py-6">
+      <main id="main-content" className="tutor-main relative mx-auto min-h-[calc(100vh-10rem)] max-w-6xl px-4 py-6">
         <Outlet />
       </main>
-      <footer className="border-t border-stone-200 py-6 text-center text-xs text-stone-500">
+      <footer className="tutor-footer relative py-6 text-center text-xs">
         Train, don't study. Treine todos os dias.
       </footer>
     </div>

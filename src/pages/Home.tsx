@@ -28,8 +28,8 @@ function SpeakChart() {
         <span className="text-sm font-bold text-red-600">avg {avg}%</span>
       </div>
       <svg viewBox={`0 0 ${w} ${h}`} className="mt-2 w-full">
-        <polyline points={pts} fill="none" stroke="#dc2626" strokeWidth="2" strokeLinejoin="round" />
-        <line x1="0" y1={h - 0.75 * h} x2={w} y2={h - 0.75 * h} stroke="#d6d3d1" strokeDasharray="4" />
+        <polyline points={pts} fill="none" stroke="currentColor" className="text-red-600" strokeWidth="2" strokeLinejoin="round" />
+        <line x1="0" y1={h - 0.75 * h} x2={w} y2={h - 0.75 * h} stroke="currentColor" className="text-stone-400" strokeDasharray="4" />
       </svg>
       <div className="text-xs text-stone-400">dashed line = 75% pass threshold</div>
     </div>
@@ -70,9 +70,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="tutor-dashboard space-y-8">
       {/* hero with streak + belt */}
-      <section className="rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 p-8 text-white shadow-lg">
+      <section className="tutor-home-hero p-6 text-white sm:p-8">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <div className="text-sm font-medium uppercase tracking-widest text-red-100">Treine, não estude</div>
