@@ -21,6 +21,7 @@ import {
 } from "./quota";
 import { loadProviderSecrets } from "./secrets";
 import { readSdp } from "./validation";
+import { normalizeRealtimeSdp } from "../src/lib/api";
 
 const ORIGIN = "https://portuguese-tutor-marlandoj.zocomputer.io";
 const temporaryDirectories: string[] = [];
@@ -146,8 +147,11 @@ describe("provider API security", () => {
     expect(await readSdp(input, 64 * 1_024)).toBe(`${VALID_SDP}\r\n`);
   });
 
-  test("Realtime answers restore the terminal CRLF required by WebRTC", () => {
-    expect(normalizeRealtimeAnswer(`${VALID_SDP}\n`)).toBe(`${VALID_SDP}\r\n`);
+  test("Realtime answers canonicalize mixed line endings for WebRTC", () => {
+    const mixed = "v=0\no=- 0 0 IN IP4 127.0.0.1\r\ns=-\rt=0 0\n";
+    const canonical = "v=0\r\no=- 0 0 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\n";
+    expect(normalizeRealtimeAnswer(mixed)).toBe(canonical);
+    expect(normalizeRealtimeSdp(mixed)).toBe(canonical);
   });
 
   test("Realtime multipart preserves the required SDP and fixed session fields", () => {

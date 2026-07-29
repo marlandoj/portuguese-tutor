@@ -69,6 +69,11 @@ export async function requestSpeech(text: string): Promise<Blob> {
   return await response.blob();
 }
 
+export function normalizeRealtimeSdp(answer: string): string {
+  const normalized = answer.replace(/\r\n?/g, "\n").trim();
+  return normalized ? `${normalized.replace(/\n/g, "\r\n")}\r\n` : "";
+}
+
 export async function requestRealtimeAnswer(sdp: string): Promise<string> {
   const response = await assertOk(
     await fetch("/api/realtime/session", {
@@ -77,7 +82,7 @@ export async function requestRealtimeAnswer(sdp: string): Promise<string> {
       body: sdp,
     })
   );
-  const answer = (await response.text()).trim();
+  const answer = normalizeRealtimeSdp(await response.text());
   if (!answer.startsWith("v=0")) throw new Error("The live-call answer was invalid.");
   return answer;
 }

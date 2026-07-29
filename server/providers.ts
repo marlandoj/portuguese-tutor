@@ -81,7 +81,8 @@ export function createRealtimeMultipart(sdp: string): { body: string; contentTyp
 }
 
 export function normalizeRealtimeAnswer(answer: string): string {
-  return `${answer.trim()}\r\n`;
+  const normalized = answer.replace(/\r\n?/g, "\n").trim();
+  return normalized ? `${normalized.replace(/\n/g, "\r\n")}\r\n` : "";
 }
 
 export class RemoteProviderGateway implements ProviderGateway {
