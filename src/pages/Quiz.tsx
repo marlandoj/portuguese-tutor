@@ -1,7 +1,8 @@
 import { Link, Navigate, useParams } from "react-router";
 import { useState } from "react";
 import { ArrowLeft, Check, RotateCcw, X } from "lucide-react";
-import { lessonById, quizByLessonId } from "@/lib/data";
+import { lessonById } from "@/lib/data";
+import { quizByLessonId } from "@/lib/quizzes";
 import { recordQuizScore } from "@/lib/store";
 import { logActivity } from "@/lib/gamify";
 import { cn } from "@/lib/utils";

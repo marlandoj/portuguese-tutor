@@ -1,7 +1,8 @@
 import { Link, Navigate, useParams } from "react-router";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, CheckCircle2, FileText, MessagesSquare, Mic, Play } from "lucide-react";
-import { lessonById, levelLabel, quizByLessonId, speakerName } from "@/lib/data";
+import { lessonById, levelLabel, speakerName } from "@/lib/data";
+import { quizByLessonId } from "@/lib/quizzes";
 import { speakPt } from "@/lib/llm";
 import { markLessonComplete, recordLessonVisit } from "@/lib/store";
 import { logActivity } from "@/lib/gamify";

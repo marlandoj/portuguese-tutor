@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Lightbulb } from "lucide-react";
-import { grammar, levelLabel } from "@/lib/data";
+import { grammar } from "@/lib/grammar-data";
+import { levelLabel } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export default function Grammar() {
