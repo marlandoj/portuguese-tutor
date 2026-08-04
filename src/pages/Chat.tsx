@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Bot, Loader2, Mic, Phone, PhoneOff, Send, Settings2, Trash2, Volume2 } from "lucide-react";
+import { Bot, FileText, Loader2, Mic, Phone, PhoneOff, Send, Settings2, Trash2, Volume2 } from "lucide-react";
 import { lessons, levelLabel, lessonById } from "@/lib/data";
 import { chatCompletion, speakPt, translateToEnglish, type ChatMsg } from "@/lib/llm";
 import { listenPt, type SpeechAlt } from "@/lib/speech";
 import { assessPronunciation, retryScore, type PronFeedback } from "@/lib/pronunciation";
-import { recordPractice, saveTroubleWord } from "@/lib/troubleWords";
+import { getTroubleWords, recordPractice, saveTroubleWord, type TroubleWord } from "@/lib/troubleWords";
+import { generateSessionReport, saveReport, type SessionReport } from "@/lib/report";
+import SessionReportPanel from "@/components/SessionReportPanel";
 import PronunciationCard from "@/components/PronunciationCard";
 import { LiveSession, type LiveState } from "@/lib/realtime";
 import { getSettings, logActivity, saveSettings } from "@/lib/gamify";
@@ -103,13 +105,47 @@ export default function Chat() {
   const [error, setError] = useState<string | null>(null);
   const [liveActive, setLiveActive] = useState(false);
   const [liveState, setLiveState] = useState<LiveState>("idle");
+  const [report, setReport] = useState<SessionReport | null>(null);
+  const [reportBusy, setReportBusy] = useState(false);
+  const [reportPron, setReportPron] = useState<TroubleWord[]>([]);
   const bottomRef = useRef<HTMLDivElement>(null);
   const sessionRef = useRef<LiveSession | null>(null);
   const assistantAccRef = useRef("");
+  const sessionStartRef = useRef(0);
+
+  const userTurns = messages.filter((m) => m.role === "user").length;
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 0 && sessionStartRef.current === 0) {
+      sessionStartRef.current = Date.now();
+    }
+    if (messages.length === 0) sessionStartRef.current = 0;
   }, [messages]);
+
+  /** End-of-session debrief: one LLM call over the transcript + pronunciation recap. */
+  const endSession = async () => {
+    if (reportBusy || userTurns < 4) return;
+    setReportBusy(true);
+    setError(null);
+    try {
+      const scenarioTitle =
+        scenario === "free" ? "Free conversation" : lessonById.get(scenario)?.title ?? scenario;
+      const result = await generateSessionReport(settings.model, messages, scenarioTitle);
+      if (!result) {
+        setError("The report could not be generated this time — the conversation is unaffected.");
+        return;
+      }
+      saveReport(result);
+      setReportPron(getTroubleWords().filter((w) => w.addedAt >= sessionStartRef.current));
+      setReport(result);
+      logActivity("report", 5);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setReportBusy(false);
+    }
+  };
 
   const updateSettings = (patch: Partial<typeof settings>) => {
     const next = { ...settings, ...patch };
@@ -296,6 +332,15 @@ export default function Chat() {
           {liveActive ? "End live call" : "Conversa ao vivo"}
         </button>
         <button
+          onClick={endSession}
+          disabled={reportBusy || userTurns < 4 || busy || liveActive}
+          title={userTurns < 4 ? "Have a few exchanges first (4+ of your turns)" : "Generate a session debrief"}
+          className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-3 py-1.5 text-sm font-semibold text-white hover:bg-amber-600 disabled:opacity-40"
+        >
+          {reportBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4" />}
+          {reportBusy ? "A escrever…" : "Terminar sessão"}
+        </button>
+        <button
           onClick={() => setShowSettings(!showSettings)}
           className="inline-flex items-center gap-1 rounded-full bg-stone-200 px-3 py-1.5 text-sm font-semibold hover:bg-stone-300"
         >
@@ -361,6 +406,14 @@ export default function Chat() {
           <Trash2 className="h-3.5 w-3.5" /> Clear chat
         </button>
       </div>
+
+      {report && (
+        <SessionReportPanel
+          report={report}
+          pronWords={reportPron}
+          onClose={() => setReport(null)}
+        />
+      )}
 
       <div className="flex min-h-[380px] flex-col rounded-2xl border border-stone-200 bg-white shadow-sm">
         <div className="flex-1 space-y-3 overflow-y-auto p-4" style={{ maxHeight: "55vh" }}>
