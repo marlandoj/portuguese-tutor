@@ -1,7 +1,8 @@
 import { Link, useSearchParams } from "react-router";
 import { useState } from "react";
 import { CheckCircle2, Circle, Headphones, FileText } from "lucide-react";
-import { audioMap, dayLessons, levelLabel, quizByLessonId, scenarioLessons } from "@/lib/data";
+import { audioMap, dayLessons, levelLabel, scenarioLessons } from "@/lib/data";
+import { quizByLessonId } from "@/lib/quizzes";
 import { getProgress } from "@/lib/store";
 import { cn } from "@/lib/utils";
 

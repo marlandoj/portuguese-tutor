@@ -1,19 +1,15 @@
 import lessonsJson from "@/data/lessons.json";
 import vocabJson from "@/data/vocab.json";
-import quizzesJson from "@/data/quizzes.json";
 import audioJson from "@/data/audio.json";
 import soundsJson from "@/data/sounds.json";
 import verbsJson from "@/data/verbs.json";
-import grammarJson from "@/data/grammar.json";
 import methodJson from "@/data/method.json";
 import cuesJson from "@/data/cues.json";
 import missionsJson from "@/data/missions.json";
 import videosJson from "@/data/videos.json";
 import type {
-  GrammarPoint,
   Lesson,
   MethodSection,
-  Quiz,
   SoundSection,
   VerbItem,
   VocabCard,
@@ -21,11 +17,9 @@ import type {
 
 export const lessons = lessonsJson as Lesson[];
 export const vocab = vocabJson as VocabCard[];
-export const quizzes = quizzesJson as Quiz[];
 export const audioMap = audioJson as Record<string, string>;
 export const sounds = soundsJson as { sections: SoundSection[] };
 export const verbs = verbsJson as VerbItem[];
-export const grammar = grammarJson as GrammarPoint[];
 export const method = methodJson as {
   philosophy: MethodSection[];
   trainingSteps: MethodSection[];
@@ -33,7 +27,6 @@ export const method = methodJson as {
 };
 
 export const lessonById = new Map(lessons.map((l) => [l.id, l]));
-export const quizByLessonId = new Map(quizzes.map((q) => [q.lessonId, q]));
 
 export interface Cue {
   i: number; // entry index within the lesson
