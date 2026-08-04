@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { Bot, Loader2, Mic, Phone, PhoneOff, Send, Settings2, Trash2, Volume2 } from "lucide-react";
 import { lessons, levelLabel, lessonById } from "@/lib/data";
 import { chatCompletion, speakPt, translateToEnglish, type ChatMsg } from "@/lib/llm";
-import { listenPt } from "@/lib/speech";
+import { listenPt, type SpeechAlt } from "@/lib/speech";
+import { assessPronunciation, retryScore, type PronFeedback } from "@/lib/pronunciation";
+import PronunciationCard from "@/components/PronunciationCard";
 import { LiveSession, type LiveState } from "@/lib/realtime";
 import { getSettings, logActivity, saveSettings } from "@/lib/gamify";
 import { cn } from "@/lib/utils";
@@ -48,6 +50,12 @@ Begin in character with the staff's opening line.`;
 interface Msg {
   role: "user" | "assistant";
   content: string;
+  /** Spoken (not typed) message, with the recognizer alternatives that produced it. */
+  viaMic?: boolean;
+  alts?: SpeechAlt[];
+  /** Pronunciation assessment result; undefined = not assessed, null = assessor failed. */
+  pron?: PronFeedback | null;
+  pronPending?: boolean;
 }
 
 /** Voice-call version of Ana's persona: spoken register, no parenthetical
@@ -60,6 +68,7 @@ Rules:
 - Keep every turn under 30 spoken words. This is a phone-style conversation: no lists, no markdown, no parenthetical translations.
 - If the learner is lost or switches to English, give them the exact Portuguese phrase they need, ask them to repeat it, then continue in Portuguese.
 - Gently correct at most one mistake per turn by modeling the correct phrase naturally.
+- When you hear a mispronounced word, coach it briefly: say the word slowly, syllable by syllable, ask the learner to repeat it once, praise the attempt, then move on — at most one word per turn, and never lecture.
 - Always end your turn with a short question to keep the learner speaking.`;
   if (scenarioId === "free") {
     return `${base}
@@ -107,12 +116,15 @@ export default function Chat() {
     saveSettings(next);
   };
 
-  const send = async (text: string) => {
+  const send = async (text: string, speech?: SpeechAlt[]) => {
     const content = text.trim();
     if (!content || busy) return;
     setInput("");
     setError(null);
-    const history: Msg[] = [...messages, { role: "user", content }];
+    const userMsg: Msg = speech?.length
+      ? { role: "user", content, viaMic: true, alts: speech }
+      : { role: "user", content };
+    const history: Msg[] = [...messages, userMsg];
     setMessages(history);
     setBusy(true);
     try {
@@ -124,10 +136,39 @@ export default function Chat() {
       setMessages([...history, { role: "assistant", content: reply }]);
       logActivity("chat", 3);
       if (settings.voiceReplies) speakPt(reply);
+      if (speech?.length) void assessSpoken(history.length - 1, content, speech);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
     } finally {
       setBusy(false);
+    }
+  };
+
+  /** Background pronunciation assessment for a spoken user message. */
+  const assessSpoken = async (msgIndex: number, said: string, alts: SpeechAlt[]) => {
+    setMessages((msgs) =>
+      msgs.map((m, i) => (i === msgIndex ? { ...m, pronPending: true } : m))
+    );
+    let pron: PronFeedback | null = null;
+    try {
+      pron = await assessPronunciation(settings.model, said, alts);
+    } catch {
+      pron = null; // coaching is best-effort; never block the conversation
+    }
+    setMessages((msgs) =>
+      msgs.map((m, i) => (i === msgIndex ? { ...m, pronPending: false, pron } : m))
+    );
+  };
+
+  /** Retry loop for a pronunciation card: re-listen and score against the focus word. */
+  const retryPronunciation = (focusWord: string) => async (): Promise<number | null> => {
+    try {
+      const alts = await listenPt();
+      const heard = alts[0]?.transcript ?? "";
+      return heard ? retryScore(focusWord, heard) : null;
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+      return null;
     }
   };
 
@@ -136,7 +177,7 @@ export default function Chat() {
     setError(null);
     try {
       const alts = await listenPt();
-      if (alts[0]?.transcript) await send(alts[0].transcript);
+      if (alts[0]?.transcript) await send(alts[0].transcript, alts);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
     } finally {
@@ -324,21 +365,29 @@ export default function Chat() {
           )}
           {messages.map((m, i) => (
             <div key={i} className={cn("flex", m.role === "user" ? "justify-end" : "justify-start")}>
-              <div
-                className={cn(
-                  "max-w-[85%] whitespace-pre-wrap rounded-2xl px-4 py-3",
-                  m.role === "user"
-                    ? "rounded-br-sm bg-red-600 text-white"
-                    : "rounded-bl-sm border border-stone-200 bg-stone-50"
-                )}
-              >
-                {m.content}
-                {m.role === "assistant" && (
+              {m.role === "user" ? (
+                <div className="flex max-w-[85%] flex-col items-end">
+                  <div className="whitespace-pre-wrap rounded-2xl rounded-br-sm bg-red-600 px-4 py-3 text-white">
+                    {m.viaMic && <Mic className="mr-1.5 inline h-3.5 w-3.5 opacity-70" aria-label="Spoken message" />}
+                    {m.content}
+                  </div>
+                  {m.pronPending && (
+                    <div className="mt-1.5 flex items-center gap-1.5 text-xs text-stone-400">
+                      <Loader2 className="h-3 w-3 animate-spin" /> A avaliar a pronúncia…
+                    </div>
+                  )}
+                  {m.pron && (m.pron.verdict === "close" || m.pron.verdict === "off") && (
+                    <PronunciationCard feedback={m.pron} onRetry={retryPronunciation(m.pron.focusWord)} />
+                  )}
+                </div>
+              ) : (
+                <div className="max-w-[85%] whitespace-pre-wrap rounded-2xl rounded-bl-sm border border-stone-200 bg-stone-50 px-4 py-3">
+                  {m.content}
                   <button onClick={() => speakPt(m.content)} className="ml-2 inline-flex text-stone-400 hover:text-red-600" aria-label="Replay voice">
                     <Volume2 className="h-4 w-4" />
                   </button>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           ))}
           {busy && (
@@ -383,6 +432,7 @@ export default function Chat() {
       </div>
       <p className="text-center text-xs text-stone-400">
         Mic uses Portuguese speech recognition with a browser fallback. Replies use a Portuguese voice with a browser fallback.
+        Spoken messages get pronunciation coaching when the recognizer hears something worth fixing.
         Live calls run for up to 10 minutes per authorization.
       </p>
     </div>
