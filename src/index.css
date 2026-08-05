@@ -360,6 +360,18 @@
   background: color-mix(in oklch, var(--theme-surface-solid) 88%, transparent);
 }
 
+/*
+  Deliberately --theme-ink rather than the --theme-muted the rest of the footer
+  uses. This is a required AI Act Art. 50(1) notice at text-xs; muted lands near
+  4.2:1 on the light canvases, under the 4.5:1 floor for small text.
+*/
+.tutor-ai-disclosure {
+  color: var(--theme-ink);
+  margin-inline: auto;
+  max-width: 44rem;
+  text-wrap: balance;
+}
+
 .tutor-home-hero {
   position: relative;
   isolation: isolate;

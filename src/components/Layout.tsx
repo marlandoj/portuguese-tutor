@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router";
+import AiDisclosure from "@/components/AiDisclosure";
 import ThemeSelector from "@/components/ThemeSelector";
 import { cn } from "@/lib/utils";
 
@@ -66,8 +67,9 @@ export default function Layout() {
       <main id="main-content" className="tutor-main relative mx-auto min-h-[calc(100vh-10rem)] max-w-6xl px-4 py-6">
         <Outlet />
       </main>
-      <footer className="tutor-footer relative py-6 text-center text-xs">
-        Train, don't study. Treine todos os dias.
+      <footer className="tutor-footer relative space-y-1.5 py-6 text-center text-xs">
+        <AiDisclosure variant="line" />
+        <p>Train, don't study. Treine todos os dias.</p>
       </footer>
     </div>
   );

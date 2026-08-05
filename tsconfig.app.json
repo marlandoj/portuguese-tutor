@@ -33,5 +33,5 @@
   },
   "include": ["src"],
   "//": "Test files run under Bun, not the browser bundle; they are typechecked by tsconfig.server.json.",
-  "exclude": ["src/**/*.test.ts"]
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
 }

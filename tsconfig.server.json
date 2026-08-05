@@ -5,6 +5,8 @@
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "types": ["bun", "node"],
+    // Component tests under src/ render real JSX through react-dom/server.
+    "jsx": "react-jsx",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -15,8 +17,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    // Component tests reach into src/, which resolves siblings through @/.
+    "paths": { "@/*": ["./src/*"] }
   },
   "baseUrl": ".",
-  "include": ["server/**/*.ts", "src/**/*.test.ts"]
+  "include": ["server/**/*.ts", "src/**/*.test.ts", "src/**/*.test.tsx"]
 }
