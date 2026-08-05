@@ -203,6 +203,7 @@ describe("provider API security", () => {
       deepgram: true,
       openai: true,
       avatar: false,
+      avatarSessionMs: AVATAR_SESSION_MINUTES * 60_000,
     });
     expect(body).not.toContain("secret");
     app.quota.close();
@@ -494,6 +495,31 @@ describe("avatar session route (ZOU-1136)", () => {
     const exhausted = await app.handler(avatarRequest());
     expect(exhausted.status).toBe(429);
     app.quota.close();
+  });
+
+  test("advertises the same budget it reserves", async () => {
+    const app = createTestApplication(AVATAR_SECRETS, true);
+    const health = (await (
+      await app.handler(request("/api/health", { method: "GET" }))
+    ).json()) as { avatarSessionMs: number };
+    // The client enforces the advertised ceiling. If these ever diverge, the
+    // avatar outlives the minutes the server accounted for and the vendor bills
+    // the difference — with no spend cap on the entry plan to absorb it.
+    expect(health.avatarSessionMs).toBe(AVATAR_SESSION_MINUTES * 60_000);
+    app.quota.close();
+  });
+
+  test("global avatar ceiling stays inside the vendor plan allowance", () => {
+    // The Anam Free plan grants 30 minutes/month and offers no spend cap, so
+    // this quota is the only cost control. Encoded as an assertion because the
+    // failure mode of raising it is a silent overrun, not a broken test.
+    const PLAN_MINUTES_PER_MONTH = 30;
+    const { globalAmount, globalWindowSeconds } = QUOTA_LIMITS.avatar;
+    expect(globalWindowSeconds).toBe(30 * 24 * 60 * 60);
+    expect(globalAmount).toBeLessThanOrEqual(PLAN_MINUTES_PER_MONTH);
+    // Headroom for operator smoke tests, which reach the vendor directly and
+    // never pass through this engine.
+    expect(PLAN_MINUTES_PER_MONTH - globalAmount).toBeGreaterThanOrEqual(AVATAR_SESSION_MINUTES);
   });
 
   test("rolls the reservation back when the provider fails", async () => {

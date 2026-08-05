@@ -183,6 +183,64 @@ describe("FallbackAudioSink", () => {
   });
 });
 
+describe("session budget ceiling", () => {
+  test("demotes to direct playback when the budget expires, without stopping audio", async () => {
+    const audio = new FakeAudioElement();
+    (globalThis as { Audio?: unknown }).Audio = function () {
+      return audio;
+    };
+    const failures: SinkFailure[] = [];
+    const sink = new FallbackAudioSink(
+      workingProvider(),
+      { mintSessionToken: async () => "token", videoElement: null, maxAvatarMs: 20 },
+      { onFallback: (failure) => failures.push(failure) }
+    );
+
+    await sink.attach(stream);
+    expect(sink.avatarActive).toBe(true);
+    expect(audio.muted).toBe(true);
+
+    await Bun.sleep(60);
+
+    expect(failures.map((failure) => failure.reason)).toEqual(["budget"]);
+    expect(sink.avatarActive).toBe(false);
+    // The conversation must survive the avatar: direct playback is unmuted and
+    // still holds the assistant stream.
+    expect(audio.muted).toBe(false);
+    expect(audio.srcObject).toBe(stream);
+    sink.detach();
+  });
+
+  test("does not arm a ceiling when the host advertises none", async () => {
+    const failures: SinkFailure[] = [];
+    const sink = new FallbackAudioSink(
+      workingProvider(),
+      { mintSessionToken: async () => "token", videoElement: null, maxAvatarMs: 0 },
+      { onFallback: (failure) => failures.push(failure) }
+    );
+    await sink.attach(stream);
+    await Bun.sleep(40);
+    expect(failures).toEqual([]);
+    expect(sink.avatarActive).toBe(true);
+    sink.detach();
+  });
+
+  test("detaching cancels the pending ceiling", async () => {
+    const failures: SinkFailure[] = [];
+    const sink = new FallbackAudioSink(
+      workingProvider(),
+      { mintSessionToken: async () => "token", videoElement: null, maxAvatarMs: 20 },
+      { onFallback: (failure) => failures.push(failure) }
+    );
+    await sink.attach(stream);
+    sink.detach();
+    await Bun.sleep(60);
+    // A timer that outlives teardown would fire onFallback after the call ended
+    // and surface a spurious error banner on an idle page.
+    expect(failures).toEqual([]);
+  });
+});
+
 describe("host neutrality (ZOU-798 / ZOU-1136 acceptance criterion)", () => {
   test("no module in the renderer imports host state, routing, or UI", () => {
     const directory = import.meta.dir;

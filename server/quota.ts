@@ -9,11 +9,17 @@ export type QuotaOperation = "chat" | "speech" | "realtime" | "avatar";
 export type IdentitySource = "forwarded" | "shared";
 export const REALTIME_SESSION_MINUTES = 10;
 /**
- * Avatar minutes are reserved up front for the same window a realtime call can
- * occupy, because Anam bills wall-clock from session start to session end
- * regardless of who is speaking.
+ * Avatar minutes are reserved up front, because Anam bills wall-clock from
+ * session start to session end regardless of who is speaking.
+ *
+ * Deliberately shorter than REALTIME_SESSION_MINUTES: the avatar demotes to
+ * voice-only at this ceiling while the conversation continues to the realtime
+ * limit. On a 30 minute/month plan a 10-minute avatar would buy three sessions
+ * a month; five buys six. The client enforces the same number — it is
+ * advertised on /api/health rather than duplicated as a client constant, so
+ * the reserved and enforced budgets cannot drift apart.
  */
-export const AVATAR_SESSION_MINUTES = 10;
+export const AVATAR_SESSION_MINUTES = 5;
 export const QUOTA_OPERATIONS: readonly QuotaOperation[] = [
   "chat",
   "speech",
@@ -47,13 +53,17 @@ export const QUOTA_LIMITS: Record<QuotaOperation, LimitDefinition> = {
     globalAmount: 600,
     globalWindowSeconds: 24 * 60 * 60,
   },
-  // Deliberately far tighter than realtime. Avatar minutes carry direct vendor
-  // cost on top of OpenAI spend, so the global ceiling is the daily blast radius.
+  // Sized against the vendor plan's MONTHLY allowance, not a daily blast radius.
+  // The Anam Free plan grants 30 minutes/month and exposes no spend cap, so this
+  // ceiling is the only cost control that exists — a daily window would permit
+  // several months of allowance to be spent in a single day. The 10-minute
+  // shortfall against the plan is deliberate headroom for operator smoke tests,
+  // which talk to the vendor directly and never pass through this engine.
   avatar: {
-    perIpAmount: 10,
+    perIpAmount: AVATAR_SESSION_MINUTES,
     perIpWindowSeconds: 24 * 60 * 60,
-    globalAmount: 60,
-    globalWindowSeconds: 24 * 60 * 60,
+    globalAmount: 20,
+    globalWindowSeconds: 30 * 24 * 60 * 60,
   },
 };
 

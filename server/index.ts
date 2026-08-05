@@ -178,6 +178,8 @@ export function createHandler(options: HandlerOptions): (request: Request) => Pr
           deepgram: Boolean(options.secrets.DEEPGRAM_API_KEY?.trim()),
           openai: Boolean(options.secrets.OPENAI_API_KEY?.trim()),
           avatar: avatarAvailable(),
+          // Advertised so the client enforces exactly what the route reserves.
+          avatarSessionMs: AVATAR_SESSION_MINUTES * 60_000,
         });
       }
 

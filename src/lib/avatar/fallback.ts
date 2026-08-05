@@ -1,5 +1,6 @@
 import {
   type AssistantAudioSink,
+  type AvatarBudgetMs,
   type AvatarProvider,
   type SinkFailure,
   type SinkMetrics,
@@ -27,11 +28,14 @@ export class FallbackAudioSink implements AssistantAudioSink {
   private avatarLive = false;
   private failure: SinkFailure | null = null;
 
+  private budgetTimer: ReturnType<typeof setTimeout> | null = null;
+
   private readonly provider: AvatarProvider | null;
   private readonly options: {
     mintSessionToken(signal?: AbortSignal): Promise<string>;
     videoElement: HTMLVideoElement | null;
     connectTimeoutMs?: number;
+    maxAvatarMs?: AvatarBudgetMs;
   };
   private readonly events: FallbackEvents;
 
@@ -41,6 +45,7 @@ export class FallbackAudioSink implements AssistantAudioSink {
       mintSessionToken(signal?: AbortSignal): Promise<string>;
       videoElement: HTMLVideoElement | null;
       connectTimeoutMs?: number;
+      maxAvatarMs?: AvatarBudgetMs;
     },
     events: FallbackEvents = {}
   ) {
@@ -52,6 +57,11 @@ export class FallbackAudioSink implements AssistantAudioSink {
   async attach(stream: MediaStream): Promise<void> {
     await this.direct.attach(stream);
     if (!this.provider) return;
+
+    // Armed before the provider session opens, not on first frame: the vendor
+    // bills from session start, so the ceiling must bound the billable window
+    // including negotiation, not just the part the learner can see.
+    this.armBudget();
 
     const sink = this.provider.create({
       mintSessionToken: this.options.mintSessionToken,
@@ -85,6 +95,7 @@ export class FallbackAudioSink implements AssistantAudioSink {
   }
 
   detach(): void {
+    this.disarmBudget();
     safely(() => this.avatar?.detach());
     this.avatar = null;
     this.avatarLive = false;
@@ -103,12 +114,31 @@ export class FallbackAudioSink implements AssistantAudioSink {
 
   private demote(failure: SinkFailure): void {
     if (this.failure) return;
+    this.disarmBudget();
     this.failure = failure;
     this.avatarLive = false;
     this.direct.setMuted(false);
     safely(() => this.avatar?.detach());
     this.avatar = null;
     this.events.onFallback?.(failure);
+  }
+
+  private armBudget(): void {
+    const budget = this.options.maxAvatarMs;
+    if (!budget || budget <= 0) return;
+    this.budgetTimer = setTimeout(() => {
+      this.budgetTimer = null;
+      this.demote({
+        reason: "budget",
+        message: `Avatar session reached its ${Math.round(budget / 60_000)} minute budget.`,
+      });
+    }, budget);
+  }
+
+  private disarmBudget(): void {
+    if (this.budgetTimer === null) return;
+    clearTimeout(this.budgetTimer);
+    this.budgetTimer = null;
   }
 }
 

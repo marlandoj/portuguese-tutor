@@ -21,7 +21,8 @@ export type SinkFailureReason =
   | "stream"
   | "timeout"
   | "unsupported"
-  | "runtime";
+  | "runtime"
+  | "budget";
 
 export interface SinkFailure {
   reason: SinkFailureReason;
@@ -72,6 +73,17 @@ export interface AvatarSinkOptions {
   /** Budget for reaching `ready`. Contract default is 8000 ms. */
   connectTimeoutMs?: number;
 }
+
+/**
+ * Wall-clock ceiling on a single avatar session, in milliseconds.
+ *
+ * Vendors that bill on session wall-clock (Anam) make an unbounded session a
+ * direct spend risk, and a metered plan may offer no vendor-side spend cap at
+ * all. The host supplies the ceiling it reserved quota for; on expiry the
+ * renderer demotes to direct playback with reason `budget`. This is a normal
+ * degradation, not an error — audio continues uninterrupted.
+ */
+export type AvatarBudgetMs = number;
 
 export interface AvatarProvider {
   readonly id: string;

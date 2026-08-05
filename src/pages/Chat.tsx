@@ -114,6 +114,7 @@ export default function Chat() {
   // only becomes true when the server reports the route is enabled AND keyed.
   const [avatarOffered, setAvatarOffered] = useState(false);
   const [avatarRequested, setAvatarRequested] = useState(false);
+  const [avatarSessionMs, setAvatarSessionMs] = useState(0);
   const [avatarActive, setAvatarActive] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const sessionRef = useRef<LiveSession | null>(null);
@@ -259,7 +260,9 @@ export default function Chat() {
     let cancelled = false;
     void requestHealth()
       .then((health) => {
-        if (!cancelled) setAvatarOffered(health.avatar);
+        if (cancelled) return;
+        setAvatarOffered(health.avatar);
+        setAvatarSessionMs(health.avatarSessionMs);
       })
       .catch(() => undefined);
     return () => {
@@ -274,12 +277,17 @@ export default function Chat() {
       {
         mintSessionToken: (signal) => requestAvatarSessionToken(signal),
         videoElement: avatarVideoRef.current,
+        maxAvatarMs: avatarSessionMs,
       },
       {
         onAvatarActive: () => setAvatarActive(true),
         onFallback: (failure) => {
           setAvatarActive(false);
-          setError(`Avatar unavailable (${failure.reason}); continuing with voice only.`);
+          setError(
+            failure.reason === "budget"
+              ? "Avatar time for this session is used up; the conversation continues with voice."
+              : `Avatar unavailable (${failure.reason}); continuing with voice only.`
+          );
         },
       }
     );

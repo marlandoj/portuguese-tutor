@@ -74,16 +74,25 @@ export interface HealthStatus {
   deepgram: boolean;
   openai: boolean;
   avatar: boolean;
+  /**
+   * Wall-clock budget the server reserves per avatar session. Read rather than
+   * hardcoded so the enforced ceiling always equals the reserved quota; a
+   * missing or malformed value yields 0, which disables the avatar cap rather
+   * than inventing one the server never accounted for.
+   */
+  avatarSessionMs: number;
 }
 
 export async function requestHealth(): Promise<HealthStatus> {
   const response = await assertOk(await fetch("/api/health"));
   const payload = (await response.json()) as Partial<HealthStatus>;
+  const avatarSessionMs = Number(payload.avatarSessionMs);
   return {
     openrouter: Boolean(payload.openrouter),
     deepgram: Boolean(payload.deepgram),
     openai: Boolean(payload.openai),
     avatar: Boolean(payload.avatar),
+    avatarSessionMs: Number.isFinite(avatarSessionMs) && avatarSessionMs > 0 ? avatarSessionMs : 0,
   };
 }
 
