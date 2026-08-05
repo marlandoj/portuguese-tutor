@@ -122,6 +122,57 @@ describe("LiveSession audio routing", () => {
     session.disconnect();
   });
 
+  test("a throwing sink cannot stall the conversation (ZOU-799 parity)", async () => {
+    installFakes();
+    const throwingSink: AssistantAudioSink = {
+      id: "throwing",
+      attach: async () => undefined,
+      interrupt: () => {
+        throw new Error("provider exploded");
+      },
+      endSequence: () => {
+        throw new Error("provider exploded");
+      },
+      detach: () => undefined,
+      metrics: () => ({
+        provider: "throwing",
+        state: "failed",
+        billableMs: 0,
+        mediaObserved: false,
+        sequences: 0,
+        interruptions: 0,
+        failure: { reason: "runtime", message: "provider exploded" },
+      }),
+    };
+
+    const states: string[] = [];
+    const transcripts: string[] = [];
+    const session = new LiveSession();
+    await session.connect(
+      "instructions",
+      {
+        onState: (state) => states.push(state),
+        onAssistantDone: (text) => transcripts.push(text),
+      },
+      { audioSink: throwingSink }
+    );
+
+    connection.dataChannel.onmessage?.({
+      data: JSON.stringify({ type: "input_audio_buffer.speech_started" }),
+    });
+    connection.dataChannel.onmessage?.({
+      data: JSON.stringify({ type: "response.audio_transcript.done", transcript: "Olá!" }),
+    });
+    connection.dataChannel.onmessage?.({ data: JSON.stringify({ type: "response.done" }) });
+
+    // Identical to the avatar-off path: both sink control points threw, and the
+    // state machine and transcripts advanced anyway.
+    expect(states).toContain("listening");
+    expect(states.filter((state) => state === "listening").length).toBe(2);
+    expect(transcripts).toEqual(["Olá!"]);
+    session.disconnect();
+  });
+
   test("disconnect tears the sink down", async () => {
     installFakes();
     const sink = new RecordingSink();
