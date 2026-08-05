@@ -4,6 +4,7 @@ import { lessons, levelLabel, lessonById } from "@/lib/data";
 import { chatCompletion, speakPt, translateToEnglish, type ChatMsg } from "@/lib/llm";
 import { listenPt, type SpeechAlt } from "@/lib/speech";
 import { assessPronunciation, retryScore, type PronFeedback } from "@/lib/pronunciation";
+import { recordPractice, saveTroubleWord } from "@/lib/troubleWords";
 import PronunciationCard from "@/components/PronunciationCard";
 import { LiveSession, type LiveState } from "@/lib/realtime";
 import { getSettings, logActivity, saveSettings } from "@/lib/gamify";
@@ -152,6 +153,9 @@ export default function Chat() {
     let pron: PronFeedback | null = null;
     try {
       pron = await assessPronunciation(settings.model, said, alts);
+      if (pron && (pron.verdict === "close" || pron.verdict === "off")) {
+        saveTroubleWord(pron); // feeds the "Palavras difíceis" deck in Review
+      }
     } catch {
       pron = null; // coaching is best-effort; never block the conversation
     }
@@ -165,7 +169,10 @@ export default function Chat() {
     try {
       const alts = await listenPt();
       const heard = alts[0]?.transcript ?? "";
-      return heard ? retryScore(focusWord, heard) : null;
+      if (!heard) return null;
+      const score = retryScore(focusWord, heard);
+      recordPractice(focusWord, score);
+      return score;
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
       return null;
