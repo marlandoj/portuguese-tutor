@@ -59,6 +59,12 @@ export const QUOTA_LIMITS: Record<QuotaOperation, LimitDefinition> = {
   // several months of allowance to be spent in a single day. The 10-minute
   // shortfall against the plan is deliberate headroom for operator smoke tests,
   // which talk to the vendor directly and never pass through this engine.
+  //
+  // The 30-day window tumbles from the Unix epoch and does not align with the
+  // vendor billing month, so a boundary straddle can exceed the plan allowance.
+  // Confirmed with the operator 2026-08-05: Free hard-stops at 30 minutes and
+  // cannot bill overage, so a straddle costs nothing — the vendor refuses the
+  // session and FallbackAudioSink demotes to voice-only. This stays at 20.
   avatar: {
     perIpAmount: AVATAR_SESSION_MINUTES,
     perIpWindowSeconds: 24 * 60 * 60,
