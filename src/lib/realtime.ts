@@ -99,6 +99,26 @@ export class LiveSession {
     }, MAX_CALL_MILLISECONDS);
   }
 
+  /**
+   * Audio delivery must never decide whether the conversation advances.
+   *
+   * Both sink control points sit in the same switch arm as a state callback, so
+   * a provider that throws on interrupt or endSequence would skip the state
+   * transition and strand the UI mid-turn — a failure the learner would see
+   * only when the avatar is enabled. ZOU-799 requires behaviour to be identical
+   * with the renderer on and off, so the boundary is enforced here rather than
+   * trusted to every sink implementation.
+   */
+  private driveSink(action: (sink: AssistantAudioSink) => void): void {
+    const sink = this.audioSink;
+    if (!sink) return;
+    try {
+      action(sink);
+    } catch {
+      // Deliberately swallowed: the sink's own failure path handles recovery.
+    }
+  }
+
   private handleEvent(raw: string, callbacks: LiveCallbacks): void {
     if (this.closed) return;
     let event: { type?: string; transcript?: string; delta?: string; error?: { message?: string } };
@@ -109,7 +129,7 @@ export class LiveSession {
     }
     switch (event.type) {
       case "input_audio_buffer.speech_started":
-        this.audioSink?.interrupt();
+        this.driveSink((sink) => sink.interrupt());
         callbacks.onState?.("listening");
         break;
       case "conversation.item.input_audio_transcription.completed":
@@ -125,7 +145,7 @@ export class LiveSession {
         if (event.transcript) callbacks.onAssistantDone?.(event.transcript);
         break;
       case "response.done":
-        this.audioSink?.endSequence();
+        this.driveSink((sink) => sink.endSequence());
         callbacks.onState?.("listening");
         break;
       case "error":
