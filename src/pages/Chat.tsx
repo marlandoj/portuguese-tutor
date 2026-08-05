@@ -8,6 +8,7 @@ import { listenPt, type SpeechAlt } from "@/lib/speech";
 import { assessPronunciation, retryScore, type PronFeedback } from "@/lib/pronunciation";
 import { getTroubleWords, recordPractice, saveTroubleWord, type TroubleWord } from "@/lib/troubleWords";
 import { generateSessionReport, saveReport, type SessionReport } from "@/lib/report";
+import AiDisclosure from "@/components/AiDisclosure";
 import SessionReportPanel from "@/components/SessionReportPanel";
 import PronunciationCard from "@/components/PronunciationCard";
 import { LiveSession, type LiveState } from "@/lib/realtime";
@@ -366,6 +367,12 @@ export default function Chat() {
 
   return (
     <div className="mx-auto max-w-3xl space-y-4">
+      {/*
+        Rendered above the controls and outside any conditional, so the notice
+        precedes the first interaction on every path into this page — text
+        chat, live call, or avatar. See ZOU-1137.
+      */}
+      <AiDisclosure />
       <div className="flex flex-wrap items-center gap-3">
         <h1 className="flex items-center gap-2 text-2xl font-bold">
           <Bot className="h-6 w-6 text-red-600" /> AI conversation coach
