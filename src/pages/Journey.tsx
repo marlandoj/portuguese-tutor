@@ -1,8 +1,10 @@
 import { Link, useSearchParams } from "react-router";
 import { useState } from "react";
-import { Check, Lock, MapPin, UtensilsCrossed, BedDouble, Car, TrainFront, ShoppingBag, Mountain, Hospital, Sparkles, Heart, MessageCircle } from "lucide-react";
+import { Check, FileText, Lock, MapPin, Trash2, UtensilsCrossed, BedDouble, Car, TrainFront, ShoppingBag, Mountain, Hospital, Sparkles, Heart, MessageCircle } from "lucide-react";
 import { dayLessons, levelLabel } from "@/lib/data";
 import { getProgress } from "@/lib/store";
+import { deleteReport, getReports } from "@/lib/report";
+import SessionReportPanel from "@/components/SessionReportPanel";
 import { cn } from "@/lib/utils";
 
 const LANDMARKS: Record<number, { icon: typeof MapPin; name: string }> = {
@@ -24,6 +26,8 @@ export default function Journey() {
   const [params, setParams] = useSearchParams();
   const level = Number(params.get("level") ?? 1);
   const [progress] = useState(getProgress);
+  const [reports, setReports] = useState(getReports);
+  const [openReportId, setOpenReportId] = useState<string | null>(null);
   const days = dayLessons(level);
 
   const firstIncomplete = days.findIndex((l) => !progress.completedLessons.includes(l.id));
@@ -121,6 +125,47 @@ export default function Journey() {
       {level === 3 && (
         <div className="mx-auto max-w-xl text-center text-sm text-stone-500">
           <MessageCircle className="mx-auto mb-1 h-4 w-4" /> Level 3's destination: confident casual conversation with friends, partners, and family.
+        </div>
+      )}
+
+      {reports.length > 0 && (
+        <div className="mx-auto max-w-xl space-y-3">
+          <h2 className="flex items-center gap-2 text-lg font-bold">
+            <FileText className="h-5 w-5 text-red-600" /> Resumos de sessão
+          </h2>
+          {reports.map((r) => (
+            <div key={r.id} className="rounded-xl border border-stone-200 bg-white shadow-sm">
+              <div className="flex w-full items-center gap-3 px-4 py-3">
+                <button
+                  onClick={() => setOpenReportId(openReportId === r.id ? null : r.id)}
+                  className="flex min-w-0 flex-1 items-center gap-3 text-left"
+                >
+                  <div className="min-w-0 flex-1">
+                    <div className="truncate text-sm font-semibold">{r.scenario}</div>
+                    <div className="text-xs text-stone-500">
+                      {new Date(r.createdAt).toLocaleDateString(undefined, { day: "numeric", month: "short" })}
+                      {" · "}{r.corrections.length} corrections · {r.vocab.length} vocab
+                    </div>
+                  </div>
+                  <span className="text-xs font-semibold text-stone-400">
+                    {openReportId === r.id ? "Hide" : "View"}
+                  </span>
+                </button>
+                <button
+                  onClick={() => setReports(deleteReport(r.id))}
+                  className="rounded-full p-1.5 text-stone-300 hover:bg-red-50 hover:text-red-600"
+                  aria-label="Delete report"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </button>
+              </div>
+              {openReportId === r.id && (
+                <div className="border-t border-stone-100 p-3">
+                  <SessionReportPanel report={r} />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       )}
     </div>

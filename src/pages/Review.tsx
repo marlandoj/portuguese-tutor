@@ -6,6 +6,7 @@ import { dueCount, getSrs, rateCard } from "@/lib/store";
 import { levenshtein, listenPt, similarity } from "@/lib/speech";
 import { speakPt } from "@/lib/llm";
 import { logActivity } from "@/lib/gamify";
+import { getCustomCards, type CustomCard } from "@/lib/customCards";
 import { activeTroubleWords, recordPractice, removeTroubleWord, MASTERED_PASSES } from "@/lib/troubleWords";
 import { cn } from "@/lib/utils";
 
@@ -21,9 +22,15 @@ interface Card {
   speak?: string;
 }
 
-function buildDeck(kind: DeckKind, level: number | 0, lessonId: string | "", trouble: ReturnType<typeof activeTroubleWords>): Card[] {
+function buildDeck(
+  kind: DeckKind,
+  level: number | 0,
+  lessonId: string | "",
+  trouble: ReturnType<typeof activeTroubleWords>,
+  customs: CustomCard[]
+): Card[] {
   if (kind === "phrases") {
-    return vocab
+    const bundled = vocab
       .filter((v) => (level === 0 || v.level === level) && (!lessonId || v.lessonId === lessonId))
       .map((v) => ({
         id: `p-${v.id}`,
@@ -32,6 +39,18 @@ function buildDeck(kind: DeckKind, level: number | 0, lessonId: string | "", tro
         meta: `L${v.level} · ${v.lessonTitle}`,
         speak: v.jp,
       }));
+    // Personal cards saved from session reports ride along at any level,
+    // but stay out of single-lesson filters.
+    const personal = lessonId
+      ? []
+      : customs.map((c) => ({
+          id: `custom-${c.id}`,
+          front: c.pt,
+          back: c.en,
+          meta: "Resumo da sessão",
+          speak: c.pt,
+        }));
+    return [...personal, ...bundled];
   }
   if (kind === "verbs") {
     return verbs.map((v, i) => ({
@@ -98,14 +117,15 @@ export default function Review() {
   const [answer, setAnswer] = useState("");
   const [typedOk, setTypedOk] = useState<boolean | null>(null);
   const [troubleList, setTroubleList] = useState(activeTroubleWords);
+  const [customs] = useState(getCustomCards);
   const [practicing, setPracticing] = useState(false);
   const [pronScore, setPronScore] = useState<number | null>(null);
 
   const refreshTrouble = () => setTroubleList(activeTroubleWords());
 
   const deck = useMemo(
-    () => buildDeck(kind, level, lessonId, troubleList),
-    [kind, level, lessonId, troubleList]
+    () => buildDeck(kind, level, lessonId, troubleList, customs),
+    [kind, level, lessonId, troubleList, customs]
   );
   const [now] = useState(Date.now);
   const dueCards = deck.filter((c) => !srs[c.id] || srs[c.id].due <= now);
@@ -158,7 +178,7 @@ export default function Review() {
   const soundCount = sounds.sections.reduce((s, sec) => s + sec.items.length, 0);
   const troubleCount = troubleList.length;
   const decks: { key: DeckKind; label: string; count: number }[] = [
-    { key: "phrases", label: "Phrases", count: vocab.length },
+    { key: "phrases", label: "Phrases", count: vocab.length + customs.length },
     { key: "verbs", label: "Verbs", count: verbs.length },
     { key: "sounds", label: "Sounds", count: soundCount },
     { key: "pronunciation", label: "Pronúncia", count: troubleCount },
