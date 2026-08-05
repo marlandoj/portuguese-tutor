@@ -69,6 +69,52 @@ export async function requestSpeech(text: string): Promise<Blob> {
   return await response.blob();
 }
 
+export interface HealthStatus {
+  openrouter: boolean;
+  deepgram: boolean;
+  openai: boolean;
+  avatar: boolean;
+  /**
+   * Wall-clock budget the server reserves per avatar session. Read rather than
+   * hardcoded so the enforced ceiling always equals the reserved quota; a
+   * missing or malformed value yields 0, which disables the avatar cap rather
+   * than inventing one the server never accounted for.
+   */
+  avatarSessionMs: number;
+}
+
+export async function requestHealth(): Promise<HealthStatus> {
+  const response = await assertOk(await fetch("/api/health"));
+  const payload = (await response.json()) as Partial<HealthStatus>;
+  const avatarSessionMs = Number(payload.avatarSessionMs);
+  return {
+    openrouter: Boolean(payload.openrouter),
+    deepgram: Boolean(payload.deepgram),
+    openai: Boolean(payload.openai),
+    avatar: Boolean(payload.avatar),
+    avatarSessionMs: Number.isFinite(avatarSessionMs) && avatarSessionMs > 0 ? avatarSessionMs : 0,
+  };
+}
+
+/**
+ * Mints an avatar session token. The provider API key never reaches the browser;
+ * this returns only the short-lived token.
+ */
+export async function requestAvatarSessionToken(signal?: AbortSignal): Promise<string> {
+  const response = await assertOk(
+    await fetch("/api/avatar/session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: "{}",
+      signal,
+    })
+  );
+  const payload = (await response.json()) as { sessionToken?: string };
+  const token = payload.sessionToken?.trim() ?? "";
+  if (!token) throw new Error("The avatar session token was empty.");
+  return token;
+}
+
 export function normalizeRealtimeSdp(answer: string): string {
   const normalized = answer.replace(/\r\n?/g, "\n").trim();
   return normalized ? `${normalized.replace(/\n/g, "\r\n")}\r\n` : "";

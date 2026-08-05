@@ -5,9 +5,27 @@ import { isIP } from "node:net";
 import { join } from "node:path";
 import { ApiError } from "./validation";
 
-export type QuotaOperation = "chat" | "speech" | "realtime";
+export type QuotaOperation = "chat" | "speech" | "realtime" | "avatar";
 export type IdentitySource = "forwarded" | "shared";
 export const REALTIME_SESSION_MINUTES = 10;
+/**
+ * Avatar minutes are reserved up front, because Anam bills wall-clock from
+ * session start to session end regardless of who is speaking.
+ *
+ * Deliberately shorter than REALTIME_SESSION_MINUTES: the avatar demotes to
+ * voice-only at this ceiling while the conversation continues to the realtime
+ * limit. On a 30 minute/month plan a 10-minute avatar would buy three sessions
+ * a month; five buys six. The client enforces the same number — it is
+ * advertised on /api/health rather than duplicated as a client constant, so
+ * the reserved and enforced budgets cannot drift apart.
+ */
+export const AVATAR_SESSION_MINUTES = 5;
+export const QUOTA_OPERATIONS: readonly QuotaOperation[] = [
+  "chat",
+  "speech",
+  "realtime",
+  "avatar",
+];
 
 interface LimitDefinition {
   perIpAmount: number;
@@ -35,10 +53,39 @@ export const QUOTA_LIMITS: Record<QuotaOperation, LimitDefinition> = {
     globalAmount: 600,
     globalWindowSeconds: 24 * 60 * 60,
   },
+  // Sized against the vendor plan's MONTHLY allowance, not a daily blast radius.
+  // The Anam Free plan grants 30 minutes/month and exposes no spend cap, so this
+  // ceiling is the only cost control that exists — a daily window would permit
+  // several months of allowance to be spent in a single day. The 10-minute
+  // shortfall against the plan is deliberate headroom for operator smoke tests,
+  // which talk to the vendor directly and never pass through this engine.
+  avatar: {
+    perIpAmount: AVATAR_SESSION_MINUTES,
+    perIpWindowSeconds: 24 * 60 * 60,
+    globalAmount: 20,
+    globalWindowSeconds: 30 * 24 * 60 * 60,
+  },
 };
 
 const GLOBAL_BUCKET = "__global__";
 const SHARED_IDENTITY = "shared-anonymous";
+
+function createCountersTable(name: string): string {
+  const operations = QUOTA_OPERATIONS.map((operation) => `'${operation}'`).join(", ");
+  return `
+    CREATE TABLE IF NOT EXISTS ${name} (
+      bucket_hash TEXT NOT NULL CHECK (
+        bucket_hash = '${GLOBAL_BUCKET}' OR
+        (length(bucket_hash) = 64 AND bucket_hash NOT GLOB '*[^0-9a-f]*')
+      ),
+      operation TEXT NOT NULL CHECK (operation IN (${operations})),
+      window_start INTEGER NOT NULL,
+      amount INTEGER NOT NULL CHECK (amount >= 0),
+      expires_at INTEGER NOT NULL CHECK (expires_at > window_start),
+      PRIMARY KEY (bucket_hash, operation, window_start)
+    )
+  `;
+}
 
 interface CounterRow {
   amount: number;
@@ -107,20 +154,41 @@ export class QuotaEngine {
     this.database = new Database(join(dataDirectory, "quota.sqlite"), { create: true });
     this.database.run("PRAGMA journal_mode = WAL");
     this.database.run("PRAGMA busy_timeout = 5000");
-    this.database.run(`
-      CREATE TABLE IF NOT EXISTS quota_counters (
-        bucket_hash TEXT NOT NULL CHECK (
-          bucket_hash = '${GLOBAL_BUCKET}' OR
-          (length(bucket_hash) = 64 AND bucket_hash NOT GLOB '*[^0-9a-f]*')
-        ),
-        operation TEXT NOT NULL CHECK (operation IN ('chat', 'speech', 'realtime')),
-        window_start INTEGER NOT NULL,
-        amount INTEGER NOT NULL CHECK (amount >= 0),
-        expires_at INTEGER NOT NULL CHECK (expires_at > window_start),
-        PRIMARY KEY (bucket_hash, operation, window_start)
-      )
-    `);
+    this.database.run(createCountersTable("quota_counters"));
+    this.migrateOperationCheck();
     this.cleanupExpired();
+  }
+
+  /**
+   * The operation CHECK constraint is baked into the table definition, so
+   * `CREATE TABLE IF NOT EXISTS` leaves a pre-existing database rejecting any
+   * newly added operation. Rebuild the table when its recorded SQL predates the
+   * current operation set.
+   */
+  private migrateOperationCheck(): void {
+    const row = this.database
+      .query("SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'quota_counters'")
+      .get() as { sql?: string } | null;
+    const sql = row?.sql ?? "";
+    if (QUOTA_OPERATIONS.every((operation) => sql.includes(`'${operation}'`))) return;
+
+    this.database.run("BEGIN IMMEDIATE");
+    try {
+      this.database.run(createCountersTable("quota_counters_migrated"));
+      this.database.run(`
+        INSERT OR IGNORE INTO quota_counters_migrated
+          (bucket_hash, operation, window_start, amount, expires_at)
+        SELECT bucket_hash, operation, window_start, amount, expires_at
+        FROM quota_counters
+        WHERE operation IN (${QUOTA_OPERATIONS.map((operation) => `'${operation}'`).join(", ")})
+      `);
+      this.database.run("DROP TABLE quota_counters");
+      this.database.run("ALTER TABLE quota_counters_migrated RENAME TO quota_counters");
+      this.database.run("COMMIT");
+    } catch (error) {
+      this.database.run("ROLLBACK");
+      throw error;
+    }
   }
 
   identify(request: Request): { bucketHash: string; source: IdentitySource } {

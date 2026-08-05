@@ -1,4 +1,5 @@
 import { requestRealtimeAnswer } from "./api";
+import { DirectAudioSink, type AssistantAudioSink } from "./avatar";
 
 export type LiveState = "idle" | "connecting" | "listening" | "speaking";
 
@@ -11,24 +12,38 @@ export interface LiveCallbacks {
   onEnded?: () => void;
 }
 
+export interface LiveOptions {
+  /**
+   * Where assistant audio is delivered. Defaults to direct playback, which is
+   * the unchanged behaviour. An avatar renderer is layered in by passing a
+   * FallbackAudioSink; see src/lib/avatar.
+   */
+  audioSink?: AssistantAudioSink;
+}
+
 const MAX_CALL_MILLISECONDS = 10 * 60 * 1_000;
 
 export class LiveSession {
   private pc: RTCPeerConnection | null = null;
   private dc: RTCDataChannel | null = null;
   private stream: MediaStream | null = null;
-  private audioElement: HTMLAudioElement | null = null;
+  private audioSink: AssistantAudioSink | null = null;
   private hardStopTimer: ReturnType<typeof setTimeout> | null = null;
   private closed = false;
 
-  async connect(instructions: string, callbacks: LiveCallbacks): Promise<void> {
+  async connect(
+    instructions: string,
+    callbacks: LiveCallbacks,
+    options: LiveOptions = {}
+  ): Promise<void> {
     callbacks.onState?.("connecting");
     const connection = new RTCPeerConnection();
     this.pc = connection;
-    this.audioElement = new Audio();
-    this.audioElement.autoplay = true;
+    this.audioSink = options.audioSink ?? new DirectAudioSink();
     connection.ontrack = (event) => {
-      if (this.audioElement) this.audioElement.srcObject = event.streams[0];
+      // Only the assistant's remote stream reaches the sink. The learner's
+      // microphone track lives on `this.stream` and is never passed here.
+      void this.audioSink?.attach(event.streams[0]);
     };
     connection.onconnectionstatechange = () => {
       if (this.closed) return;
@@ -94,6 +109,7 @@ export class LiveSession {
     }
     switch (event.type) {
       case "input_audio_buffer.speech_started":
+        this.audioSink?.interrupt();
         callbacks.onState?.("listening");
         break;
       case "conversation.item.input_audio_transcription.completed":
@@ -109,6 +125,7 @@ export class LiveSession {
         if (event.transcript) callbacks.onAssistantDone?.(event.transcript);
         break;
       case "response.done":
+        this.audioSink?.endSequence();
         callbacks.onState?.("listening");
         break;
       case "error":
@@ -134,10 +151,12 @@ export class LiveSession {
       // Ignore an already-closed peer connection.
     }
     this.stream?.getTracks().forEach((track) => track.stop());
-    if (this.audioElement) {
-      this.audioElement.srcObject = null;
-      this.audioElement = null;
+    try {
+      this.audioSink?.detach();
+    } catch {
+      // Teardown must not surface sink errors.
     }
+    this.audioSink = null;
     this.pc = null;
     this.dc = null;
     this.stream = null;

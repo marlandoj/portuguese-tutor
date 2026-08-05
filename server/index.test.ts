@@ -13,6 +13,7 @@ import {
   type SpeechAlternative,
 } from "./providers";
 import {
+  AVATAR_SESSION_MINUTES,
   QUOTA_LIMITS,
   REALTIME_SESSION_MINUTES,
   QuotaEngine,
@@ -43,7 +44,9 @@ class FakeProviders implements ProviderGateway {
   transcriptionCalls = 0;
   synthesisCalls = 0;
   realtimeCalls = 0;
+  avatarCalls = 0;
   failRealtime = false;
+  failAvatar = false;
   chatBarrier: Promise<void> | null = null;
 
   async chat(): Promise<string> {
@@ -67,13 +70,22 @@ class FakeProviders implements ProviderGateway {
     if (this.failRealtime) throw new ProviderError("OpenAI");
     return "v=0\r\nm=audio 9 UDP/TLS/RTP/SAVPF 111";
   }
+
+  async createAvatarSession(): Promise<string> {
+    this.avatarCalls += 1;
+    if (this.failAvatar) throw new ProviderError("Anam");
+    return "fake.session.token";
+  }
 }
 
-function createTestApplication(secrets = {
-  OPENROUTER_API_KEY: "openrouter-secret",
-  OPENAI_API_KEY: "openai-secret",
-  DEEPGRAM_API_KEY: "deepgram-secret",
-}) {
+function createTestApplication(
+  secrets: Record<string, string> = {
+    OPENROUTER_API_KEY: "openrouter-secret",
+    OPENAI_API_KEY: "openai-secret",
+    DEEPGRAM_API_KEY: "deepgram-secret",
+  },
+  avatarEnabled = false
+) {
   const root = temporaryDirectory();
   const runtime = join(root, "runtime");
   const dist = join(root, "dist");
@@ -87,8 +99,24 @@ function createTestApplication(secrets = {
     allowedOrigins: new Set([ORIGIN]),
     distDirectory: dist,
     secrets,
+    avatarEnabled,
   });
   return { root, runtime, quota, providers, handler };
+}
+
+const AVATAR_SECRETS = {
+  OPENROUTER_API_KEY: "openrouter-secret",
+  OPENAI_API_KEY: "openai-secret",
+  DEEPGRAM_API_KEY: "deepgram-secret",
+  ANAM_API_KEY: "anam-secret",
+};
+
+function avatarRequest(forwardedFor?: string): Request {
+  return request(
+    "/api/avatar/session",
+    { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" },
+    forwardedFor
+  );
 }
 
 function request(
@@ -170,7 +198,13 @@ describe("provider API security", () => {
     const response = await app.handler(request("/api/health", { method: "GET" }));
     expect(response.status).toBe(200);
     const body = await response.text();
-    expect(JSON.parse(body)).toEqual({ openrouter: true, deepgram: true, openai: true });
+    expect(JSON.parse(body)).toEqual({
+      openrouter: true,
+      deepgram: true,
+      openai: true,
+      avatar: false,
+      avatarSessionMs: AVATAR_SESSION_MINUTES * 60_000,
+    });
     expect(body).not.toContain("secret");
     app.quota.close();
   });
@@ -415,5 +449,121 @@ describe("static application", () => {
     expect(await spa.text()).toContain("Português Tutor");
     expect(favicon.status).toBe(204);
     app.quota.close();
+  });
+});
+
+describe("avatar session route (ZOU-1136)", () => {
+  test("stays absent when the key is present but the flag is off", async () => {
+    const app = createTestApplication(AVATAR_SECRETS, false);
+    const response = await app.handler(avatarRequest());
+    expect(response.status).toBe(404);
+    expect(app.providers.avatarCalls).toBe(0);
+    const health = await (await app.handler(request("/api/health", { method: "GET" }))).json();
+    expect(health.avatar).toBe(false);
+    app.quota.close();
+  });
+
+  test("stays absent when the flag is on but no key is configured", async () => {
+    const app = createTestApplication(
+      { OPENROUTER_API_KEY: "a", OPENAI_API_KEY: "b", DEEPGRAM_API_KEY: "c" },
+      true
+    );
+    const response = await app.handler(avatarRequest());
+    expect(response.status).toBe(404);
+    expect(app.providers.avatarCalls).toBe(0);
+    app.quota.close();
+  });
+
+  test("mints a token and reports availability when enabled and keyed", async () => {
+    const app = createTestApplication(AVATAR_SECRETS, true);
+    const response = await app.handler(avatarRequest());
+    expect(response.status).toBe(201);
+    const payload = (await response.json()) as { sessionToken?: string };
+    expect(payload.sessionToken).toBe("fake.session.token");
+    expect(app.providers.avatarCalls).toBe(1);
+    const health = await (await app.handler(request("/api/health", { method: "GET" }))).json();
+    expect(health.avatar).toBe(true);
+    app.quota.close();
+  });
+
+  test("reserves avatar minutes and exhausts the per-user quota", async () => {
+    const app = createTestApplication(AVATAR_SECRETS, true);
+    const allowed = Math.floor(QUOTA_LIMITS.avatar.perIpAmount / AVATAR_SESSION_MINUTES);
+    for (let index = 0; index < allowed; index += 1) {
+      expect((await app.handler(avatarRequest())).status).toBe(201);
+    }
+    const exhausted = await app.handler(avatarRequest());
+    expect(exhausted.status).toBe(429);
+    app.quota.close();
+  });
+
+  test("advertises the same budget it reserves", async () => {
+    const app = createTestApplication(AVATAR_SECRETS, true);
+    const health = (await (
+      await app.handler(request("/api/health", { method: "GET" }))
+    ).json()) as { avatarSessionMs: number };
+    // The client enforces the advertised ceiling. If these ever diverge, the
+    // avatar outlives the minutes the server accounted for and the vendor bills
+    // the difference — with no spend cap on the entry plan to absorb it.
+    expect(health.avatarSessionMs).toBe(AVATAR_SESSION_MINUTES * 60_000);
+    app.quota.close();
+  });
+
+  test("global avatar ceiling stays inside the vendor plan allowance", () => {
+    // The Anam Free plan grants 30 minutes/month and offers no spend cap, so
+    // this quota is the only cost control. Encoded as an assertion because the
+    // failure mode of raising it is a silent overrun, not a broken test.
+    const PLAN_MINUTES_PER_MONTH = 30;
+    const { globalAmount, globalWindowSeconds } = QUOTA_LIMITS.avatar;
+    expect(globalWindowSeconds).toBe(30 * 24 * 60 * 60);
+    expect(globalAmount).toBeLessThanOrEqual(PLAN_MINUTES_PER_MONTH);
+    // Headroom for operator smoke tests, which reach the vendor directly and
+    // never pass through this engine.
+    expect(PLAN_MINUTES_PER_MONTH - globalAmount).toBeGreaterThanOrEqual(AVATAR_SESSION_MINUTES);
+  });
+
+  test("rolls the reservation back when the provider fails", async () => {
+    const app = createTestApplication(AVATAR_SECRETS, true);
+    app.providers.failAvatar = true;
+    expect((await app.handler(avatarRequest())).status).toBe(502);
+    app.providers.failAvatar = false;
+    const database = new Database(join(app.runtime, "quota.sqlite"));
+    const row = database
+      .query("SELECT COALESCE(SUM(amount), 0) AS amount FROM quota_counters WHERE operation = 'avatar'")
+      .get() as { amount: number };
+    database.close();
+    expect(row.amount).toBe(0);
+    app.quota.close();
+  });
+
+  test("migrates a database whose CHECK constraint predates the avatar operation", () => {
+    const runtime = temporaryDirectory();
+    const legacy = new Database(join(runtime, "quota.sqlite"), { create: true });
+    legacy.run(`
+      CREATE TABLE quota_counters (
+        bucket_hash TEXT NOT NULL,
+        operation TEXT NOT NULL CHECK (operation IN ('chat', 'speech', 'realtime')),
+        window_start INTEGER NOT NULL,
+        amount INTEGER NOT NULL CHECK (amount >= 0),
+        expires_at INTEGER NOT NULL CHECK (expires_at > window_start),
+        PRIMARY KEY (bucket_hash, operation, window_start)
+      )
+    `);
+    legacy.run(
+      "INSERT INTO quota_counters VALUES ('__global__', 'chat', 100, 5, 99999999999)"
+    );
+    legacy.close();
+
+    const engine = new QuotaEngine(runtime);
+    const reservation = engine.reserve(request("/api/avatar/session"), "avatar", 1);
+    expect(reservation.identitySource).toBe("forwarded");
+
+    const database = new Database(join(runtime, "quota.sqlite"));
+    const preserved = database
+      .query("SELECT amount FROM quota_counters WHERE operation = 'chat'")
+      .get() as { amount: number } | null;
+    database.close();
+    expect(preserved?.amount).toBe(5);
+    engine.close();
   });
 });

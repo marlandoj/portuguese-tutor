@@ -5,6 +5,7 @@ const PROVIDER_SECRET_NAMES = [
   "OPENROUTER_API_KEY",
   "OPENAI_API_KEY",
   "DEEPGRAM_API_KEY",
+  "ANAM_API_KEY",
 ] as const;
 
 type ProviderSecretName = (typeof PROVIDER_SECRET_NAMES)[number];

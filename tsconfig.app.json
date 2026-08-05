@@ -31,5 +31,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "//": "Test files run under Bun, not the browser bundle; they are typechecked by tsconfig.server.json.",
+  "exclude": ["src/**/*.test.ts"]
 }

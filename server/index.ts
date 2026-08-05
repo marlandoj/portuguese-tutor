@@ -1,6 +1,16 @@
 import { resolve, sep } from "node:path";
-import { ProviderError, RemoteProviderGateway, type ProviderGateway } from "./providers";
-import { QuotaEngine, REALTIME_SESSION_MINUTES, type IdentitySource } from "./quota";
+import {
+  DEFAULT_AVATAR_ID,
+  ProviderError,
+  RemoteProviderGateway,
+  type ProviderGateway,
+} from "./providers";
+import {
+  AVATAR_SESSION_MINUTES,
+  QuotaEngine,
+  REALTIME_SESSION_MINUTES,
+  type IdentitySource,
+} from "./quota";
 import { loadProviderSecrets } from "./secrets";
 import {
   ApiError,
@@ -38,6 +48,7 @@ interface SecretSource {
   OPENROUTER_API_KEY?: string;
   OPENAI_API_KEY?: string;
   DEEPGRAM_API_KEY?: string;
+  ANAM_API_KEY?: string;
 }
 
 interface HandlerOptions {
@@ -46,6 +57,13 @@ interface HandlerOptions {
   allowedOrigins: ReadonlySet<string>;
   distDirectory: string;
   secrets: SecretSource;
+  /**
+   * Avatar rendering is off unless explicitly enabled, independently of whether
+   * ANAM_API_KEY happens to be present. Anam audio passthrough is a Beta Feature
+   * and ToS 2.4 limits Beta use to internal evaluation, so possession of a key
+   * must not by itself expose the route on a public deployment.
+   */
+  avatarEnabled?: boolean;
 }
 
 class ConcurrencyGate {
@@ -144,6 +162,11 @@ export function createHandler(options: HandlerOptions): (request: Request) => Pr
   const chatGate = new ConcurrencyGate(8);
   const speechGate = new ConcurrencyGate(4);
   const realtimeGate = new ConcurrencyGate(4);
+  // Anam concurrency is 1 on the entry plans, so serialize until a tier that
+  // supports more is actually committed (ZOU-800 decides that).
+  const avatarGate = new ConcurrencyGate(1);
+  const avatarAvailable = () =>
+    Boolean(options.avatarEnabled) && Boolean(options.secrets.ANAM_API_KEY?.trim());
 
   return async (request: Request): Promise<Response> => {
     try {
@@ -154,6 +177,9 @@ export function createHandler(options: HandlerOptions): (request: Request) => Pr
           openrouter: Boolean(options.secrets.OPENROUTER_API_KEY?.trim()),
           deepgram: Boolean(options.secrets.DEEPGRAM_API_KEY?.trim()),
           openai: Boolean(options.secrets.OPENAI_API_KEY?.trim()),
+          avatar: avatarAvailable(),
+          // Advertised so the client enforces exactly what the route reserves.
+          avatarSessionMs: AVATAR_SESSION_MINUTES * 60_000,
         });
       }
 
@@ -228,6 +254,30 @@ export function createHandler(options: HandlerOptions): (request: Request) => Pr
         });
       }
 
+      if (path === "/api/avatar/session") {
+        assertMethod(request, "POST");
+        assertAllowedOrigin(request, options.allowedOrigins);
+        if (!avatarAvailable()) throw new ApiError(404, "API route not found.");
+        const secret = requireSecret(options.secrets.ANAM_API_KEY);
+        return await avatarGate.run(async () => {
+          const reservation = options.quota.reserve(request, "avatar", AVATAR_SESSION_MINUTES);
+          try {
+            const sessionToken = await options.providers.createAvatarSession(
+              secret,
+              DEFAULT_AVATAR_ID
+            );
+            return jsonResponse(
+              201,
+              { sessionToken },
+              quotaHeaders(reservation.identitySource)
+            );
+          } catch (error) {
+            reservation.rollback();
+            throw error;
+          }
+        });
+      }
+
       if (path.startsWith("/api/")) throw new ApiError(404, "API route not found.");
       return await serveStatic(request, options.distDirectory);
     } catch (error) {
@@ -254,6 +304,7 @@ if (import.meta.main) {
     allowedOrigins,
     distDirectory: resolve(process.cwd(), "dist"),
     secrets,
+    avatarEnabled: process.env.AVATAR_ENABLED?.trim() === "1",
   });
   const server = Bun.serve({ hostname: "0.0.0.0", port, fetch: handler });
   const shutdown = () => {

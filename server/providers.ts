@@ -16,13 +16,21 @@ export interface ProviderGateway {
   transcribe(apiKey: string, audio: Uint8Array, contentType: string): Promise<SpeechAlternative[]>;
   synthesize(apiKey: string, text: string): Promise<AudioResult>;
   createRealtimeCall(apiKey: string, sdp: string): Promise<string>;
+  createAvatarSession(apiKey: string, avatarId: string): Promise<string>;
 }
 
 export class ProviderError extends Error {
-  constructor(readonly provider: "OpenRouter" | "Deepgram" | "OpenAI") {
+  constructor(readonly provider: "OpenRouter" | "Deepgram" | "OpenAI" | "Anam") {
     super(`${provider} request failed.`);
   }
 }
+
+/**
+ * Stock avatar. ZOU-797 fixed the pilot to stock IDs: zero-data-retention does
+ * not cover one-shot persona source images, so no uploaded likeness is used.
+ */
+export const DEFAULT_AVATAR_ID = "6cc28442-cccd-42a8-b6e4-24b7210a09c5";
+export const AVATAR_MODEL = "cara-4";
 
 interface OpenRouterResponse {
   choices?: Array<{ message?: { content?: string } }>;
@@ -210,5 +218,51 @@ export class RemoteProviderGateway implements ProviderGateway {
     const answer = normalizeRealtimeAnswer(await response.text());
     if (!answer.startsWith("v=0")) throw new ProviderError("OpenAI");
     return answer;
+  }
+
+  /**
+   * Mints a short-lived Anam session token. The API key stays server-side; only
+   * the token reaches the browser.
+   *
+   * `showAIAvatarDisclosure` defaults to false for SDK sessions and can only be
+   * set here, at token creation — it is not settable later from the client.
+   */
+  async createAvatarSession(apiKey: string, avatarId: string): Promise<string> {
+    let response: Response;
+    try {
+      response = await fetchWithTimeout(
+        this.fetchImplementation,
+        "https://api.anam.ai/v1/auth/session-token",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            personaConfig: {
+              name: "tutor-embodied-partner",
+              avatarId,
+              avatarModel: AVATAR_MODEL,
+              enableAudioPassthrough: true,
+            },
+            sessionOptions: { showAIAvatarDisclosure: true },
+          }),
+        },
+        30_000
+      );
+    } catch {
+      throw new ProviderError("Anam");
+    }
+    if (!response.ok) throw new ProviderError("Anam");
+    let payload: { sessionToken?: unknown };
+    try {
+      payload = (await response.json()) as { sessionToken?: unknown };
+    } catch {
+      throw new ProviderError("Anam");
+    }
+    const token = typeof payload.sessionToken === "string" ? payload.sessionToken.trim() : "";
+    if (!token) throw new ProviderError("Anam");
+    return token;
   }
 }
