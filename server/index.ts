@@ -24,25 +24,46 @@ import {
 
 const PUBLIC_ORIGIN = "https://portuguese-tutor-marlandoj.zocomputer.io";
 const JSON_HEADERS = { "Content-Type": "application/json; charset=utf-8" };
-const STATIC_SECURITY_HEADERS = {
-  "Content-Security-Policy": [
-    "default-src 'self'",
-    "script-src 'self' https://static.cloudflareinsights.com",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data:",
-    "media-src 'self' blob:",
-    "connect-src 'self' https://cloudflareinsights.com",
-    "font-src 'self' data:",
-    "object-src 'none'",
-    "frame-ancestors 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-  ].join("; "),
-  "Permissions-Policy": "microphone=(self), camera=(), geolocation=()",
-  "Referrer-Policy": "strict-origin-when-cross-origin",
-  "X-Content-Type-Options": "nosniff",
-  "X-Frame-Options": "DENY",
-};
+/**
+ * Avatar rendering needs three relaxations the default policy denies:
+ *   script-src  https://esm.sh  — the Anam SDK is a runtime dynamic import
+ *   script-src  blob:           — the PCM AudioWorklet is an inline blob module
+ *   connect-src https: wss:     — Anam returns `engineHost` / `signallingEndpoint`
+ *                                 at session start, so the real signalling host is
+ *                                 not knowable statically and cannot be allowlisted
+ *                                 ahead of time.
+ * These apply ONLY when avatar rendering is switched on, so the public
+ * deployment keeps the strict policy. Tighten connect-src to the concrete hosts
+ * once a real session has been observed in a browser network log.
+ */
+function securityHeaders(avatarEnabled: boolean) {
+  const scriptSrc = avatarEnabled
+    ? "script-src 'self' https://static.cloudflareinsights.com https://esm.sh blob:"
+    : "script-src 'self' https://static.cloudflareinsights.com";
+  const connectSrc = avatarEnabled
+    ? "connect-src 'self' https: wss:"
+    : "connect-src 'self' https://cloudflareinsights.com";
+  const mediaSrc = avatarEnabled ? "media-src 'self' blob: mediastream:" : "media-src 'self' blob:";
+  return {
+    "Content-Security-Policy": [
+      "default-src 'self'",
+      scriptSrc,
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data:",
+      mediaSrc,
+      connectSrc,
+      "font-src 'self' data:",
+      "object-src 'none'",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+    ].join("; "),
+    "Permissions-Policy": "microphone=(self), camera=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+  };
+}
 
 interface SecretSource {
   OPENROUTER_API_KEY?: string;
@@ -116,7 +137,12 @@ function errorResponse(error: unknown): Response {
   return jsonResponse(500, { error: "Unexpected server error." });
 }
 
-async function serveStatic(request: Request, distDirectory: string): Promise<Response> {
+async function serveStatic(
+  request: Request,
+  distDirectory: string,
+  avatarEnabled: boolean,
+): Promise<Response> {
+  const staticSecurityHeaders = securityHeaders(avatarEnabled);
   if (request.method !== "GET" && request.method !== "HEAD") {
     throw new ApiError(405, "Method not allowed.");
   }
@@ -130,7 +156,7 @@ async function serveStatic(request: Request, distDirectory: string): Promise<Res
   if (pathname === "/favicon.ico") {
     return new Response(null, {
       status: 204,
-      headers: { ...STATIC_SECURITY_HEADERS, "Cache-Control": "public, max-age=86400" },
+      headers: { ...staticSecurityHeaders, "Cache-Control": "public, max-age=86400" },
     });
   }
 
@@ -148,7 +174,7 @@ async function serveStatic(request: Request, distDirectory: string): Promise<Res
   }
   if (!(await file.exists())) throw new ApiError(503, "Application build is unavailable.");
 
-  const headers = new Headers(STATIC_SECURITY_HEADERS);
+  const headers = new Headers(staticSecurityHeaders);
   if (file.type) headers.set("Content-Type", file.type);
   if (relativePath.startsWith("assets/")) {
     headers.set("Cache-Control", "public, max-age=31536000, immutable");
@@ -279,7 +305,7 @@ export function createHandler(options: HandlerOptions): (request: Request) => Pr
       }
 
       if (path.startsWith("/api/")) throw new ApiError(404, "API route not found.");
-      return await serveStatic(request, options.distDirectory);
+      return await serveStatic(request, options.distDirectory, avatarAvailable());
     } catch (error) {
       return errorResponse(error);
     }

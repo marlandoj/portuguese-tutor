@@ -567,3 +567,34 @@ describe("avatar session route (ZOU-1136)", () => {
     engine.close();
   });
 });
+
+test("static CSP stays strict unless avatar rendering is enabled", async () => {
+  const { handler } = createTestApplication();
+  const response = await handler(new Request(`${ORIGIN}/`));
+  const csp = response.headers.get("Content-Security-Policy") ?? "";
+  expect(csp).toContain("connect-src 'self' https://cloudflareinsights.com");
+  expect(csp).not.toContain("https://esm.sh");
+  expect(csp).not.toMatch(/script-src[^;]*blob:/);
+  expect(csp).not.toContain("wss:");
+});
+
+test("static CSP admits the Anam SDK and worklet only when avatar is enabled", async () => {
+  const { handler } = createTestApplication(AVATAR_SECRETS, true);
+  const response = await handler(new Request(`${ORIGIN}/`));
+  const csp = response.headers.get("Content-Security-Policy") ?? "";
+  expect(csp).toContain("https://esm.sh");
+  expect(csp).toContain("wss:");
+  expect(csp).toContain("mediastream:");
+  expect(csp).toMatch(/script-src[^;]*blob:/);
+  expect(csp).toContain("frame-ancestors 'none'");
+  expect(csp).toContain("object-src 'none'");
+});
+
+test("avatar CSP relaxation requires the key, not just the flag", async () => {
+  const { handler } = createTestApplication(
+    { OPENROUTER_API_KEY: "a", OPENAI_API_KEY: "b", DEEPGRAM_API_KEY: "c" },
+    true
+  );
+  const response = await handler(new Request(`${ORIGIN}/`));
+  expect(response.headers.get("Content-Security-Policy") ?? "").not.toContain("https://esm.sh");
+});
