@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { Bot, FileText, Loader2, Mic, Phone, PhoneOff, Send, Settings2, Trash2, Volume2 } from "lucide-react";
+import { Bot, FileText, Loader2, Mic, Phone, PhoneOff, Send, Settings2, Trash2, User, Volume2 } from "lucide-react";
+import { requestAvatarSessionToken, requestHealth } from "@/lib/api";
+import { FallbackAudioSink, createAnamProvider } from "@/lib/avatar";
 import { lessons, levelLabel, lessonById } from "@/lib/data";
 import { chatCompletion, speakPt, translateToEnglish, type ChatMsg } from "@/lib/llm";
 import { listenPt, type SpeechAlt } from "@/lib/speech";
@@ -108,10 +110,16 @@ export default function Chat() {
   const [report, setReport] = useState<SessionReport | null>(null);
   const [reportBusy, setReportBusy] = useState(false);
   const [reportPron, setReportPron] = useState<TroubleWord[]>([]);
+  // Avatar rendering is opt-in per session and off by default. `avatarOffered`
+  // only becomes true when the server reports the route is enabled AND keyed.
+  const [avatarOffered, setAvatarOffered] = useState(false);
+  const [avatarRequested, setAvatarRequested] = useState(false);
+  const [avatarActive, setAvatarActive] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const sessionRef = useRef<LiveSession | null>(null);
   const assistantAccRef = useRef("");
   const sessionStartRef = useRef(0);
+  const avatarVideoRef = useRef<HTMLVideoElement>(null);
 
   const userTurns = messages.filter((m) => m.role === "user").length;
 
@@ -241,10 +249,41 @@ export default function Chat() {
     sessionRef.current = null;
     setLiveActive(false);
     setLiveState("idle");
+    setAvatarActive(false);
     assistantAccRef.current = "";
   };
 
   useEffect(() => () => sessionRef.current?.disconnect(), []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void requestHealth()
+      .then((health) => {
+        if (!cancelled) setAvatarOffered(health.avatar);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const buildAudioSink = () => {
+    const useAvatar = avatarOffered && avatarRequested;
+    return new FallbackAudioSink(
+      useAvatar ? createAnamProvider() : null,
+      {
+        mintSessionToken: (signal) => requestAvatarSessionToken(signal),
+        videoElement: avatarVideoRef.current,
+      },
+      {
+        onAvatarActive: () => setAvatarActive(true),
+        onFallback: (failure) => {
+          setAvatarActive(false);
+          setError(`Avatar unavailable (${failure.reason}); continuing with voice only.`);
+        },
+      }
+    );
+  };
 
   const toggleLive = async () => {
     if (liveActive) {
@@ -255,7 +294,9 @@ export default function Chat() {
     const session = new LiveSession();
     sessionRef.current = session;
     setLiveActive(true);
+    setAvatarActive(false);
     assistantAccRef.current = "";
+    const audioSink = buildAudioSink();
     try {
       await session.connect(buildLiveInstructions(scenario), {
         onState: (s) => setLiveState(s),
@@ -307,7 +348,7 @@ export default function Chat() {
         },
         onError: (msg) => setError(msg),
         onEnded: endLive,
-      });
+      }, { audioSink });
       logActivity("live", 10);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
@@ -340,12 +381,60 @@ export default function Chat() {
           {reportBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4" />}
           {reportBusy ? "A escrever…" : "Terminar sessão"}
         </button>
+        {avatarOffered && (
+          <button
+            onClick={() => setAvatarRequested((on) => !on)}
+            disabled={liveActive}
+            title={
+              liveActive
+                ? "Change this before starting a live call"
+                : "Show an animated face during the live call. Voice and coaching are identical either way."
+            }
+            className={cn(
+              "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold disabled:opacity-40",
+              avatarRequested
+                ? "bg-sky-600 text-white hover:bg-sky-700"
+                : "bg-stone-200 hover:bg-stone-300"
+            )}
+          >
+            <User className="h-4 w-4" />
+            {avatarRequested ? "Avatar on" : "Avatar off"}
+          </button>
+        )}
         <button
           onClick={() => setShowSettings(!showSettings)}
           className="inline-flex items-center gap-1 rounded-full bg-stone-200 px-3 py-1.5 text-sm font-semibold hover:bg-stone-300"
         >
           <Settings2 className="h-4 w-4" /> Settings
         </button>
+      </div>
+
+      {/*
+        The surface is mounted whenever a live call runs so the provider has a
+        stable element to stream into, and is only revealed once frames arrive.
+        Learners are told plainly that the face is synthetic and that it is not
+        a pronunciation reference — its lip-sync is tuned for conversational
+        realism, not phonetic articulation.
+      */}
+      <div className={cn(liveActive && avatarRequested ? "block" : "hidden")}>
+        <div
+          className={cn(
+            "overflow-hidden rounded-xl border border-sky-200 bg-stone-900",
+            avatarActive ? "block" : "hidden"
+          )}
+        >
+          <video
+            ref={avatarVideoRef}
+            autoPlay
+            playsInline
+            muted={false}
+            className="aspect-video w-full object-cover"
+          />
+          <p className="bg-sky-50 px-3 py-1.5 text-xs font-medium text-sky-900">
+            AI-generated avatar. Watch it for company, not for pronunciation — use
+            Pronúncia for mouth and sound practice.
+          </p>
+        </div>
       </div>
 
       {liveActive && (

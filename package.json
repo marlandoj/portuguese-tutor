@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "test": "bun test server/index.test.ts",
+    "test": "bun test server/index.test.ts src/lib/avatar/avatar.test.ts src/lib/realtime.test.ts",
     "preview": "vite preview",
     "prod": "npm run build && bun server/index.ts"
   },
