@@ -26,7 +26,7 @@ export default function SessionReportPanel({ report, pronWords, onClose }: Props
       <div className="flex items-center gap-2">
         <BookOpenCheck className="h-5 w-5 text-red-600" />
         <div className="min-w-0">
-          <div className="font-bold">Resumo da sessão</div>
+          <div className="font-bold">Session summary</div>
           <div className="text-xs text-stone-500">
             {date} · {report.scenario} · {report.messageCount} messages
           </div>
@@ -131,7 +131,7 @@ export default function SessionReportPanel({ report, pronWords, onClose }: Props
               </li>
             ))}
           </ul>
-          <div className="mt-1 text-xs text-stone-400">Drill these in Review → Pronúncia.</div>
+          <div className="mt-1 text-xs text-stone-400">Practice these in Review &gt; Pronunciation.</div>
         </section>
       )}
 

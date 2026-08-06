@@ -32,7 +32,7 @@ export default function Anime() {
     <div className="space-y-6">
       <div>
         <h1 className="flex items-center gap-2 text-2xl font-bold">
-          <Clapperboard className="h-6 w-6 text-red-600" /> Música & Séries without subtitles
+          <Clapperboard className="h-6 w-6 text-red-600" /> Music & Series without subtitles
         </h1>
         <p className="text-sm text-stone-500">
           Your side-goal, made measurable. Log each song or episode, rate your comprehension honestly, note phrases you caught.

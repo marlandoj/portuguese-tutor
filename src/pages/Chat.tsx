@@ -333,7 +333,7 @@ export default function Chat() {
           )}
         >
           {liveActive ? <PhoneOff className="h-4 w-4" /> : <Phone className="h-4 w-4" />}
-          {liveActive ? "End live call" : "Conversa ao vivo"}
+          {liveActive ? "End live call" : "Start live call"}
         </button>
         <button
           onClick={endSession}
@@ -342,7 +342,7 @@ export default function Chat() {
           className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-3 py-1.5 text-sm font-semibold text-white hover:bg-amber-600 disabled:opacity-40"
         >
           {reportBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4" />}
-          {reportBusy ? "A escrever…" : "Terminar sessão"}
+          {reportBusy ? "Generating report..." : "End session"}
         </button>
         {avatarOffered && (
           <button
@@ -395,7 +395,7 @@ export default function Chat() {
           />
           <p className="bg-sky-50 px-3 py-1.5 text-xs font-medium text-sky-900">
             AI-generated avatar. Watch it for company, not for pronunciation — use
-            Pronúncia for mouth and sound practice.
+            Pronunciation for mouth and sound practice.
           </p>
         </div>
       </div>
@@ -403,7 +403,7 @@ export default function Chat() {
       {liveActive && (
         <div className="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-sm font-semibold text-emerald-800">
           <span className={cn("h-2.5 w-2.5 rounded-full", liveState === "speaking" ? "bg-red-500" : "bg-emerald-500", liveState !== "idle" && "animate-pulse")} />
-          {liveState === "connecting" && "A ligar à Professora Ana…"}
+          {liveState === "connecting" && "Connecting to Professora Ana..."}
           {liveState === "listening" && "Live — Ana is listening. Just speak; interrupt her anytime."}
           {liveState === "speaking" && "Ana is speaking… (you can talk over her to interrupt)"}
           {liveState === "idle" && "Call ended."}
@@ -498,7 +498,7 @@ export default function Chat() {
                   </div>
                   {m.pronPending && (
                     <div className="mt-1.5 flex items-center gap-1.5 text-xs text-stone-400">
-                      <Loader2 className="h-3 w-3 animate-spin" /> A avaliar a pronúncia…
+                      <Loader2 className="h-3 w-3 animate-spin" /> Evaluating pronunciation...
                     </div>
                   )}
                   {m.pron && (m.pron.verdict === "close" || m.pron.verdict === "off") && (
@@ -541,7 +541,7 @@ export default function Chat() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && send(input)}
             disabled={busy || liveActive}
-            placeholder={liveActive ? "Live call in progress — just speak" : "Fale comigo em português…"}
+            placeholder={liveActive ? "Live call in progress — just speak" : "Speak to me in Portuguese..."}
             className="min-w-0 flex-1 rounded-full border border-stone-300 px-4 py-2.5 outline-none focus:border-red-400 disabled:opacity-50"
           />
           <button

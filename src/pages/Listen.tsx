@@ -223,7 +223,7 @@ export default function Listen() {
             onChange={(e) => setTyped(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && answerDictation()}
             disabled={dictationResult !== null}
-            placeholder="Digite o que você ouviu…"
+            placeholder="Type what you heard..."
             className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-lg outline-none focus:border-red-400"
             autoFocus
           />

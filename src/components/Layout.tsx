@@ -18,7 +18,7 @@ const NAV_MORE = [
   { to: "/sounds", label: "Sounds" },
   { to: "/verbs", label: "Verbs" },
   { to: "/grammar", label: "Grammar" },
-  { to: "/anime", label: "Música & Séries" },
+  { to: "/anime", label: "Music & Series" },
   { to: "/coach", label: "Coach" },
 ];
 

@@ -61,7 +61,7 @@ export function audioUrl(lessonId: string): string | null {
 }
 
 export function levelLabel(level: number): string {
-  return ["", "Level 1 — Sobrevivência", "Level 2 — Vida Diária", "Level 3 — Conexões"][level] ?? `Level ${level}`;
+  return ["", "Level 1: Survival", "Level 2: Daily Life", "Level 3: Connections"][level] ?? `Level ${level}`;
 }
 
 export function levelDescription(level: number): string {

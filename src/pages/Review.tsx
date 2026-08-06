@@ -47,7 +47,7 @@ function buildDeck(
           id: `custom-${c.id}`,
           front: c.pt,
           back: c.en,
-          meta: "Resumo da sessão",
+          meta: "Session summary",
           speak: c.pt,
         }));
     return [...personal, ...bundled];
@@ -68,7 +68,7 @@ function buildDeck(
       frontSub: w.slowForm || undefined,
       back: w.tip || "Listen to the model, then practice below.",
       backSub: w.heardAs && w.heardAs !== w.word ? `Last time the coach heard “${w.heardAs}”` : undefined,
-      meta: `Palavras difíceis · ${w.passes}/${MASTERED_PASSES} passes`,
+      meta: `Trouble words · ${w.passes}/${MASTERED_PASSES} passes`,
       speak: w.word,
     }));
   }
@@ -181,7 +181,7 @@ export default function Review() {
     { key: "phrases", label: "Phrases", count: vocab.length + customs.length },
     { key: "verbs", label: "Verbs", count: verbs.length },
     { key: "sounds", label: "Sounds", count: soundCount },
-    { key: "pronunciation", label: "Pronúncia", count: troubleCount },
+    { key: "pronunciation", label: "Pronunciation", count: troubleCount },
   ];
 
   const levelLessons = lessons.filter((l) => level === 0 || l.level === level);
@@ -279,7 +279,7 @@ export default function Review() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 font-semibold text-white hover:bg-red-700 disabled:opacity-50"
               >
                 {practicing ? <Loader2 className="h-5 w-5 animate-spin" /> : <Mic className="h-5 w-5" />}
-                {practicing ? "A ouvir…" : `Praticar “${current.front}”`}
+                {practicing ? "Listening..." : `Practice “${current.front}”`}
               </button>
               {pronScore !== null && (
                 <div className={cn(
@@ -287,10 +287,10 @@ export default function Review() {
                   pronScore >= 80 ? "bg-green-100 text-green-800" : pronScore >= 0 ? "bg-amber-100 text-amber-800" : "bg-stone-100 text-stone-600"
                 )}>
                   {pronScore >= 80
-                    ? `✓ ${pronScore}% — boa! ${MASTERED_PASSES > 0 ? "Rate it below to schedule the next rep." : ""}`
+                    ? `✓ ${pronScore}%: good! ${MASTERED_PASSES > 0 ? "Rate it below to schedule the next rep." : ""}`
                     : pronScore >= 0
-                      ? `${pronScore}% — quase. Ouve o modelo outra vez e tenta de novo.`
-                      : "Não consegui ouvir — verifica o microfone e tenta outra vez."}
+                      ? `${pronScore}%: nearly there. Listen to the model again and retry.`
+                      : "I could not hear you. Check the microphone and try again."}
                 </div>
               )}
               {current.speak && (

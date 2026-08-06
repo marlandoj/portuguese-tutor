@@ -75,8 +75,8 @@ export default function Home() {
       <section className="tutor-home-hero p-6 text-white sm:p-8">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <div className="text-sm font-medium uppercase tracking-widest text-red-100">Treine, não estude</div>
-            <h1 className="mt-2 text-3xl font-bold sm:text-4xl">Bem-vindo de volta! Ready to train?</h1>
+            <div className="text-sm font-medium uppercase tracking-widest text-red-100">Train, don't study</div>
+            <h1 className="mt-2 text-3xl font-bold sm:text-4xl">Welcome back! Ready to train?</h1>
             <div className="mt-3 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold">
                 <Flame className="h-4 w-4 text-amber-300" /> {streak}-day streak
@@ -200,7 +200,7 @@ export default function Home() {
           { to: "/chat", icon: MessagesSquare, label: "AI conversation", desc: "Free talk with Professora Ana" },
           { to: "/listen", icon: Ear, label: "Listening drill", desc: "Comprehension + dictation" },
           { to: "/journey", icon: Sparkle, label: "Journey map", desc: "Your trip, stop by stop" },
-          { to: "/anime", icon: Trophy, label: "Música & Séries", desc: "Comprehension progress" },
+          { to: "/anime", icon: Trophy, label: "Music & Series", desc: "Comprehension progress" },
         ].map((c) => (
           <Link key={c.to} to={c.to} className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm transition hover:border-red-300 hover:shadow">
             <c.icon className="h-5 w-5 text-red-600" />
