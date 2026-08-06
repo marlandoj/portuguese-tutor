@@ -117,21 +117,25 @@ export default function Chat() {
   const [avatarRequested, setAvatarRequested] = useState(false);
   const [avatarSessionMs, setAvatarSessionMs] = useState(0);
   const [avatarActive, setAvatarActive] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const transcriptRef = useRef<HTMLDivElement>(null);
   const sessionRef = useRef<LiveSession | null>(null);
   const assistantAccRef = useRef("");
   const sessionStartRef = useRef(0);
   const avatarVideoRef = useRef<HTMLVideoElement>(null);
 
   const userTurns = messages.filter((m) => m.role === "user").length;
+  const avatarLayoutActive = liveActive && avatarRequested;
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    transcriptRef.current?.scrollTo({
+      top: transcriptRef.current.scrollHeight,
+      behavior: avatarLayoutActive || messages.length <= 1 ? "auto" : "smooth",
+    });
     if (messages.length > 0 && sessionStartRef.current === 0) {
       sessionStartRef.current = Date.now();
     }
     if (messages.length === 0) sessionStartRef.current = 0;
-  }, [messages]);
+  }, [messages, busy, avatarLayoutActive]);
 
   /** End-of-session debrief: one LLM call over the transcript + pronunciation recap. */
   const endSession = async () => {
@@ -431,7 +435,7 @@ export default function Chat() {
         a pronunciation reference — its lip-sync is tuned for conversational
         realism, not phonetic articulation.
       */}
-      <div className={cn(liveActive && avatarRequested ? "block" : "hidden")}>
+      <div className={cn(avatarLayoutActive ? "block" : "hidden")}>
         <div
           className={cn(
             "overflow-hidden rounded-xl border border-sky-200 bg-stone-900",
@@ -519,8 +523,21 @@ export default function Chat() {
         />
       )}
 
-      <div className="flex min-h-[380px] flex-col rounded-2xl border border-stone-200 bg-white shadow-sm">
-        <div className="flex-1 space-y-3 overflow-y-auto p-4" style={{ maxHeight: "55vh" }}>
+      <div
+        data-avatar-layout={avatarLayoutActive ? "true" : "false"}
+        className={cn(
+          "flex flex-col rounded-2xl border border-stone-200 bg-white shadow-sm",
+          avatarLayoutActive ? "h-[clamp(18rem,40svh,24rem)] min-h-0" : "min-h-[380px]"
+        )}
+      >
+        <div
+          ref={transcriptRef}
+          data-chat-transcript
+          className={cn(
+            "min-h-0 flex-1 space-y-3 overflow-y-auto overscroll-contain p-4 [scrollbar-gutter:stable]",
+            !avatarLayoutActive && "max-h-[55vh]"
+          )}
+        >
           {messages.length === 0 && (
             <div className="pt-16 text-center text-stone-400">
               <Bot className="mx-auto mb-2 h-10 w-10" />
@@ -559,7 +576,6 @@ export default function Chat() {
               <Loader2 className="h-4 w-4 animate-spin" /> Professora Ana is thinking…
             </div>
           )}
-          <div ref={bottomRef} />
         </div>
 
         {error && <div className="border-t border-red-200 bg-red-50 px-4 py-2 text-sm text-red-700">{error}</div>}
@@ -582,7 +598,7 @@ export default function Chat() {
             onKeyDown={(e) => e.key === "Enter" && send(input)}
             disabled={busy || liveActive}
             placeholder={liveActive ? "Live call in progress — just speak" : "Fale comigo em português…"}
-            className="flex-1 rounded-full border border-stone-300 px-4 py-2.5 outline-none focus:border-red-400 disabled:opacity-50"
+            className="min-w-0 flex-1 rounded-full border border-stone-300 px-4 py-2.5 outline-none focus:border-red-400 disabled:opacity-50"
           />
           <button
             onClick={() => send(input)}
