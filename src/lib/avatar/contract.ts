@@ -46,7 +46,7 @@ export interface SinkMetrics {
     chunkDurationMs: number;
     chunksSent: number;
     pcmBytesSent: number;
-    silentChunksDropped: number;
+    inactiveFramesDropped: number;
   };
 }
 
@@ -58,9 +58,11 @@ export interface AssistantAudioSink {
   readonly id: string;
   /** Called once per session with the assistant's remote MediaStream. */
   attach(stream: MediaStream): Promise<void>;
+  /** Assistant audio began playing. Maps to `output_audio_buffer.started`. */
+  beginSequence(): void;
   /** Barge-in. Maps to `input_audio_buffer.speech_started`. */
   interrupt(): void;
-  /** Sequence boundary. Maps to `response.done`. */
+  /** Drained audio boundary. Maps to `output_audio_buffer.stopped`. */
   endSequence(): void;
   /** Idempotent teardown. Must not throw. */
   detach(): void;

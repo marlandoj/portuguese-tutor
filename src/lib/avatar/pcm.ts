@@ -37,7 +37,7 @@ export interface PcmTransportDiagnostics {
   chunkDurationMs: number;
   chunksSent: number;
   pcmBytesSent: number;
-  silentChunksDropped: number;
+  inactiveFramesDropped: number;
 }
 
 export const DEFAULT_PCM_CHUNK_DURATION_MS = 40;
@@ -45,15 +45,12 @@ export const DEFAULT_PCM_CHUNK_DURATION_MS = 40;
 export function floatToPcm16Base64(samples: Float32Array): {
   base64: string;
   byteLength: number;
-  silent: boolean;
 } {
   const buffer = new ArrayBuffer(samples.length * 2);
   const view = new DataView(buffer);
-  let silent = true;
   for (let i = 0; i < samples.length; i += 1) {
     const clamped = Math.max(-1, Math.min(1, samples[i]));
     const value = Math.round(clamped < 0 ? clamped * 0x8000 : clamped * 0x7fff);
-    if (value !== 0) silent = false;
     view.setInt16(i * 2, value, true);
   }
   const bytes = new Uint8Array(buffer);
@@ -62,7 +59,7 @@ export function floatToPcm16Base64(samples: Float32Array): {
   for (let i = 0; i < bytes.length; i += STRIDE) {
     binary += String.fromCharCode(...bytes.subarray(i, i + STRIDE));
   }
-  return { base64: btoa(binary), byteLength: bytes.byteLength, silent };
+  return { base64: btoa(binary), byteLength: bytes.byteLength };
 }
 
 export class PcmChunker {
@@ -85,7 +82,7 @@ export class PcmChunker {
       chunkDurationMs: (framesPerChunk / sampleRateHz) * 1_000,
       chunksSent: 0,
       pcmBytesSent: 0,
-      silentChunksDropped: 0,
+      inactiveFramesDropped: 0,
     };
   }
 
@@ -109,13 +106,13 @@ export class PcmChunker {
     return { ...this.diagnosticsState };
   }
 
+  dropInactive(frameCount: number): void {
+    this.diagnosticsState.inactiveFramesDropped += frameCount;
+  }
+
   private emit(samples: Float32Array): void {
     const encoded = floatToPcm16Base64(samples);
     this.pendingLength = 0;
-    if (encoded.silent) {
-      this.diagnosticsState.silentChunksDropped += 1;
-      return;
-    }
     this.onChunkCallback(encoded.base64);
     this.diagnosticsState.chunksSent += 1;
     this.diagnosticsState.pcmBytesSent += encoded.byteLength;
@@ -129,6 +126,7 @@ export class PcmPump {
   private moduleUrl: string | null = null;
   private chunker: PcmChunker | null = null;
   private stopped = false;
+  private sequenceActive = false;
 
   private readonly options: PcmPumpOptions;
 
@@ -177,7 +175,8 @@ export class PcmPump {
     this.node.port.onmessage = (event: MessageEvent<Float32Array>) => {
       if (this.stopped) return;
       try {
-        this.chunker?.push(event.data);
+        if (this.sequenceActive) this.chunker?.push(event.data);
+        else this.chunker?.dropInactive(event.data.length);
       } catch (error) {
         this.options.onError(error instanceof Error ? error.message : String(error));
       }
@@ -195,6 +194,17 @@ export class PcmPump {
 
   flush(): void {
     this.chunker?.flush();
+  }
+
+  beginSequence(): void {
+    if (this.stopped) return;
+    this.sequenceActive = true;
+  }
+
+  endSequence(): void {
+    if (!this.sequenceActive) return;
+    this.flush();
+    this.sequenceActive = false;
   }
 
   diagnostics(): PcmTransportDiagnostics | null {

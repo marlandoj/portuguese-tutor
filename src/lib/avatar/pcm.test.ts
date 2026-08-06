@@ -10,7 +10,6 @@ describe("PCM16 encoding", () => {
     const encoded = floatToPcm16Base64(new Float32Array([-2, -1, -0.5, 0, 0.5, 1, 2]));
     const bytes = decode(encoded.base64);
 
-    expect(encoded.silent).toBe(false);
     expect(encoded.byteLength).toBe(14);
     expect(Array.from({ length: 7 }, (_, index) => bytes.readInt16LE(index * 2))).toEqual([
       -32768,
@@ -21,11 +20,6 @@ describe("PCM16 encoding", () => {
       32767,
       32767,
     ]);
-  });
-
-  test("identifies samples that quantize to digital silence", () => {
-    const encoded = floatToPcm16Base64(new Float32Array([0, 0.000001, -0.000001]));
-    expect(encoded.silent).toBe(true);
   });
 });
 
@@ -46,18 +40,25 @@ describe("PcmChunker", () => {
       chunkDurationMs: 40,
       chunksSent: 1,
       pcmBytesSent: 1_280,
-      silentChunksDropped: 0,
+      inactiveFramesDropped: 0,
     });
   });
 
-  test("drops digitally silent idle chunks instead of sending them to Anam", () => {
+  test("preserves silence inside an active sequence", () => {
     const chunks: string[] = [];
     const chunker = new PcmChunker(16_000, 40, (chunk) => chunks.push(chunk));
 
     chunker.push(new Float32Array(640));
 
-    expect(chunks).toEqual([]);
-    expect(chunker.diagnostics().silentChunksDropped).toBe(1);
+    expect(chunks).toHaveLength(1);
+    expect(decode(chunks[0]).every((byte) => byte === 0)).toBe(true);
+  });
+
+  test("accounts for frames discarded outside provider sequences", () => {
+    const chunker = new PcmChunker(24_000, 40, () => undefined);
+    chunker.dropInactive(1_152);
+    expect(chunker.diagnostics().inactiveFramesDropped).toBe(1_152);
+    expect(chunker.diagnostics().chunksSent).toBe(0);
   });
 
   test("flushes an audible partial tail before the sequence boundary", () => {

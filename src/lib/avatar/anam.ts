@@ -50,6 +50,8 @@ export interface AnamProviderConfig {
   sampleRate?: number;
 }
 
+export const DEFAULT_ANAM_SAMPLE_RATE = 24_000;
+
 export function createAnamProvider(config: AnamProviderConfig = {}): AvatarProvider {
   const loadSdk =
     config.loadSdk ??
@@ -57,7 +59,8 @@ export function createAnamProvider(config: AnamProviderConfig = {}): AvatarProvi
   return {
     id: "anam",
     requiresVideoSurface: true,
-    create: (options) => new AnamAudioSink(options, loadSdk, config.sampleRate ?? 16_000),
+    create: (options) =>
+      new AnamAudioSink(options, loadSdk, config.sampleRate ?? DEFAULT_ANAM_SAMPLE_RATE),
   };
 }
 
@@ -70,6 +73,7 @@ class AnamAudioSink implements AssistantAudioSink {
   private startedAt: number | null = null;
   private abort = new AbortController();
   private done = false;
+  private sequenceActive = false;
   private frameWatch: ReturnType<typeof setInterval> | null = null;
 
   private readonly options: AvatarSinkOptions;
@@ -124,6 +128,7 @@ class AnamAudioSink implements AssistantAudioSink {
         onError: (message) => this.fail("stream", message),
       });
       if (this.done) return this.pump.stop();
+      if (this.sequenceActive) this.pump.beginSequence();
 
       this.audioStream = client.createAgentAudioInputStream({
         encoding: "pcm_s16le",
@@ -140,6 +145,12 @@ class AnamAudioSink implements AssistantAudioSink {
     }
   }
 
+  beginSequence(): void {
+    if (this.done || this.sequenceActive) return;
+    this.sequenceActive = true;
+    this.pump?.beginSequence();
+  }
+
   interrupt(): void {
     if (this.done) return;
     this.metricsState = {
@@ -148,6 +159,8 @@ class AnamAudioSink implements AssistantAudioSink {
     };
     // Both calls are required. endSequence alone leaves buffered audio playing.
     try {
+      this.sequenceActive = false;
+      this.pump?.endSequence();
       this.client?.interruptPersona();
       this.audioStream?.endSequence();
     } catch (error) {
@@ -156,10 +169,11 @@ class AnamAudioSink implements AssistantAudioSink {
   }
 
   endSequence(): void {
-    if (this.done) return;
+    if (this.done || !this.sequenceActive) return;
+    this.sequenceActive = false;
     this.metricsState = { ...this.metricsState, sequences: this.metricsState.sequences + 1 };
     try {
-      this.pump?.flush();
+      this.pump?.endSequence();
       this.audioStream?.endSequence();
     } catch (error) {
       this.fail("runtime", error instanceof Error ? error.message : String(error));
