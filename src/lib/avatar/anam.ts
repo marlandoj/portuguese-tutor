@@ -114,9 +114,13 @@ class AnamAudioSink implements AssistantAudioSink {
       await client.streamToVideoElement(element.id);
       if (this.done) return;
 
+      const queuedChunks: string[] = [];
       this.pump = await PcmPump.start(stream, {
         targetSampleRate: this.requestedSampleRate,
-        onChunk: (base64) => this.audioStream?.sendAudioChunk(base64),
+        onChunk: (base64) => {
+          if (this.audioStream) this.audioStream.sendAudioChunk(base64);
+          else queuedChunks.push(base64);
+        },
         onError: (message) => this.fail("stream", message),
       });
       if (this.done) return this.pump.stop();
@@ -126,6 +130,7 @@ class AnamAudioSink implements AssistantAudioSink {
         sampleRate: this.pump.sampleRate,
         channels: 1,
       });
+      for (const chunk of queuedChunks) this.audioStream.sendAudioChunk(chunk);
       this.metricsState = { ...this.metricsState, state: "ready" };
       this.watchForFrames(element);
     } catch (error) {
@@ -154,6 +159,7 @@ class AnamAudioSink implements AssistantAudioSink {
     if (this.done) return;
     this.metricsState = { ...this.metricsState, sequences: this.metricsState.sequences + 1 };
     try {
+      this.pump?.flush();
       this.audioStream?.endSequence();
     } catch (error) {
       this.fail("runtime", error instanceof Error ? error.message : String(error));
@@ -164,6 +170,7 @@ class AnamAudioSink implements AssistantAudioSink {
     this.done = true;
     this.stopFrameWatch();
     this.abort.abort();
+    const audioTransport = this.pump?.diagnostics();
     this.pump?.stop();
     try {
       this.client?.stopStreaming();
@@ -174,6 +181,7 @@ class AnamAudioSink implements AssistantAudioSink {
       ...this.metricsState,
       state: this.metricsState.state === "failed" ? "failed" : "stopped",
       billableMs: this.elapsed(),
+      ...(audioTransport ? { audioTransport } : {}),
     };
     this.pump = null;
     this.client = null;
@@ -181,7 +189,12 @@ class AnamAudioSink implements AssistantAudioSink {
   }
 
   metrics(): SinkMetrics {
-    return { ...this.metricsState, billableMs: this.elapsed() };
+    const audioTransport = this.pump?.diagnostics() ?? this.metricsState.audioTransport;
+    return {
+      ...this.metricsState,
+      billableMs: this.elapsed(),
+      ...(audioTransport ? { audioTransport } : {}),
+    };
   }
 
   private watchForFrames(element: HTMLVideoElement): void {

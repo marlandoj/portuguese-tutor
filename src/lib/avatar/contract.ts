@@ -39,6 +39,15 @@ export interface SinkMetrics {
   sequences: number;
   interruptions: number;
   failure: SinkFailure | null;
+  /** Non-content metadata for diagnosing provider audio transport quality. */
+  audioTransport?: {
+    sampleRateHz: number;
+    channels: number;
+    chunkDurationMs: number;
+    chunksSent: number;
+    pcmBytesSent: number;
+    silentChunksDropped: number;
+  };
 }
 
 /**
