@@ -8,18 +8,18 @@ import SessionReportPanel from "@/components/SessionReportPanel";
 import { cn } from "@/lib/utils";
 
 const LANDMARKS: Record<number, { icon: typeof MapPin; name: string }> = {
-  3: { icon: UtensilsCrossed, name: "Restaurante" },
+  3: { icon: UtensilsCrossed, name: "Restaurant" },
   6: { icon: BedDouble, name: "Hotel" },
   7: { icon: Car, name: "Taxi" },
-  10: { icon: ShoppingBag, name: "Mercado" },
-  11: { icon: Sparkles, name: "Praia" },
-  15: { icon: Mountain, name: "Lisboa" },
+  10: { icon: ShoppingBag, name: "Market" },
+  11: { icon: Sparkles, name: "Beach" },
+  15: { icon: Mountain, name: "Lisbon" },
 };
 
 const LEVEL_THEME: Record<number, { icon: typeof MapPin; label: string }> = {
-  1: { icon: TrainFront, label: "Viagem a Portugal" },
-  2: { icon: Hospital, label: "Vida em Portugal" },
-  3: { icon: Heart, label: "Amizades & Conexões" },
+  1: { icon: TrainFront, label: "Journey through Portugal" },
+  2: { icon: Hospital, label: "Life in Portugal" },
+  3: { icon: Heart, label: "Friendships & Connections" },
 };
 
 export default function Journey() {
@@ -131,7 +131,7 @@ export default function Journey() {
       {reports.length > 0 && (
         <div className="mx-auto max-w-xl space-y-3">
           <h2 className="flex items-center gap-2 text-lg font-bold">
-            <FileText className="h-5 w-5 text-red-600" /> Resumos de sessão
+            <FileText className="h-5 w-5 text-red-600" /> Session summaries
           </h2>
           {reports.map((r) => (
             <div key={r.id} className="rounded-xl border border-stone-200 bg-white shadow-sm">

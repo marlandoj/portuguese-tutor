@@ -43,7 +43,6 @@ export default function Certificate() {
           Português Tutor · European Portuguese
         </div>
         <div className="mt-6 text-4xl font-bold text-stone-900">Certificate of Completion</div>
-        <div className="mt-2 text-2xl text-stone-600">Certificado de Conclusão</div>
 
         <div className="mt-8 text-lg text-stone-600">This certifies that</div>
         <div className="mt-2 text-3xl font-bold text-stone-900">Kevin Jackson</div>

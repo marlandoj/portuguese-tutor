@@ -11,10 +11,10 @@ interface Props {
 }
 
 const VERDICT_STYLE: Record<string, { chip: string; label: string }> = {
-  close: { chip: "bg-amber-100 text-amber-800", label: "Quase lá" },
-  off: { chip: "bg-red-100 text-red-700", label: "Vamos afinar" },
-  unclear: { chip: "bg-stone-200 text-stone-600", label: "Não percebi bem" },
-  great: { chip: "bg-emerald-100 text-emerald-700", label: "Boa pronúncia!" },
+  close: { chip: "bg-amber-100 text-amber-800", label: "Nearly there" },
+  off: { chip: "bg-red-100 text-red-700", label: "Let's refine it" },
+  unclear: { chip: "bg-stone-200 text-stone-600", label: "I didn't catch that" },
+  great: { chip: "bg-emerald-100 text-emerald-700", label: "Great pronunciation!" },
 };
 
 export default function PronunciationCard({ feedback, onRetry }: Props) {
@@ -59,7 +59,7 @@ export default function PronunciationCard({ feedback, onRetry }: Props) {
           )}
           {feedback.heardAs && feedback.heardAs !== feedback.focusWord && (
             <div className="text-xs text-stone-500">
-              Ouvi: <span className="italic">“{feedback.heardAs}”</span>
+              I heard: <span className="italic">“{feedback.heardAs}”</span>
             </div>
           )}
         </div>
@@ -74,13 +74,13 @@ export default function PronunciationCard({ feedback, onRetry }: Props) {
               onClick={() => speakPt(feedback.focusWord)}
               className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-stone-700 ring-1 ring-stone-300 hover:bg-stone-100"
             >
-              <Volume2 className="h-3.5 w-3.5" /> Ouvir
+              <Volume2 className="h-3.5 w-3.5" /> Listen
             </button>
             <button
               onClick={() => speakSlowly(feedback.focusWord)}
               className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-stone-700 ring-1 ring-stone-300 hover:bg-stone-100"
             >
-              <Turtle className="h-3.5 w-3.5" /> Devagar
+              <Turtle className="h-3.5 w-3.5" /> Slowly
             </button>
           </>
         )}
@@ -90,11 +90,11 @@ export default function PronunciationCard({ feedback, onRetry }: Props) {
           className="inline-flex items-center gap-1 rounded-full bg-red-600 px-2.5 py-1 text-xs font-semibold text-white hover:bg-red-700 disabled:opacity-50"
         >
           {retrying ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Mic className="h-3.5 w-3.5" />}
-          {retrying ? "A ouvir…" : "Tentar outra vez"}
+          {retrying ? "Listening..." : "Try again"}
         </button>
         {passed && (
           <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700">
-            <PartyPopper className="h-3.5 w-3.5" /> Boa!
+            <PartyPopper className="h-3.5 w-3.5" /> Good!
           </span>
         )}
       </div>
