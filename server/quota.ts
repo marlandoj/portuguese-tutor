@@ -8,14 +8,15 @@ import { ApiError } from "./validation";
 export type QuotaOperation = "chat" | "speech" | "realtime" | "avatar";
 export type IdentitySource = "forwarded" | "shared";
 export const REALTIME_SESSION_MINUTES = 10;
+export const AVATAR_DAILY_PER_IP_MINUTES = 10;
 /**
  * Avatar minutes are reserved up front, because Anam bills wall-clock from
  * session start to session end regardless of who is speaking.
  *
  * Deliberately shorter than REALTIME_SESSION_MINUTES: the avatar demotes to
  * voice-only at this ceiling while the conversation continues to the realtime
- * limit. On a 30 minute/month plan a 10-minute avatar would buy three sessions
- * a month; five buys six. The client enforces the same number — it is
+ * limit. Each session remains capped at five minutes while the daily per-IP
+ * allowance permits two sessions. The client enforces the session number — it is
  * advertised on /api/health rather than duplicated as a client constant, so
  * the reserved and enforced budgets cannot drift apart.
  */
@@ -66,7 +67,7 @@ export const QUOTA_LIMITS: Record<QuotaOperation, LimitDefinition> = {
   // cannot bill overage, so a straddle costs nothing — the vendor refuses the
   // session and FallbackAudioSink demotes to voice-only. This stays at 20.
   avatar: {
-    perIpAmount: AVATAR_SESSION_MINUTES,
+    perIpAmount: AVATAR_DAILY_PER_IP_MINUTES,
     perIpWindowSeconds: 24 * 60 * 60,
     globalAmount: 20,
     globalWindowSeconds: 30 * 24 * 60 * 60,
