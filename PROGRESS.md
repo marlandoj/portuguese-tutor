@@ -1,12 +1,13 @@
-# Portuguese Tutor Migration
+# Portuguese Tutor: Pronunciation Coaching Upgrade
 
-status: complete
-watchdog: off
+status: in_progress
+watchdog: paused
 
-- [x] Transfer the Windows application source and audio assets to Zo
-- [x] Add the server-side AI proxy, provider validation, and quota controls
-- [x] Refactor the client to use same-origin API endpoints
-- [x] Align the Zo Site build and runtime configuration with Japanese Tutor
+- [x] Preserve the completed Portuguese Tutor migration and avatar deployment
+- [x] Define Ana's pronunciation drill state and 80% advancement gate
+- [x] Add regression tests for English coaching, Portuguese modeling, retry, and resumption
 - [x] Pass TypeScript, unit tests, lint, and production build
-- [x] Validate core desktop and mobile flows in a real browser
-- [x] Publish the site publicly and verify the production URL
+- [ ] Validate the live voice behavior in a browser
+- [ ] Deploy the verified change to the private tutor service
+
+PAUSED: Code is ready; private-service deployment and a quota-consuming microphone trial require the user's approval.

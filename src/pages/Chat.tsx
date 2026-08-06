@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Bot, FileText, Loader2, Mic, Phone, PhoneOff, Send, Settings2, Trash2, User, Volume2 } from "lucide-react";
 import { requestAvatarSessionToken, requestHealth } from "@/lib/api";
 import { FallbackAudioSink, createAnamProvider } from "@/lib/avatar";
-import { lessons, levelLabel, lessonById } from "@/lib/data";
+import { lessons, lessonById } from "@/lib/data";
 import { chatCompletion, speakPt, translateToEnglish, type ChatMsg } from "@/lib/llm";
 import { listenPt, type SpeechAlt } from "@/lib/speech";
 import { assessPronunciation, retryScore, type PronFeedback } from "@/lib/pronunciation";
@@ -13,6 +13,11 @@ import SessionReportPanel from "@/components/SessionReportPanel";
 import PronunciationCard from "@/components/PronunciationCard";
 import { LiveSession, type LiveState } from "@/lib/realtime";
 import { getSettings, logActivity, saveSettings } from "@/lib/gamify";
+import {
+  buildLiveInstructions,
+  buildSystemPrompt,
+  isPronunciationDrillTurn,
+} from "@/lib/coachPrompts";
 import { cn } from "@/lib/utils";
 
 const MODELS = [
@@ -21,37 +26,6 @@ const MODELS = [
   { id: "google/gemini-2.0-flash-001", label: "Gemini 2.0 Flash (fast)" },
   { id: "anthropic/claude-sonnet-4", label: "Claude Sonnet (strong Portuguese)" },
 ];
-
-function buildSystemPrompt(scenarioId: string): string {
-  const base = `You are "Professora Ana", a warm European Portuguese (Portugal) conversation coach (fluency = speaking confidently; mistakes are welcome; never switch fully to English).
-
-Rules:
-- Speak primarily in natural European Portuguese appropriate to an A1-A2 learner — Portugal vocabulary and register (tu with friends, o senhor/a senhora formally, 'estar a + infinitive', words like fixe, giro, se faz favor, casa de banho, autocarro).
-- After each Portuguese reply, add ONE short English support line in parentheses — never more.
-- If the learner writes in English, answer the Portuguese they were trying to say, then continue in Portuguese.
-- Gently correct one mistake per turn maximum, by modeling the correct phrase, not lecturing.
-- Ask follow-up questions to keep the learner speaking.
-- Keep every reply under 40 Portuguese words.`;
-  if (scenarioId === "free") {
-    return `${base}
-
-Scenario: free conversation. Start with a friendly greeting and a simple question about their day or weekend.`;
-  }
-  const lesson = lessonById.get(scenarioId);
-  if (!lesson) return base;
-  const script = lesson.entries
-    .filter((e) => e.jp)
-    .slice(0, 25)
-    .map((e) => `${e.speaker === "K" ? "Customer" : "Staff"}: ${e.jp}${e.en ? ` (${e.en})` : ""}`)
-    .join("\n");
-  return `${base}
-
-Scenario: "${lesson.title}" (${levelLabel(lesson.level)}). You play the STAFF/PARTNER role; the learner plays the customer.
-Reference script lines from their course (stay close to this vocabulary, but improvise naturally):
-${script}
-
-Begin in character with the staff's opening line.`;
-}
 
 interface Msg {
   role: "user" | "assistant";
@@ -62,39 +36,6 @@ interface Msg {
   /** Pronunciation assessment result; undefined = not assessed, null = assessor failed. */
   pron?: PronFeedback | null;
   pronPending?: boolean;
-}
-
-/** Voice-call version of Ana's persona: spoken register, no parenthetical
- *  translations (they'd be read aloud), slower pace, phone-style turns. */
-function buildLiveInstructions(scenarioId: string): string {
-  const base = `You are "Professora Ana", a warm European Portuguese (Portugal) conversation coach in a LIVE VOICE CALL with an A1-A2 learner.
-
-Rules:
-- Speak ONLY European Portuguese from Portugal (tu with friends, o senhor/a senhora formally, 'estar a + infinitive', fixe, giro, se faz favor, casa de banho, autocarro) — slow, clear, learner-friendly pace.
-- Keep every turn under 30 spoken words. This is a phone-style conversation: no lists, no markdown, no parenthetical translations.
-- If the learner is lost or switches to English, give them the exact Portuguese phrase they need, ask them to repeat it, then continue in Portuguese.
-- Gently correct at most one mistake per turn by modeling the correct phrase naturally.
-- When you hear a mispronounced word, coach it briefly: say the word slowly, syllable by syllable, ask the learner to repeat it once, praise the attempt, then move on — at most one word per turn, and never lecture.
-- Always end your turn with a short question to keep the learner speaking.`;
-  if (scenarioId === "free") {
-    return `${base}
-
-Scenario: free conversation. Greet them warmly and ask a simple question about their day or weekend.`;
-  }
-  const lesson = lessonById.get(scenarioId);
-  if (!lesson) return base;
-  const script = lesson.entries
-    .filter((e) => e.jp)
-    .slice(0, 25)
-    .map((e) => `${e.speaker === "K" ? "Customer" : "Staff"}: ${e.jp}`)
-    .join("\n");
-  return `${base}
-
-Scenario: "${lesson.title}" (${levelLabel(lesson.level)}). You play the STAFF/PARTNER role; the learner plays the customer.
-Reference script lines from their course (stay close to this vocabulary, but improvise naturally):
-${script}
-
-Begin in character with the staff's opening line.`;
 }
 
 export default function Chat() {
@@ -341,6 +282,7 @@ export default function Chat() {
           assistantAccRef.current = "";
           // Silent English support line: translated in the background via
           // the server-backed chat provider and appended as text only.
+          if (isPronunciationDrillTurn(text)) return;
           void translateToEnglish(settings.model, text)
             .then((en) => {
               setMessages((msgs) => {
