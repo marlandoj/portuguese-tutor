@@ -40,6 +40,8 @@ export class DirectAudioSink implements AssistantAudioSink {
     return this.element?.muted ?? false;
   }
 
+  beginSequence(): void {}
+
   interrupt(): void {
     this.metricsState = { ...this.metricsState, interruptions: this.metricsState.interruptions + 1 };
   }

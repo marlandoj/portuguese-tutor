@@ -1,3 +1,5 @@
+import { AvatarSinkError } from "./avatar/contract";
+
 export type ChatRole = "system" | "user" | "assistant";
 
 export interface ChatMessage {
@@ -101,14 +103,29 @@ export async function requestHealth(): Promise<HealthStatus> {
  * this returns only the short-lived token.
  */
 export async function requestAvatarSessionToken(signal?: AbortSignal): Promise<string> {
-  const response = await assertOk(
-    await fetch("/api/avatar/session", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: "{}",
-      signal,
-    })
-  );
+  const response = await fetch("/api/avatar/session", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: "{}",
+    signal,
+  });
+  if (response.status === 429) {
+    const retryAfterSeconds = Number(response.headers.get("Retry-After"));
+    const retryAt =
+      Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
+        ? new Date(Date.now() + retryAfterSeconds * 1_000).toLocaleString([], {
+            dateStyle: "medium",
+            timeStyle: "short",
+          })
+        : null;
+    throw new AvatarSinkError(
+      "quota",
+      retryAt
+        ? `Avatar quota is exhausted. Try again after ${retryAt}.`
+        : "Avatar quota is exhausted for the current window."
+    );
+  }
+  await assertOk(response);
   const payload = (await response.json()) as { sessionToken?: string };
   const token = payload.sessionToken?.trim() ?? "";
   if (!token) throw new Error("The avatar session token was empty.");

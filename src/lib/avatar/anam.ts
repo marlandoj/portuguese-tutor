@@ -1,6 +1,7 @@
 import {
   DEFAULT_CONNECT_TIMEOUT_MS,
   type AssistantAudioSink,
+  AvatarSinkError,
   type AvatarProvider,
   type AvatarSinkOptions,
   type SinkFailureReason,
@@ -50,6 +51,8 @@ export interface AnamProviderConfig {
   sampleRate?: number;
 }
 
+export const DEFAULT_ANAM_SAMPLE_RATE = 24_000;
+
 export function createAnamProvider(config: AnamProviderConfig = {}): AvatarProvider {
   const loadSdk =
     config.loadSdk ??
@@ -57,7 +60,8 @@ export function createAnamProvider(config: AnamProviderConfig = {}): AvatarProvi
   return {
     id: "anam",
     requiresVideoSurface: true,
-    create: (options) => new AnamAudioSink(options, loadSdk, config.sampleRate ?? 16_000),
+    create: (options) =>
+      new AnamAudioSink(options, loadSdk, config.sampleRate ?? DEFAULT_ANAM_SAMPLE_RATE),
   };
 }
 
@@ -70,6 +74,7 @@ class AnamAudioSink implements AssistantAudioSink {
   private startedAt: number | null = null;
   private abort = new AbortController();
   private done = false;
+  private sequenceActive = false;
   private frameWatch: ReturnType<typeof setInterval> | null = null;
 
   private readonly options: AvatarSinkOptions;
@@ -114,25 +119,40 @@ class AnamAudioSink implements AssistantAudioSink {
       await client.streamToVideoElement(element.id);
       if (this.done) return;
 
+      const queuedChunks: string[] = [];
       this.pump = await PcmPump.start(stream, {
         targetSampleRate: this.requestedSampleRate,
-        onChunk: (base64) => this.audioStream?.sendAudioChunk(base64),
+        onChunk: (base64) => {
+          if (this.audioStream) this.audioStream.sendAudioChunk(base64);
+          else queuedChunks.push(base64);
+        },
         onError: (message) => this.fail("stream", message),
       });
       if (this.done) return this.pump.stop();
+      if (this.sequenceActive) this.pump.beginSequence();
 
       this.audioStream = client.createAgentAudioInputStream({
         encoding: "pcm_s16le",
         sampleRate: this.pump.sampleRate,
         channels: 1,
       });
+      for (const chunk of queuedChunks) this.audioStream.sendAudioChunk(chunk);
       this.metricsState = { ...this.metricsState, state: "ready" };
       this.watchForFrames(element);
     } catch (error) {
-      this.fail("connect", error instanceof Error ? error.message : String(error));
+      this.fail(
+        error instanceof AvatarSinkError ? error.reason : "connect",
+        error instanceof Error ? error.message : String(error)
+      );
     } finally {
       clearTimeout(timeout);
     }
+  }
+
+  beginSequence(): void {
+    if (this.done || this.sequenceActive) return;
+    this.sequenceActive = true;
+    this.pump?.beginSequence();
   }
 
   interrupt(): void {
@@ -143,6 +163,8 @@ class AnamAudioSink implements AssistantAudioSink {
     };
     // Both calls are required. endSequence alone leaves buffered audio playing.
     try {
+      this.sequenceActive = false;
+      this.pump?.endSequence();
       this.client?.interruptPersona();
       this.audioStream?.endSequence();
     } catch (error) {
@@ -151,9 +173,11 @@ class AnamAudioSink implements AssistantAudioSink {
   }
 
   endSequence(): void {
-    if (this.done) return;
+    if (this.done || !this.sequenceActive) return;
+    this.sequenceActive = false;
     this.metricsState = { ...this.metricsState, sequences: this.metricsState.sequences + 1 };
     try {
+      this.pump?.endSequence();
       this.audioStream?.endSequence();
     } catch (error) {
       this.fail("runtime", error instanceof Error ? error.message : String(error));
@@ -164,6 +188,7 @@ class AnamAudioSink implements AssistantAudioSink {
     this.done = true;
     this.stopFrameWatch();
     this.abort.abort();
+    const audioTransport = this.pump?.diagnostics();
     this.pump?.stop();
     try {
       this.client?.stopStreaming();
@@ -174,6 +199,7 @@ class AnamAudioSink implements AssistantAudioSink {
       ...this.metricsState,
       state: this.metricsState.state === "failed" ? "failed" : "stopped",
       billableMs: this.elapsed(),
+      ...(audioTransport ? { audioTransport } : {}),
     };
     this.pump = null;
     this.client = null;
@@ -181,7 +207,12 @@ class AnamAudioSink implements AssistantAudioSink {
   }
 
   metrics(): SinkMetrics {
-    return { ...this.metricsState, billableMs: this.elapsed() };
+    const audioTransport = this.pump?.diagnostics() ?? this.metricsState.audioTransport;
+    return {
+      ...this.metricsState,
+      billableMs: this.elapsed(),
+      ...(audioTransport ? { audioTransport } : {}),
+    };
   }
 
   private watchForFrames(element: HTMLVideoElement): void {

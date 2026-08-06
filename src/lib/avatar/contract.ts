@@ -17,6 +17,7 @@ export type SinkState = "idle" | "connecting" | "ready" | "rendering" | "failed"
 /** Reason codes are stable across providers so hosts can branch without string matching. */
 export type SinkFailureReason =
   | "token"
+  | "quota"
   | "connect"
   | "stream"
   | "timeout"
@@ -29,6 +30,16 @@ export interface SinkFailure {
   message: string;
 }
 
+export class AvatarSinkError extends Error {
+  readonly reason: SinkFailureReason;
+
+  constructor(reason: SinkFailureReason, message: string) {
+    super(message);
+    this.name = "AvatarSinkError";
+    this.reason = reason;
+  }
+}
+
 export interface SinkMetrics {
   provider: string;
   state: SinkState;
@@ -39,6 +50,15 @@ export interface SinkMetrics {
   sequences: number;
   interruptions: number;
   failure: SinkFailure | null;
+  /** Non-content metadata for diagnosing provider audio transport quality. */
+  audioTransport?: {
+    sampleRateHz: number;
+    channels: number;
+    chunkDurationMs: number;
+    chunksSent: number;
+    pcmBytesSent: number;
+    inactiveFramesDropped: number;
+  };
 }
 
 /**
@@ -49,9 +69,11 @@ export interface AssistantAudioSink {
   readonly id: string;
   /** Called once per session with the assistant's remote MediaStream. */
   attach(stream: MediaStream): Promise<void>;
+  /** Assistant audio began playing. Maps to `output_audio_buffer.started`. */
+  beginSequence(): void;
   /** Barge-in. Maps to `input_audio_buffer.speech_started`. */
   interrupt(): void;
-  /** Sequence boundary. Maps to `response.done`. */
+  /** Drained audio boundary. Maps to `output_audio_buffer.stopped`. */
   endSequence(): void;
   /** Idempotent teardown. Must not throw. */
   detach(): void;

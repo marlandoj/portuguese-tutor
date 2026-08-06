@@ -25,16 +25,33 @@ registerProcessor('pcm-tap', PcmTapProcessor);
 export interface PcmPumpOptions {
   /** Preferred capture rate. The real context rate is reported back via `sampleRate`. */
   targetSampleRate?: number;
+  /** Duration of each provider chunk. Larger than an AudioWorklet render quantum. */
+  chunkDurationMs?: number;
   onChunk(base64: string): void;
   onError(message: string): void;
 }
 
-function floatToPcm16Base64(samples: Float32Array): string {
+export interface PcmTransportDiagnostics {
+  sampleRateHz: number;
+  channels: 1;
+  chunkDurationMs: number;
+  chunksSent: number;
+  pcmBytesSent: number;
+  inactiveFramesDropped: number;
+}
+
+export const DEFAULT_PCM_CHUNK_DURATION_MS = 40;
+
+export function floatToPcm16Base64(samples: Float32Array): {
+  base64: string;
+  byteLength: number;
+} {
   const buffer = new ArrayBuffer(samples.length * 2);
   const view = new DataView(buffer);
   for (let i = 0; i < samples.length; i += 1) {
     const clamped = Math.max(-1, Math.min(1, samples[i]));
-    view.setInt16(i * 2, clamped < 0 ? clamped * 0x8000 : clamped * 0x7fff, true);
+    const value = Math.round(clamped < 0 ? clamped * 0x8000 : clamped * 0x7fff);
+    view.setInt16(i * 2, value, true);
   }
   const bytes = new Uint8Array(buffer);
   let binary = "";
@@ -42,7 +59,64 @@ function floatToPcm16Base64(samples: Float32Array): string {
   for (let i = 0; i < bytes.length; i += STRIDE) {
     binary += String.fromCharCode(...bytes.subarray(i, i + STRIDE));
   }
-  return btoa(binary);
+  return { base64: btoa(binary), byteLength: bytes.byteLength };
+}
+
+export class PcmChunker {
+  private readonly pending: Float32Array;
+  private readonly onChunkCallback: (base64: string) => void;
+  private pendingLength = 0;
+  private diagnosticsState: PcmTransportDiagnostics;
+
+  constructor(
+    sampleRateHz: number,
+    chunkDurationMs: number,
+    onChunk: (base64: string) => void
+  ) {
+    this.onChunkCallback = onChunk;
+    const framesPerChunk = Math.max(1, Math.round((sampleRateHz * chunkDurationMs) / 1_000));
+    this.pending = new Float32Array(framesPerChunk);
+    this.diagnosticsState = {
+      sampleRateHz,
+      channels: 1,
+      chunkDurationMs: (framesPerChunk / sampleRateHz) * 1_000,
+      chunksSent: 0,
+      pcmBytesSent: 0,
+      inactiveFramesDropped: 0,
+    };
+  }
+
+  push(samples: Float32Array): void {
+    let offset = 0;
+    while (offset < samples.length) {
+      const count = Math.min(samples.length - offset, this.pending.length - this.pendingLength);
+      this.pending.set(samples.subarray(offset, offset + count), this.pendingLength);
+      this.pendingLength += count;
+      offset += count;
+      if (this.pendingLength === this.pending.length) this.emit(this.pending);
+    }
+  }
+
+  flush(): void {
+    if (this.pendingLength === 0) return;
+    this.emit(this.pending.slice(0, this.pendingLength));
+  }
+
+  diagnostics(): PcmTransportDiagnostics {
+    return { ...this.diagnosticsState };
+  }
+
+  dropInactive(frameCount: number): void {
+    this.diagnosticsState.inactiveFramesDropped += frameCount;
+  }
+
+  private emit(samples: Float32Array): void {
+    const encoded = floatToPcm16Base64(samples);
+    this.pendingLength = 0;
+    this.onChunkCallback(encoded.base64);
+    this.diagnosticsState.chunksSent += 1;
+    this.diagnosticsState.pcmBytesSent += encoded.byteLength;
+  }
 }
 
 export class PcmPump {
@@ -50,7 +124,9 @@ export class PcmPump {
   private source: MediaStreamAudioSourceNode | null = null;
   private node: AudioWorkletNode | null = null;
   private moduleUrl: string | null = null;
+  private chunker: PcmChunker | null = null;
   private stopped = false;
+  private sequenceActive = false;
 
   private readonly options: PcmPumpOptions;
 
@@ -91,10 +167,16 @@ export class PcmPump {
 
     this.source = context.createMediaStreamSource(stream);
     this.node = new AudioWorkletNode(context, "pcm-tap");
+    this.chunker = new PcmChunker(
+      context.sampleRate,
+      this.options.chunkDurationMs ?? DEFAULT_PCM_CHUNK_DURATION_MS,
+      this.options.onChunk
+    );
     this.node.port.onmessage = (event: MessageEvent<Float32Array>) => {
       if (this.stopped) return;
       try {
-        this.options.onChunk(floatToPcm16Base64(event.data));
+        if (this.sequenceActive) this.chunker?.push(event.data);
+        else this.chunker?.dropInactive(event.data.length);
       } catch (error) {
         this.options.onError(error instanceof Error ? error.message : String(error));
       }
@@ -108,6 +190,25 @@ export class PcmPump {
     mute.gain.value = 0;
     this.node.connect(mute);
     mute.connect(context.destination);
+  }
+
+  flush(): void {
+    this.chunker?.flush();
+  }
+
+  beginSequence(): void {
+    if (this.stopped) return;
+    this.sequenceActive = true;
+  }
+
+  endSequence(): void {
+    if (!this.sequenceActive) return;
+    this.flush();
+    this.sequenceActive = false;
+  }
+
+  diagnostics(): PcmTransportDiagnostics | null {
+    return this.chunker?.diagnostics() ?? null;
   }
 
   stop(): void {
@@ -125,6 +226,7 @@ export class PcmPump {
     this.context = null;
     this.source = null;
     this.node = null;
+    this.chunker = null;
     this.moduleUrl = null;
   }
 }

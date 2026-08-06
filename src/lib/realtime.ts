@@ -128,6 +128,14 @@ export class LiveSession {
       return;
     }
     switch (event.type) {
+      case "output_audio_buffer.started":
+        this.driveSink((sink) => sink.beginSequence());
+        callbacks.onState?.("speaking");
+        break;
+      case "output_audio_buffer.stopped":
+        this.driveSink((sink) => sink.endSequence());
+        callbacks.onState?.("listening");
+        break;
       case "input_audio_buffer.speech_started":
         this.driveSink((sink) => sink.interrupt());
         callbacks.onState?.("listening");
@@ -145,8 +153,8 @@ export class LiveSession {
         if (event.transcript) callbacks.onAssistantDone?.(event.transcript);
         break;
       case "response.done":
-        this.driveSink((sink) => sink.endSequence());
-        callbacks.onState?.("listening");
+        // WebRTC audio may still be draining after response.done. The provider
+        // sequence closes only on output_audio_buffer.stopped.
         break;
       case "error":
         callbacks.onError?.(event.error?.message ?? "Realtime API error");

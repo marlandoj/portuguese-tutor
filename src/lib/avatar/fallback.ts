@@ -26,6 +26,7 @@ export class FallbackAudioSink implements AssistantAudioSink {
   private readonly direct = new DirectAudioSink();
   private avatar: AssistantAudioSink | null = null;
   private avatarLive = false;
+  private sequenceActive = false;
   private failure: SinkFailure | null = null;
 
   private budgetTimer: ReturnType<typeof setTimeout> | null = null;
@@ -76,6 +77,7 @@ export class FallbackAudioSink implements AssistantAudioSink {
       },
     });
     this.avatar = sink;
+    if (this.sequenceActive) safely(() => sink.beginSequence());
 
     try {
       await sink.attach(stream);
@@ -84,14 +86,24 @@ export class FallbackAudioSink implements AssistantAudioSink {
     }
   }
 
+  beginSequence(): void {
+    if (this.sequenceActive) return;
+    this.sequenceActive = true;
+    this.direct.beginSequence();
+    if (this.avatar) safely(() => this.avatar?.beginSequence());
+  }
+
   interrupt(): void {
+    this.sequenceActive = false;
     this.direct.interrupt();
-    if (this.avatarLive) safely(() => this.avatar?.interrupt());
+    if (this.avatar) safely(() => this.avatar?.interrupt());
   }
 
   endSequence(): void {
+    if (!this.sequenceActive) return;
+    this.sequenceActive = false;
     this.direct.endSequence();
-    if (this.avatarLive) safely(() => this.avatar?.endSequence());
+    if (this.avatar) safely(() => this.avatar?.endSequence());
   }
 
   detach(): void {
@@ -99,6 +111,7 @@ export class FallbackAudioSink implements AssistantAudioSink {
     safely(() => this.avatar?.detach());
     this.avatar = null;
     this.avatarLive = false;
+    this.sequenceActive = false;
     this.direct.detach();
   }
 

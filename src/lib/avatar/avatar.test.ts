@@ -3,7 +3,12 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { DirectAudioSink } from "./direct";
 import { FallbackAudioSink } from "./fallback";
-import { FALLBACK_DEADLINE_MS, type AvatarProvider, type SinkFailure } from "./contract";
+import {
+  FALLBACK_DEADLINE_MS,
+  emptyMetrics,
+  type AvatarProvider,
+  type SinkFailure,
+} from "./contract";
 
 class FakeAudioElement {
   srcObject: unknown = null;
@@ -28,6 +33,7 @@ function workingProvider(events: { onCreate?: () => void } = {}): AvatarProvider
         attach: async () => {
           options.onMediaObserved?.();
         },
+        beginSequence: () => undefined,
         interrupt: () => undefined,
         endSequence: () => undefined,
         detach: () => undefined,
@@ -54,6 +60,7 @@ function failingProvider(reason: SinkFailure): AvatarProvider {
       attach: async () => {
         options.onFailure(reason);
       },
+      beginSequence: () => undefined,
       interrupt: () => undefined,
       endSequence: () => undefined,
       detach: () => undefined,
@@ -108,6 +115,42 @@ describe("FallbackAudioSink", () => {
     sink.detach();
   });
 
+  test("replays an audio start that arrives while the provider is negotiating", async () => {
+    let releaseAttach: (() => void) | undefined;
+    let starts = 0;
+    const provider: AvatarProvider = {
+      id: "slow",
+      requiresVideoSurface: true,
+      create: (options) => ({
+        id: "slow",
+        attach: () =>
+          new Promise<void>((resolve) => {
+            releaseAttach = () => {
+              options.onMediaObserved?.();
+              resolve();
+            };
+          }),
+        beginSequence: () => {
+          starts += 1;
+        },
+        interrupt: () => undefined,
+        endSequence: () => undefined,
+        detach: () => undefined,
+        metrics: () => emptyMetrics("slow"),
+      }),
+    };
+    const sink = new FallbackAudioSink(provider, sinkOptions);
+
+    const attaching = sink.attach(stream);
+    sink.beginSequence();
+    await Bun.sleep(0);
+    expect(starts).toBe(1);
+
+    releaseAttach?.();
+    await attaching;
+    sink.detach();
+  });
+
   test("restores direct playback well inside the fallback deadline", async () => {
     let failure: SinkFailure | null = null;
     const sink = new FallbackAudioSink(
@@ -138,6 +181,7 @@ describe("FallbackAudioSink", () => {
         attach: async () => {
           throw new Error("connect refused");
         },
+        beginSequence: () => undefined,
         interrupt: () => undefined,
         endSequence: () => undefined,
         detach: () => undefined,

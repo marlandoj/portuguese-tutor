@@ -14,12 +14,16 @@ const ANSWER_SDP = "v=0\r\no=- 0 0 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\n";
 class RecordingSink implements AssistantAudioSink {
   readonly id = "recording";
   attached: MediaStream[] = [];
+  starts = 0;
   interrupts = 0;
   sequences = 0;
   detached = false;
 
   async attach(stream: MediaStream): Promise<void> {
     this.attached.push(stream);
+  }
+  beginSequence(): void {
+    this.starts += 1;
   }
   interrupt(): void {
     this.interrupts += 1;
@@ -106,16 +110,25 @@ describe("LiveSession audio routing", () => {
     session.disconnect();
   });
 
-  test("barge-in and sequence boundaries drive the sink", async () => {
+  test("WebRTC audio-buffer events drive provider sequence boundaries", async () => {
     installFakes();
     const sink = new RecordingSink();
     const session = new LiveSession();
     await session.connect("instructions", {}, { audioSink: sink });
 
     connection.dataChannel.onmessage?.({
-      data: JSON.stringify({ type: "input_audio_buffer.speech_started" }),
+      data: JSON.stringify({ type: "output_audio_buffer.started" }),
     });
     connection.dataChannel.onmessage?.({ data: JSON.stringify({ type: "response.done" }) });
+    expect(sink.starts).toBe(1);
+    expect(sink.sequences).toBe(0);
+
+    connection.dataChannel.onmessage?.({
+      data: JSON.stringify({ type: "output_audio_buffer.stopped" }),
+    });
+    connection.dataChannel.onmessage?.({
+      data: JSON.stringify({ type: "input_audio_buffer.speech_started" }),
+    });
 
     expect(sink.interrupts).toBe(1);
     expect(sink.sequences).toBe(1);
@@ -127,6 +140,9 @@ describe("LiveSession audio routing", () => {
     const throwingSink: AssistantAudioSink = {
       id: "throwing",
       attach: async () => undefined,
+      beginSequence: () => {
+        throw new Error("provider exploded");
+      },
       interrupt: () => {
         throw new Error("provider exploded");
       },
@@ -158,14 +174,19 @@ describe("LiveSession audio routing", () => {
     );
 
     connection.dataChannel.onmessage?.({
+      data: JSON.stringify({ type: "output_audio_buffer.started" }),
+    });
+    connection.dataChannel.onmessage?.({
       data: JSON.stringify({ type: "input_audio_buffer.speech_started" }),
     });
     connection.dataChannel.onmessage?.({
       data: JSON.stringify({ type: "response.audio_transcript.done", transcript: "Olá!" }),
     });
-    connection.dataChannel.onmessage?.({ data: JSON.stringify({ type: "response.done" }) });
+    connection.dataChannel.onmessage?.({
+      data: JSON.stringify({ type: "output_audio_buffer.stopped" }),
+    });
 
-    // Identical to the avatar-off path: both sink control points threw, and the
+    // Identical to the avatar-off path: all sink control points threw, and the
     // state machine and transcripts advanced anyway.
     expect(states).toContain("listening");
     expect(states.filter((state) => state === "listening").length).toBe(2);

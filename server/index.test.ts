@@ -489,6 +489,9 @@ describe("avatar session route (ZOU-1136)", () => {
   test("reserves avatar minutes and exhausts the per-user quota", async () => {
     const app = createTestApplication(AVATAR_SECRETS, true);
     const allowed = Math.floor(QUOTA_LIMITS.avatar.perIpAmount / AVATAR_SESSION_MINUTES);
+    expect(QUOTA_LIMITS.avatar.perIpAmount).toBe(10);
+    expect(QUOTA_LIMITS.avatar.perIpWindowSeconds).toBe(24 * 60 * 60);
+    expect(allowed).toBe(2);
     for (let index = 0; index < allowed; index += 1) {
       expect((await app.handler(avatarRequest())).status).toBe(201);
     }
