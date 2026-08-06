@@ -17,6 +17,7 @@ export type SinkState = "idle" | "connecting" | "ready" | "rendering" | "failed"
 /** Reason codes are stable across providers so hosts can branch without string matching. */
 export type SinkFailureReason =
   | "token"
+  | "quota"
   | "connect"
   | "stream"
   | "timeout"
@@ -27,6 +28,16 @@ export type SinkFailureReason =
 export interface SinkFailure {
   reason: SinkFailureReason;
   message: string;
+}
+
+export class AvatarSinkError extends Error {
+  readonly reason: SinkFailureReason;
+
+  constructor(reason: SinkFailureReason, message: string) {
+    super(message);
+    this.name = "AvatarSinkError";
+    this.reason = reason;
+  }
 }
 
 export interface SinkMetrics {

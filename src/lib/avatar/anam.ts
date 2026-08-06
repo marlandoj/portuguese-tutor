@@ -1,6 +1,7 @@
 import {
   DEFAULT_CONNECT_TIMEOUT_MS,
   type AssistantAudioSink,
+  AvatarSinkError,
   type AvatarProvider,
   type AvatarSinkOptions,
   type SinkFailureReason,
@@ -139,7 +140,10 @@ class AnamAudioSink implements AssistantAudioSink {
       this.metricsState = { ...this.metricsState, state: "ready" };
       this.watchForFrames(element);
     } catch (error) {
-      this.fail("connect", error instanceof Error ? error.message : String(error));
+      this.fail(
+        error instanceof AvatarSinkError ? error.reason : "connect",
+        error instanceof Error ? error.message : String(error)
+      );
     } finally {
       clearTimeout(timeout);
     }

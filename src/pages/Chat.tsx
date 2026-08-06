@@ -291,6 +291,8 @@ export default function Chat() {
           setError(
             failure.reason === "budget"
               ? "Avatar time for this session is used up; the conversation continues with voice."
+              : failure.reason === "quota"
+                ? `${failure.message} The conversation continues with voice.`
               : `Avatar unavailable (${failure.reason}); continuing with voice only.`
           );
         },
